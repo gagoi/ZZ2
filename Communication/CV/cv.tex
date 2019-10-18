@@ -1,0 +1,64 @@
+\documentclass[12pt,a4paper]{moderncv}
+\moderncvtheme[blue]{classic}
+\usepackage[utf8]{inputenc}
+\usepackage[inline]{enumitem}
+% Marge aux 4 coins de la page, ici elles sont réduites pour gagner de la place
+\usepackage[top=1.0cm, bottom=1.0cm, left=1.6cm, right=1.6cm]{geometry}
+% Largeur de la colonne de gauche pour les dates
+\setlength{\hintscolumnwidth}{2.7cm}
+\firstname{Alexis}
+\familyname{Madrzejewski}
+\title{Administrateur système / Devops}
+\address{2 rue qui n'existe pas}{63000 Clermont-Ferrand}
+\email{redacted@redacted.invalid}
+\homepage{www.madrzejewski.com}
+\mobile{06 00 00 00 00}
+\extrainfo{26 ans -- Permis B}
+\begin{document}
+\maketitle
+% Marge négative entre le titre et la partie expérience, pour gagner de la place
+\vspace*{-2.5\baselineskip}
+\section{Expériences}
+\cventry{Mars 2013\\à Aujourd'hui}{Administrateur système}{o2switch}{Clermont-Ferrand}{France}{
+\begin{itemize}%
+\item Gestion de \texttt{+}200 serveurs Centos\texttt{/}LAMP basé sur cPanel\texttt{/}WHM, \texttt{+}100k sites hébergés
+\item \textbf{Développement} : \textit{scripts bash, web html\texttt{/}css\texttt{/}php\texttt{/}mysql, extensions WHM\texttt{/}cPanel}
+  \begin{itemize}%
+  \item Exemple de projet, développement d'une extension cPanel permettant aux clients d'activer un cache Varnish personnalisé sur leur site internet.
+  Permet aussi de changer l'adresse IP associée à un site internet pour des besoins SEO.
+  \textbf{Technologies utilisées} : \textit{API WHM/cPanel, PHP POO, Composer, Git, Docker, Symfony4, Tests unitaires phpunit, Nginx, Varnish}
+  \end{itemize}
+\item Support client par ticket\texttt{/}téléphone \textit{(demandes variées)}, gestion de la documentation\newline
+\end{itemize}}
+\cventry{Avril 2012\\à Octobre 2012}{Administrateur système}{Vesalis}{Clermont-Ferrand}{France}{
+\begin{itemize}%
+\item Mise en place d'une solution de répartition de charge sur un serveur IBM Blade Center
+\item Adaptation du code des logiciels \textit{C\texttt{/}C\texttt{+}\texttt{+}} de la société pour le rendre compatible Linux\newline{}
+\end{itemize}}
+\cventry{Juin 2009\\à Avril 2012}{Création de Tutoriels-video.fr}{}{}{}{
+\begin{itemize}%
+\item Formations vidéos gratuites en informatique.
+Plus d'un \textbf{million de vues} sur les vidéos.
+\end{itemize}}
+\section{Formations}
+\cventry{2012 -- 2013}{Licence Professionnelle}{IUT Clermont-Ferrand (63)}{}{}{Spécialité Administration et Sécurité des Réseaux}
+\cventry{2010 -- 2012}{DUT informatique}{IUT Clermont-Ferrand}{}{}{Spécialité systèmes embarqués. Formation orienté Linux\texttt{/}Debian et programmation C}
+\section{Certifications}
+\cventry{Juillet 2017}{Certification LFCE}{The Linux Foundation}{Valide 2 ans}{\href{https://www.alexis-madrzejewski.com/ressources/lfce-madrzejewski.pdf}{LFCE-1700-0334-0200}}{
+Certification \textit{Linux Foundation Certified Engineer} créé par \textit{The Linux Foundation}.
+Les compétences testées sont en rapport avec Linux et l'administration système avancé.\newline
+}
+\cventry{Août 2016}{Certification LFCS}{The Linux Foundation}{Valide 2 ans}{\href{https://www.alexis-madrzejewski.com/ressources/lfcs-madrzejewski.pdf}{LFCS-1600-0922-0100}}{
+Certification \textit{Linux Foundation Certified System Administrator}.
+}
+\section{Compétences en informatique}
+\cvdoubleitem{\underline{OS}}{Centos 6\texttt{/}7, Debian, CloudLinux}{\underline{Virtualisation}}{Proxmox, OpenVZ}
+\cvitem{\underline{Programmation}}{HTML, CSS, Javascript, PHP, SQL, Bash, C, Silex, Symfony (3\texttt{/}4), Bootstrap (3)}
+\cvitem{\underline{Admin. services}}{Apache, Nginx, Varnish, WHM\texttt{/}cPanel, MySQL, Bind, Postfix, Dovecot, Exim}
+\cvitem{\underline{Admin. fichiers}}{LVM, mdadm, Cloisonnement Cloudlinux}
+\cvitem{\underline{Sécurité}}{Notions SELinux, CSF, iptables, firewalld}
+\cvlanguage{\underline{Anglais}}{lu, écrit, parlé -- Toeic 965 \texttt{/} 990}{}
+\section{Centres d'intérêt}
+\cvitem{}{\href{https://www.youtube.com/results?search_query=Lockpicking}{Lockpicking} \textit{(crochetage)}, \href{https://www.youtube.com/results?search_query=Cardistry}{Cardistry},
+Création d'articles et vidéos sur mes sites}
+\end{document}
