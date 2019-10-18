@@ -1,64 +1,82 @@
-\documentclass[12pt,a4paper]{moderncv}
-\moderncvtheme[blue]{classic}
+\documentclass[11pt, a4paper, sans]{moderncv}
 \usepackage[utf8]{inputenc}
-\usepackage[inline]{enumitem}
-% Marge aux 4 coins de la page, ici elles sont réduites pour gagner de la place
-\usepackage[top=1.0cm, bottom=1.0cm, left=1.6cm, right=1.6cm]{geometry}
-% Largeur de la colonne de gauche pour les dates
-\setlength{\hintscolumnwidth}{2.7cm}
-\firstname{Alexis}
-\familyname{Madrzejewski}
-\title{Administrateur système / Devops}
-\address{2 rue qui n'existe pas}{63000 Clermont-Ferrand}
-\email{redacted@redacted.invalid}
-\homepage{www.madrzejewski.com}
-\mobile{06 00 00 00 00}
-\extrainfo{26 ans -- Permis B}
+\usepackage[scale=0.8, top=1.5cm, bottom=2cm]{geometry}
+\usepackage{multicol}
+\usepackage{graphbox}
+\usepackage{enumitem}
+\usepackage{amssymb}
+
+\moderncvstyle{casual}
+\moderncvcolor{green}
+\setlength{\hintscolumnwidth}{2.5cm}
+
+\name{Jérémy}{Zangla} 
+\title{Étudiant Ingénieur Informatique}
+
 \begin{document}
-\maketitle
-% Marge négative entre le titre et la partie expérience, pour gagner de la place
-\vspace*{-2.5\baselineskip}
+\makecvtitle
+\vspace*{-1cm}
+\footnotesize
+\faHome~: 22 rue Saint-Martial, 63730 Les Martres-de-Veyre, France \\
+\faEnvelopeSquare~: zangla.jeremy@gmail.com \hfill \href{https://github.com/gagoi}{gagoi : \faGithubSquare} \\
+\faPhoneSquare~: +336 06 49 76 29 \hfill \href{https://www.linkedin.com/in/j\%C3\%A9r\%C3\%A9my-zangla-a18336137/}{Jérémy Zangla : \faLinkedinSquare}
+\normalsize
+\rule{17cm}{0.1pt}
+
+\section{Formation}
+\cventry{2018 -- Présent \footnotesize(diplomé en 2021)\normalsize}{Diplôme d'ingénieur en informatique}{ISIMA}{Clermont-Ferrand (63)}{}{
+	Actuellement en deuxième en fillière 2 : \textit{Génie Logiciel \& Systèmes Informatique}
+	\begin{itemize}[label=\textbullet]
+		\item Projet en binôme (2019) : Fabrication d'un robot sumo
+	\end{itemize}
+}
+\cventry{2016 -- 2018}{Prep'ISIMA}{UCA \& ISIMA}{Clermont-Ferrand (63)}{}{
+	\begin{itemize}[label=\textbullet]
+		\item Projet  en binôme (2018) : Fabrication d'un robot suiveur de ligne
+	\end{itemize}
+}
+\cventry{2013 -- 2016}{Baccalauréat Scientifique}{Lycée Lafayette}{Clermont-Ferrand (63)}{}{
+	\begin{itemize}[label=\textbullet]
+		\item Projet en binôme (2015-2016) : Développement d'une librairie JAVA de création de jeux 2D.
+	\end{itemize}}
+
+
 \section{Expériences}
-\cventry{Mars 2013\\à Aujourd'hui}{Administrateur système}{o2switch}{Clermont-Ferrand}{France}{
-\begin{itemize}%
-\item Gestion de \texttt{+}200 serveurs Centos\texttt{/}LAMP basé sur cPanel\texttt{/}WHM, \texttt{+}100k sites hébergés
-\item \textbf{Développement} : \textit{scripts bash, web html\texttt{/}css\texttt{/}php\texttt{/}mysql, extensions WHM\texttt{/}cPanel}
-  \begin{itemize}%
-  \item Exemple de projet, développement d'une extension cPanel permettant aux clients d'activer un cache Varnish personnalisé sur leur site internet.
-  Permet aussi de changer l'adresse IP associée à un site internet pour des besoins SEO.
-  \textbf{Technologies utilisées} : \textit{API WHM/cPanel, PHP POO, Composer, Git, Docker, Symfony4, Tests unitaires phpunit, Nginx, Varnish}
-  \end{itemize}
-\item Support client par ticket\texttt{/}téléphone \textit{(demandes variées)}, gestion de la documentation\newline
-\end{itemize}}
-\cventry{Avril 2012\\à Octobre 2012}{Administrateur système}{Vesalis}{Clermont-Ferrand}{France}{
-\begin{itemize}%
-\item Mise en place d'une solution de répartition de charge sur un serveur IBM Blade Center
-\item Adaptation du code des logiciels \textit{C\texttt{/}C\texttt{+}\texttt{+}} de la société pour le rendre compatible Linux\newline{}
-\end{itemize}}
-\cventry{Juin 2009\\à Avril 2012}{Création de Tutoriels-video.fr}{}{}{}{
-\begin{itemize}%
-\item Formations vidéos gratuites en informatique.
-Plus d'un \textbf{million de vues} sur les vidéos.
-\end{itemize}}
-\section{Formations}
-\cventry{2012 -- 2013}{Licence Professionnelle}{IUT Clermont-Ferrand (63)}{}{}{Spécialité Administration et Sécurité des Réseaux}
-\cventry{2010 -- 2012}{DUT informatique}{IUT Clermont-Ferrand}{}{}{Spécialité systèmes embarqués. Formation orienté Linux\texttt{/}Debian et programmation C}
-\section{Certifications}
-\cventry{Juillet 2017}{Certification LFCE}{The Linux Foundation}{Valide 2 ans}{\href{https://www.alexis-madrzejewski.com/ressources/lfce-madrzejewski.pdf}{LFCE-1700-0334-0200}}{
-Certification \textit{Linux Foundation Certified Engineer} créé par \textit{The Linux Foundation}.
-Les compétences testées sont en rapport avec Linux et l'administration système avancé.\newline
+\cventry{2015 -- Présent}{Entreprise familliale (production d'asperges)}{Les Martres-de-Veyre (63)}{}{}{
+	\begin{itemize}[label=\textbullet]
+		\item Gestion du travail sous contraintes (météo, disponnibilité du personnel, etc.).
+		\item Identification et correction des problèmes rencontrés.
+		\item Vente de la production au marché.
+	\end{itemize}
 }
-\cventry{Août 2016}{Certification LFCS}{The Linux Foundation}{Valide 2 ans}{\href{https://www.alexis-madrzejewski.com/ressources/lfcs-madrzejewski.pdf}{LFCS-1600-0922-0100}}{
-Certification \textit{Linux Foundation Certified System Administrator}.
+\cventry{2018 -- Présent}{Trésorier}{Isibot (club de robotique de l'ISIMA)}{}{}{
+	\begin{itemize}[label=\textbullet]
+		\item Création d'un plan de nos projets et négociation des subventions avec le Bureau des Étudiants.
+		\item Participation aux cours pour débutants en robotique.
+	\end{itemize}
 }
-\section{Compétences en informatique}
-\cvdoubleitem{\underline{OS}}{Centos 6\texttt{/}7, Debian, CloudLinux}{\underline{Virtualisation}}{Proxmox, OpenVZ}
-\cvitem{\underline{Programmation}}{HTML, CSS, Javascript, PHP, SQL, Bash, C, Silex, Symfony (3\texttt{/}4), Bootstrap (3)}
-\cvitem{\underline{Admin. services}}{Apache, Nginx, Varnish, WHM\texttt{/}cPanel, MySQL, Bind, Postfix, Dovecot, Exim}
-\cvitem{\underline{Admin. fichiers}}{LVM, mdadm, Cloisonnement Cloudlinux}
-\cvitem{\underline{Sécurité}}{Notions SELinux, CSF, iptables, firewalld}
-\cvlanguage{\underline{Anglais}}{lu, écrit, parlé -- Toeic 965 \texttt{/} 990}{}
-\section{Centres d'intérêt}
-\cvitem{}{\href{https://www.youtube.com/results?search_query=Lockpicking}{Lockpicking} \textit{(crochetage)}, \href{https://www.youtube.com/results?search_query=Cardistry}{Cardistry},
-Création d'articles et vidéos sur mes sites}
+
+\section{Compétences}
+\subsection{Langues}
+\cvlanguage{Anglais}{Avancé}{TOIC 950}
+\cvlanguage{Allemand}{Débuttant}{A2}
+\subsection{Compétences informatiques}
+	\begin{itemize}
+		\item Langages : Java, C, C++, Python, Scheme
+		\item Frameworks : JavaFX, Arduino, MBed, SFML
+		\item IDE : Eclipse, Android Studio, Arduino IDE, Mbed platform, Visual Studio (et VSCode)
+		
+		\item Aide au développement : Git, Valgrind, Catch2 Framework
+		\item Bureautique : Microsoft Office (Word, Excel, PowerPoint), LibreOffice (Writer, Calc)
+		\item Technologies Web : HTML5, CSS3, JavaScript
+		\item Autres : LaTex, SQLite, JSON, XML
+	\end{itemize}
+
+\section{Hobbies}
+\begin{itemize}[label=\textbullet]
+	\item Participation à 6 Game Jam (Développement de jeux vidéos en un temps réduit (24H-72H))
+	\item Course (deux fois par semaine)
+	\item Handi'Tutorat (Aide scolaire aux lycéens souffrant de handicapes)
+\end{itemize}
+
 \end{document}
