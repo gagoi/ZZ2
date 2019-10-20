@@ -1,38 +1,48 @@
 \documentclass[11pt, a4paper, sans]{moderncv}
 \usepackage[utf8]{inputenc}
-\usepackage[scale=0.8, top=1.5cm, bottom=2cm]{geometry}
+%\usepackage[scale=0.8, top=2cm, bottom=2cm]{geometry}
 \usepackage{multicol}
 \usepackage{graphbox}
 \usepackage{enumitem}
 \usepackage{amssymb}
+\usepackage{anysize}
+\usepackage{anyfontsize}
+\marginsize{2cm}{2cm}{1.8cm}{1.8cm}
 
 \moderncvstyle{casual}
 \moderncvcolor{green}
-\setlength{\hintscolumnwidth}{2.5cm}
+\setlength{\hintscolumnwidth}{2.5cm} %taille de la bande gauche
 
 \name{Jérémy}{Zangla} 
-\title{Étudiant Ingénieur Informatique}
+
 
 \begin{document}
-\makecvtitle
-\vspace*{-1cm}
+\begin{flushright}
+\fontfamily{lmss}\fontsize{30pt}{1}\selectfont{\textrm{\color{darkgray}Jérémy \color{black}ZANGLA\\}}
+\normalsize
+\color{black}
+Recherge d'un stage de 4 à 5 mois à partir du 1er Avril 2020.\\
+
+\end{flushright}
+\rule{17cm}{0.1pt}
+
 \footnotesize
-\faHome~: 22 rue Saint-Martial, 63730 Les Martres-de-Veyre, France \\
+\faHome~: 22 rue Saint-Martial, 63730 Les Martres-de-Veyre, France \hfill Permis B : \faCar\\
 \faEnvelopeSquare~: zangla.jeremy@gmail.com \hfill \href{https://github.com/gagoi}{gagoi : \faGithubSquare} \\
 \faPhoneSquare~: +336 06 49 76 29 \hfill \href{https://www.linkedin.com/in/j\%C3\%A9r\%C3\%A9my-zangla-a18336137/}{Jérémy Zangla : \faLinkedinSquare}
 \normalsize
 \rule{17cm}{0.1pt}
-
-\section{Formation}
+\section{Formations}
 \cventry{2018 -- Présent \footnotesize(diplomé en 2021)\normalsize}{Diplôme d'ingénieur en informatique}{ISIMA}{Clermont-Ferrand (63)}{}{
-	Actuellement en deuxième en fillière 2 : \textit{Génie Logiciel \& Systèmes Informatique}
+	Actuellement en deuxième année en fillière 2 : \textit{Génie Logiciel \& Systèmes Informatiques}.
+	\vspace{-1.5mm}
 	\begin{itemize}[label=\textbullet]
-		\item Projet en binôme (2019) : Fabrication d'un robot sumo
+		\item Projet en binôme (2019) : Fabrication d'un robot sumo.
 	\end{itemize}
 }
 \cventry{2016 -- 2018}{Prep'ISIMA}{UCA \& ISIMA}{Clermont-Ferrand (63)}{}{
 	\begin{itemize}[label=\textbullet]
-		\item Projet  en binôme (2018) : Fabrication d'un robot suiveur de ligne
+		\item Projet  en binôme (2018) : Fabrication d'un robot suiveur de ligne.
 	\end{itemize}
 }
 \cventry{2013 -- 2016}{Baccalauréat Scientifique}{Lycée Lafayette}{Clermont-Ferrand (63)}{}{
@@ -44,13 +54,15 @@
 \section{Expériences}
 \cventry{2015 -- Présent}{Entreprise familliale (production d'asperges)}{Les Martres-de-Veyre (63)}{}{}{
 	\begin{itemize}[label=\textbullet]
-		\item Gestion du travail sous contraintes (météo, disponnibilité du personnel, etc.).
+		\setlength\itemsep{0mm}
+		\item Gestion du travail sous contraintes (météo, disponibilité du personnel, etc.).
 		\item Identification et correction des problèmes rencontrés.
-		\item Vente de la production au marché.
+		\item Participation aux travaux agricoles et vente de la production au marché.
 	\end{itemize}
 }
 \cventry{2018 -- Présent}{Trésorier}{Isibot (club de robotique de l'ISIMA)}{}{}{
 	\begin{itemize}[label=\textbullet]
+		\setlength\itemsep{0mm}
 		\item Création d'un plan de nos projets et négociation des subventions avec le Bureau des Étudiants.
 		\item Participation aux cours pour débutants en robotique.
 	\end{itemize}
@@ -59,24 +71,23 @@
 \section{Compétences}
 \subsection{Langues}
 \cvlanguage{Anglais}{Avancé}{TOIC 950}
-\cvlanguage{Allemand}{Débuttant}{A2}
+\cvlanguage{Allemand}{Débutant}{A2}
 \subsection{Compétences informatiques}
 	\begin{itemize}
-		\item Langages : Java, C, C++, Python, Scheme
-		\item Frameworks : JavaFX, Arduino, MBed, SFML
-		\item IDE : Eclipse, Android Studio, Arduino IDE, Mbed platform, Visual Studio (et VSCode)
-		
+		\setlength\itemsep{0mm}
+		\item Langages \& Frameworks: Java, C, C++, Python, Scheme, JavaFX, Arduino, MBed, SFML
+		\item IDEs : Eclipse, Android Studio, Arduino IDE, Mbed platform, Visual Studio (et VSCode)
 		\item Aide au développement : Git, Valgrind, Catch2 Framework
 		\item Bureautique : Microsoft Office (Word, Excel, PowerPoint), LibreOffice (Writer, Calc)
-		\item Technologies Web : HTML5, CSS3, JavaScript
-		\item Autres : LaTex, SQLite, JSON, XML
+		\item Autres : LaTex, SQLite, MySQL, JSON, XML
 	\end{itemize}
 
-\section{Hobbies}
+\section{Intérêts}
 \begin{itemize}[label=\textbullet]
-	\item Participation à 6 Game Jam (Développement de jeux vidéos en un temps réduit (24H-72H))
-	\item Course (deux fois par semaine)
-	\item Handi'Tutorat (Aide scolaire aux lycéens souffrant de handicapes)
+	\setlength\itemsep{0mm}
+	\item Participation à 6 Game Jams (Développement de jeux vidéos en temps limité de 24h à 72h)
+	\item Course à pied (deux fois par semaine)
+	\item Handi'Tutorat (Aide scolaire aux lycéens souffrant de handicaps)
 \end{itemize}
 
 \end{document}

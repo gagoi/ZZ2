@@ -89,12 +89,6 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/moderncv/moderncvcompatibility.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/moderncv/moderncvcompatibility.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
-INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
-INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
-INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifvtex.sty
-INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifvtex.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/graphbox/graphbox.sty
@@ -105,6 +99,10 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/anysize/anysize.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/anysize/anysize.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/anyfontsize/anyfontsize.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/anyfontsize/anyfontsize.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/moderncv/moderncvstylecasual.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/moderncv/moderncvstylecasual.sty
 INPUT /usr/share/texmf/tex/latex/lm/lmodern.sty
@@ -182,8 +180,7 @@ INPUT /home/gagoi/Documents/zz/ZZ2/Communication/CV/cv.out
 INPUT /home/gagoi/Documents/zz/ZZ2/Communication/CV/cv.out
 OUTPUT /home/gagoi/Documents/zz/ZZ2/Communication/CV/cv.out
 INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmss17.tfm
-INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmss17.tfm
-INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmsso17.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmr17.tfm
 INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmss9.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/fontawesome/FontAwesome--fontawesometwo.tfm
 INPUT /usr/share/texlive/texmf-dist/tex/latex/fontawesome/ufontawesomeone.fd
@@ -238,10 +235,9 @@ INPUT /usr/share/texlive/texmf-dist/fonts/enc/dvips/fontawesome/fontawesomeone.e
 INPUT /usr/share/texlive/texmf-dist/fonts/enc/dvips/fontawesome/fontawesometwo.enc
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/fontawesome/FontAwesome.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+INPUT /usr/share/texmf/fonts/type1/public/lm/lmr17.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmss10.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmss12.pfb
-INPUT /usr/share/texmf/fonts/type1/public/lm/lmss17.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmss9.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmsso10.pfb
-INPUT /usr/share/texmf/fonts/type1/public/lm/lmsso17.pfb
