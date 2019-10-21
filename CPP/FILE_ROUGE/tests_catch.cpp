@@ -140,7 +140,7 @@ TEST_CASE("Polymorphisme", "[Forme]") {
 }
 */
 
-
+/*
 TEST_CASE("Groupe", "[Forme]") {
    Groupe g;
    Cercle * f1 = new Cercle;
@@ -162,4 +162,20 @@ TEST_CASE("Groupe", "[Forme]") {
 
    delete f1;
    delete f2;
+}
+*/
+
+TEST_CASE("Groupe", "[Clone]")
+{
+	Groupe g1, * g2;
+	Cercle f1;
+	Rectangle f2;
+
+	g1.ajouterForme(f1);
+	g1.ajouterForme(f2);
+
+	g2 = g1.clone();
+
+	std::cout << "CLONE" << std::endl;
+	REQUIRE(g1.toString() == g2->toString());
 }

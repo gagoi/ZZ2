@@ -45,3 +45,14 @@ void Cercle::setRayon(int r)
 	_h = 2*r;
 	_r = r;
 }
+
+Cercle* Cercle::clone() const
+{
+	Cercle * c = new Cercle;
+	c->_h = _h;
+	c->_w = _w;
+	c->setX(getPoint().getX());
+	c->setY(getPoint().getY());
+	nbFormes++;
+	return c;
+}

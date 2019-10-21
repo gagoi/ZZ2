@@ -17,6 +17,7 @@ class Cercle : public Forme
 		virtual std::string toString() const;
 		void setRayon(int r);
 		int getRayon() const;
+		virtual Cercle* clone() const;
 
 };
 

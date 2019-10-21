@@ -2,6 +2,7 @@
 #define GROUPE_HPP__
 
 #include <iostream>
+#include <cstring>
 
 #include "Forme.hpp"
 
@@ -14,9 +15,11 @@ class Groupe : public Forme
 		Forme* _formes[size];
 	public:
 		Groupe();
+		Groupe(Groupe& g);
 		void ajouterForme(Forme&);
 		void afficher();
 		virtual std::string toString() const;
+		virtual Groupe* clone() const;
 		~Groupe();
 };
 #endif

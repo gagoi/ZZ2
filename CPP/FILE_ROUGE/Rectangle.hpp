@@ -15,6 +15,7 @@ class Rectangle : public Forme
 	public:
 		Rectangle(int x = 0, int y = 0, int w = 0, int h = 0, int type = SIZE);
 		virtual std::string toString() const;
+		virtual Rectangle* clone() const;
 
 };
 

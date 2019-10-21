@@ -24,17 +24,19 @@ class Forme
 		Forme();
 		Forme(Point, COULEURS);
 		Forme(const Point& p, int w, int h);
+		Forme(const Forme& f);
 		void setCouleur(COULEURS coleur);
 		virtual ~Forme();
-		Point& getPoint();
+		Point getPoint() const;
 		COULEURS getCouleur() const;
 		int getId() const;
-		virtual std::string toString() const = 0;
+		virtual std::string toString() const;
 		static int prochainId();
 		void setX(int x);
 		void setY(int y);
 		int getHauteur() const;
 		int getLargeur() const;
+		virtual Forme* clone() const;
 
 };
 

@@ -17,12 +17,16 @@ Forme::Forme(const Point& p, int w, int h):
 	nbFormes++;
 }
 
+Forme::Forme(const Forme& f):Forme(f.getPoint(),f.getLargeur(), f.getHauteur())
+{
+}
+
 int Forme::prochainId()
 {
 	return nbFormes;
 }
 
-Point& Forme::getPoint()
+Point Forme::getPoint() const
 {
 	return _p;
 }
@@ -63,4 +67,18 @@ int Forme::getHauteur() const
 int Forme::getLargeur() const
 {
 	return _w;
+}
+
+std::string Forme::toString() const
+{
+	std::ostringstream oss;
+	oss << "Forme " << _p.getX() << ' ' << _p.getY() << ' ' << _w << ' ' << _h;
+	return oss.str();
+}
+
+Forme* Forme::clone() const
+{
+	Forme * f = new Forme(this->getPoint(), this->_couleur);
+	nbFormes++;
+	return f;
 }

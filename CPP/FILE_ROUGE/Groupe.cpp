@@ -3,7 +3,14 @@ Groupe::Groupe(): Forme(ORIGINE, 0, 0)
 {
     _nbFormes = 0;
 }
-
+/*
+Groupe::Groupe(Groupe& g): Groupe()
+{
+	this->setX(g.getPoint().getX());
+	this->setY(g.getPoint().getY());
+	memcpy(this->_formes, g._formes, nbFormes * sizeof(Forme*));
+}
+*/
 void Groupe::ajouterForme(Forme& f)
 {
 	if (_nbFormes < size)
@@ -27,11 +34,31 @@ void Groupe::afficher()
 
 Groupe::~Groupe()
 {
+	for (int i = 0; i < nbFormes; ++i)
+		delete _formes[i];
 }
 
 std::string Groupe::toString() const
 {
 	std::ostringstream oss;
-	oss << "GROUPE " << _p.getX() << ' ' << _p.getY() << ' ' << _w << ' ' << _h;
+	oss << "GROUPE " << _p.getX() << ' ' << _p.getY() << ' ' << _w << ' ' << _h << ' ' << nbFormes << " { ";
+	for (int i = 0; i < _nbFormes; ++i)
+		oss << _formes[i]->toString() << "; ";
+	oss << "}";
 	return oss.str();
+}
+
+Groupe* Groupe::clone() const
+{
+	Groupe * g = new Groupe;
+	g->_nbFormes = _nbFormes;
+	for (int i = 0; i < _nbFormes; ++i)
+	{
+		std::cout << i << std::endl;
+		g->_formes[i] = _formes[i]->clone();
+	}
+
+	std::cout << "cloné" << std::endl;
+	nbFormes++;
+	return g;
 }
