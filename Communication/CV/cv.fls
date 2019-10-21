@@ -224,7 +224,6 @@ INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmsso10.tfm
 INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmss10.tfm
 INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmsso10.tfm
 INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmss12.tfm
-INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmss8.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
 INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
 INPUT /home/gagoi/Documents/zz/ZZ2/Communication/CV/cv.aux
