@@ -28,13 +28,13 @@ void Groupe::afficher()
 {
 	for (unsigned int i = 0; i < _nbFormes; ++i)
 	{
-		std::cout << _formes[i]->toString() << std::endl;
+		std::cout << _formes[i]->toString()  << "(" << _formes[i] << ")" << std::endl;
 	}	
 }
 
 Groupe::~Groupe()
 {
-	for (int i = 0; i < nbFormes; ++i)
+	for (int i = 0; i < _nbFormes; ++i)
 		delete _formes[i];
 }
 
@@ -54,9 +54,8 @@ Groupe* Groupe::clone() const
 	g->_nbFormes = _nbFormes;
 	for (int i = 0; i < _nbFormes; ++i)
 	{
-		std::cout << i << std::endl;
 		g->_formes[i] = _formes[i]->clone();
-	}
+	}	
 
 	std::cout << "cloné" << std::endl;
 	nbFormes++;

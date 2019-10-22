@@ -165,10 +165,29 @@ TEST_CASE("Groupe", "[Forme]") {
 }
 */
 
-TEST_CASE("Groupe", "[Clone]")
+TEST_CASE("Clone de rectangle", "[Rectangle]")
+{
+	Rectangle r1;
+	Rectangle * r2 = r1.clone();
+
+	REQUIRE(r1.toString() == r2->toString());
+	delete r2;
+}
+
+TEST_CASE("Clone de cercle", "[Cercle]")
+{
+	Cercle r1;
+	Cercle * r2 = r1.clone();
+
+	REQUIRE(r1.toString() == r2->toString());
+	delete r2;
+}
+
+
+TEST_CASE("Clone de groupe", "[Groupe]")
 {
 	Groupe g1, * g2;
-	Cercle f1;
+	Rectangle f1;
 	Rectangle f2;
 
 	g1.ajouterForme(f1);
@@ -176,6 +195,11 @@ TEST_CASE("Groupe", "[Clone]")
 
 	g2 = g1.clone();
 
+	g1.afficher();
+	g2->afficher();
+
 	std::cout << "CLONE" << std::endl;
 	REQUIRE(g1.toString() == g2->toString());
+
+	delete g2;
 }

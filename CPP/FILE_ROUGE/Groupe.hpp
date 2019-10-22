@@ -16,10 +16,10 @@ class Groupe : public Forme
 	public:
 		Groupe();
 		Groupe(Groupe& g);
+		virtual ~Groupe();
 		void ajouterForme(Forme&);
 		void afficher();
 		virtual std::string toString() const;
 		virtual Groupe* clone() const;
-		~Groupe();
 };
 #endif

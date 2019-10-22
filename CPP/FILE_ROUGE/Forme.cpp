@@ -21,6 +21,11 @@ Forme::Forme(const Forme& f):Forme(f.getPoint(),f.getLargeur(), f.getHauteur())
 {
 }
 
+Forme::~Forme()
+{
+
+}
+
 int Forme::prochainId()
 {
 	return nbFormes;
@@ -45,8 +50,6 @@ void Forme::setCouleur(COULEURS coleur)
 {
 	_couleur = coleur;
 }
-
-Forme::~Forme(){}
 
 void Forme::setX(int x)
 {

@@ -25,8 +25,8 @@ class Forme
 		Forme(Point, COULEURS);
 		Forme(const Point& p, int w, int h);
 		Forme(const Forme& f);
-		void setCouleur(COULEURS coleur);
 		virtual ~Forme();
+		void setCouleur(COULEURS coleur);
 		Point getPoint() const;
 		COULEURS getCouleur() const;
 		int getId() const;
