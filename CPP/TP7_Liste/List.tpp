@@ -17,6 +17,15 @@ List<T>::~List()
 }
 
 template<typename T>
+List<T>::List(const List<T> & l)
+{
+	for(Cell<T> * c = l._first; c != nullptr; c = c->next())
+	{
+		push_back(c->getValue());
+	}
+}
+
+template<typename T>
 bool List<T>::isEmpty() const
 {
 	return _first == nullptr;
@@ -82,7 +91,8 @@ T List<T>::pop_back()
 	Cell<T> * old = _last;
 	_last = _last->prev();
 	delete old;
-	_last->setNext(nullptr);
+	if (_last != nullptr)
+		_last->setNext(nullptr);
 
 	_size--;
 
@@ -105,7 +115,8 @@ T List<T>::pop_front()
 	Cell<T> * old = _first;
 	_first = _first->next();
 	delete old;
-	_first->setPrev(nullptr);
+	if (_first != nullptr)
+		_first->setPrev(nullptr);
 
 	_size--;
 
@@ -131,4 +142,15 @@ std::ostream & operator<<(std::ostream & out, List<T> & t)
 	for(Cell<T> * act = t._first; act != nullptr; act = act->next())
 		out << act << " ";
     return out;
+}
+
+template<typename T>
+List<T>& List<T>::operator=(const List<T> & l)
+{
+	for(Cell<T> * c = l._first; c != nullptr; c = c->next())
+	{
+		this->push_back(c->getValue());
+	}
+
+	return *this;
 }

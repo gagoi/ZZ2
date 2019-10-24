@@ -78,4 +78,40 @@ TEST_CASE("Pops", "[List]") {
 
    REQUIRE(l.pop_front() == 30);
    REQUIRE(l.pop_back() == 152);
+   REQUIRE(l.size() == 1);
+}
+
+TEST_CASE("Constructeur par copie", "[List]"){
+   List_int l1;
+
+   std::ostringstream oss1, oss2;
+
+   l1.push_back(12);
+   l1.push_back(1586526);
+   l1.push_back(1);
+
+   List_int l2 = l1;
+
+   oss1 << l1;
+   oss2 << l2;
+
+   REQUIRE(oss1.str() == oss2.str());
+}
+
+TEST_CASE("Operator=", "[List]"){
+   List_int l1;
+   List_int l2;
+
+   std::ostringstream oss1, oss2;
+
+   l1.push_back(12);
+   l1.push_back(1586526);
+   l1.push_back(1);
+
+   l2 = l1;
+
+   oss1 << l1;
+   oss2 << l2;
+
+   REQUIRE(oss1.str() == oss2.str());
 }

@@ -17,6 +17,7 @@ private:
 	std::size_t _size;
 public:
 	List();
+	List(const List<T> & l);
 	~List();
 	bool isEmpty() const;
 	std::size_t size() const;
@@ -34,6 +35,7 @@ public:
 	friend std::ostream & operator<<(std::ostream & out, List<T2> & t);
 	template<typename T3>
 	friend std::ostream & operator<<(std::ostream & out, Cell<T3> * t);
+	List<T>& operator=(const List<T> & l);
 
 };
 
