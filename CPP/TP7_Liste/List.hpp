@@ -7,6 +7,7 @@
 #include <sstream>
 
 #include "Cell.hpp"
+#include "ItList.hpp"
 
 template <typename T>
 class List
@@ -30,6 +31,8 @@ public:
 	T pop_front();
 
 	void display(std::ostream & os) const;
+	ItList<T> begin() const;
+	ItList<T> end() const;
 
 	template<typename T2>
 	friend std::ostream & operator<<(std::ostream & out, List<T2> & t);

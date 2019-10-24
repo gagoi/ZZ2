@@ -115,3 +115,8 @@ TEST_CASE("Operator=", "[List]"){
 
    REQUIRE(oss1.str() == oss2.str());
 }
+
+TEST_CASE("Initialisation par défaut it", "[ItList]") {
+   List_int l1;
+   auto i = l1.begin();
+}

@@ -135,6 +135,17 @@ void List<T>::display(std::ostream & os) const
 	os << *this << std::endl;
 }
 
+template<typename T>
+ItList<T> List<T>::begin() const
+{
+	return ItList<T>(_first);
+}
+
+template<typename T>
+ItList<T> List<T>::end() const
+{
+	return ItList<T>();
+}
 
 template<typename T>
 std::ostream & operator<<(std::ostream & out, List<T> & t)
