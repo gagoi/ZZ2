@@ -1,0 +1,97 @@
+\documentclass[a4paper]{article}
+\usepackage{makeidx}
+\usepackage{formular}
+\usepackage{listings}
+\usepackage[utf8]{inputenc}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{mdframed}
+\usepackage{geometry}
+
+\geometry{hmargin=2.5cm,vmargin=1.5cm}
+\definecolor{light-gray}{gray}{0.95} %the shade of grey that stack exchange uses
+
+\title{Compte Rendu TP3\\Intervalle de confiance et Fibonacci}
+\author{Jérémy ZANGLA}
+
+\lstset{
+  literate=
+  {á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
+  {Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1
+  {à}{{\`a}}1 {è}{{\`e}}1 {ì}{{\`i}}1 {ò}{{\`o}}1 {ù}{{\`u}}1
+  {À}{{\`A}}1 {È}{{\'E}}1 {Ì}{{\`I}}1 {Ò}{{\`O}}1 {Ù}{{\`U}}1
+  {ä}{{\"a}}1 {ë}{{\"e}}1 {ï}{{\"i}}1 {ö}{{\"o}}1 {ü}{{\"u}}1
+  {Ä}{{\"A}}1 {Ë}{{\"E}}1 {Ï}{{\"I}}1 {Ö}{{\"O}}1 {Ü}{{\"U}}1
+  {â}{{\^a}}1 {ê}{{\^e}}1 {î}{{\^i}}1 {ô}{{\^o}}1 {û}{{\^u}}1
+  {Â}{{\^A}}1 {Ê}{{\^E}}1 {Î}{{\^I}}1 {Ô}{{\^O}}1 {Û}{{\^U}}1
+  {œ}{{\oe}}1 {Œ}{{\OE}}1 {æ}{{\ae}}1 {Æ}{{\AE}}1 {ß}{{\ss}}1
+  {ű}{{\H{u}}}1 {Ű}{{\H{U}}}1 {ő}{{\H{o}}}1 {Ő}{{\H{O}}}1
+  {ç}{{\c c}}1 {Ç}{{\c C}}1 {ø}{{\o}}1 {å}{{\r a}}1 {Å}{{\r A}}1
+  {€}{{\EUR}}1 {£}{{\pounds}}1,
+  numbers=left,
+  numbersep=10pt,
+  showspaces=false,
+  showstringspaces=false,
+  showtabs=false,
+  stepnumber=1,
+  stringstyle=\color{gray},
+  tabsize=4,
+  basicstyle=\small,
+  keywordstyle=\bf\color{blue},
+  backgroundcolor=\color{light-gray},
+  commentstyle=\color{ForestGreen},
+  showstringspaces=false
+}
+
+\begin{document}
+
+\maketitle
+\pagebreak
+\tableofcontents
+\pagebreak
+\section{Préambule}
+	Nous utilisons pour la génération des nombres aléatoires le code de Matsumoto reprennant le générateur de Mersenne Twister. Nous ne décrirons pas son code, et nous n'utiliseront que la fonction genrand\_real1 qui nous renvoie un nombre pseudo-aléatoire appartenant à [0; 1].
+	\\
+	Tout le code que nous avons développé sera décrit ici. De plus une documentation sera jointe à ce rapport. Enfin une série de résultats obtenus avec différents paramètres sera également jointe.
+\section{Méthode de Monte-Carlo}
+\subsection{Description de la méthode}
+L'algorithme suivi ici est tout simple, on travaille dans le carré déterminé par les points (0; 0) et (1; 1). 
+On utilise également le cercle de centre (0; 0) et de rayon 1, plus particulièrement le quart de cercle appartenant au carré précédent.
+Prenons maintenant un point P quelconque appartenant au carré. On sait que la probabilité qu'il appartienne au cercle est égale au rapport entre la surface du cercle et la surface du carré.
+On peut donc généré une multitude de ces points de manière aléatoire et compter le nombre de point appartenant au cercle. En divisant le nombre de point du cercle par le nombre de point total, on retombe bien sur notre probabilité d'appartenir au cercle.
+Donc, nous pouvons déduire $pi$ de la manière suivante :
+\begin{eqnarray*}
+	p &=& \frac{surface_{cercle}}{surface_{carre}} \\
+	\frac{nb\_inner}{nb\_points}  &=& \frac{surface_{cercle}}{surface_{carre}} \\
+	\frac{nb\_inner}{nb\_points}  &=& \frac{\pi \times r^2}{c^2} \\
+	\frac{nb\_inner}{nb\_points}  &=& \frac{\pi}{4} \\
+	4*\frac{nb\_inner}{nb\_points}  &=& \pi \\
+\end{eqnarray*}
+
+\subsection{Implémentation de la méthode}
+\begin{mdframed}[backgroundcolor=light-gray, roundcorner=20pt,
+	leftmargin=-45, rightmargin=-45, 
+	innerleftmargin=20, innertopmargin=1, innerbottommargin=1, 
+	outerlinewidth=1, linecolor=darkgray]
+	\lstinputlisting[language=C, firstline=59, lastline=77]{main.c}
+\end{mdframed}
+
+Nous nous posons la question de la précision de ce résultat. Nous avons donc utilisé cette fonction\\ avec 1 000, 1 000 000 et enfin 1 000 000 000 de points.
+\smallskip
+\begin{center}
+	\begin{tabular}{|l||c|c|c|}
+		\hline
+		Nombre de points & 1 000 & 1 000 000 & 1 000 000 000
+		\\\hline
+		Valeur de $pi$ obtenue & 3.124 00 & 3.144 72 & 3.141 54
+		\\\hline
+		Ordre de grandeur de l'erreur & $10^{-2}$ & $10^{-3}$ & $10^{-4}$
+		\\\hline
+	\end{tabular}
+\end{center}
+
+On peut conclure rapidement qu'il faut multiplier par 1 000 le nombre de points pour obtenir une précision seulement 10 fois meilleure.
+\section{Suite de Fibonacci}
+
+
+
+\end{document}

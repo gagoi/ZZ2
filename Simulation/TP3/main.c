@@ -16,9 +16,17 @@
 /**
  * @def NB_VALUES
  * 
- * @brief Nombre de valeur de \pi utilisée pour faire les statistiques.
+ * @brief Nombre de valeurs de \pi utilisées pour faire les statistiques.
  */
-#define NB_VALUES 100
+#define NB_VALUES 100000
+
+
+/**
+ * @def NB_POINTS
+ * 
+ * @brief Nombre de points utilisés pour le calcule de PI via la méthode de Monte-Carlo, lors des statistiques.
+ */
+#define NB_POINTS 1000000
 
 
 /**
@@ -37,32 +45,35 @@
  * Le rapport de ces surfaces donne la probabilité que le point généré soit dans le cercle.
  * On peut donc déduire PI de la manière suivante :
  * \f{eqnarray*}{
- * 	p &=& \frac{Scercle}{Scarre} \\
- * 	\frac{nbInner}{nbPoints}  &=& \frac{Scercle}{Scarre} \\
- * 	\frac{nbInner}{nbPoints}  &=& \frac{\pi \times r^2}{c^2} \\
- * 	\frac{nbInner}{nbPoints}  &=& \frac{\pi}{4} \\
- * 	4*\frac{nbInner}{nbPoints}  &=& \pi \\
+ * 	p &=& \frac{surface_{cercle}}{surface_{carre}} \\
+ * 	\frac{nb\_inner}{nb\_points}  &=& \frac{surface_{cercle}}{surface_{carre}} \\
+ * 	\frac{nb\_inner}{nb\_points}  &=& \frac{\pi \times r^2}{c^2} \\
+ * 	\frac{nb\_inner}{nb\_points}  &=& \frac{\pi}{4} \\
+ * 	4*\frac{nb\_inner}{nb\_points}  &=& \pi \\
  * \f}
  * 
  * @param nbPoints Nombre de points générés pour calculer PI.
+ * 
  * @return double Valeur de PI calculée.
  */
-double monte_carlo(int nbPoints)
+double monte_carlo(int nb_points)
 {
 	double x, y; 		// Coordonnée du point généré
 	int i;				// Variable d'itération
-	int nbInner = 0;	// Nombre de point à l'intérieur du quart de cercle trigonométrique 
+	int nb_inner = 0;	// Nombre de point à l'intérieur du quart de cercle trigonométrique 
 
-	for (i = 0; i < nbPoints; ++i)
+	for (i = 0; i < nb_points; ++i)
 	{
 		x = genrand_real1(); // On génère un nouveau point
 		y = genrand_real1();
-
-		if (pow(x, 2) + pow(y, 2) < 1) // Si il est dans le cercle, on incrémente le compteur
-			nbInner++;
+		
+		// Si il est dans le cercle, on incrémente le compteur
+		if (pow(x, 2) + pow(y, 2) < 1)
+			nb_inner++;
 	}
 
-	return 4.0 * nbInner / nbPoints; // On renvoie la valeur de PI (explications plus haut)
+	// On renvoie la valeur de PI (explications plus haut)
+	return 4.0 * nb_inner / nb_points;
 }
 
 /**
@@ -72,20 +83,21 @@ double monte_carlo(int nbPoints)
  * 
  * @param nbReplicates Nombre de valeur que l'on veut utilisé pour les futures statistiques.
  * @param values Tableau dans lequel on va mettre les valeurs de \pi calculées.
+ * 
  * @return double Moyenne de toutes les valeurs calculées.
  */
-double replicates_monte_carlo(int nbReplicates, double * values)
+double replicates_monte_carlo(int nb_replicates, double * values)
 {
 	int i; 			// Variable d'itération
 	double sum = 0;	// Somme de chaque valeur de pi calculée
 
-	for (i = 0; i < nbReplicates; ++i)
+	for (i = 0; i < nb_replicates; ++i)
 	{
-		values[i] = monte_carlo(10000000); // Avec 1 000 000 000 et 100 essais : 3.1415838135
+		values[i] = monte_carlo(NB_POINTS); // Avec 1 000 000 000 et 100 essais : 3.1415838135
 		sum += values[i]; // Mise à jour de la somme
 	}
 
-	return sum / nbReplicates; // Calcul de la moyenne
+	return sum / nb_replicates; // Calcul de la moyenne
 }
 
 /**
@@ -94,9 +106,10 @@ double replicates_monte_carlo(int nbReplicates, double * values)
  * @param nb Nombre de valeur dans le jeu.
  * @param vals Tableau contenant les valeurs.
  * @param mean Moyenne des valeurs du tableau.
+ * 
  * @return double La variance du jeu.
  */
-double calcVariance(int nb, double * vals, double mean)
+double calc_variance(int nb, double * vals, double mean)
 {
 	double s = 0; 	// Somme des valeurs
 	int i;			// Variable d'itération
@@ -118,9 +131,10 @@ double calcVariance(int nb, double * vals, double mean)
  *  [120; +inf[ : case 33 du tableau
  * 
  * @param nb Nombre de valeurs utilisées.
+ * 
  * @return double Valeur du quantile.
  */
-double getT(int nb)
+double get_t(int nb)
 {
 	return t_values[nb <= 30 ? 30 : 
 				nb < 40 ? 30 : 
@@ -129,44 +143,89 @@ double getT(int nb)
 				33 ]; // Accède directement à la bonne case dans le tableau de quantiles.
 }
 
-double calcRadius(int nb, double * vals, double variance)
+/** 
+ * @brief Calcule le rayon de l'intervalle de confiance.
+ * 
+ * @param nb Nombre de valeur dans le jeu.
+ * @param vals Tableau contenant les valeurs du jeu.
+ * @param variance Variance du jeu de valeurs.
+ * 
+ * @return double Rayon de l'intervalle de confiance.
+ */
+double calc_radius(int nb, double * vals, double variance)
 {
-	return getT(nb) * sqrt(variance / nb);
+	return get_t(nb) * sqrt(variance / nb);
 }
 
+/**
+ * @brief Calcul de la suite de fibonnaci de manière itérative.
+ * 
+ * @param n Indice de l'élément que l'on veut calculer
+ * @param vals Liste des valeurs de la suite de fibonnaci jusqu'a l'élément n.
+ * @return unsigned long Valeur numéro n de la suite de fibonacci.
+ */
 unsigned long fibo(int n, unsigned long * vals)
 {
-	int i;
-	vals[0] = 1;
+	int i; // Variable d'itération
+	vals[0] = 1; // Initialisation des premières valeurs de la suite.
 	vals[1] = 1;
 
-	for (i = 2; i < n; ++i)
+	for (i = 2; i <= n; ++i) // Calcul de toutes les valeurs jusqu'à celle demandée.
 		vals[i] = vals[i - 1] + vals[i - 2];
 
-	return vals[n - 1];
+	return vals[n]; // Renvoie de la valeur demandée.
 }
 
+/**
+ * @brief Point d'entrée du programme.
+ * 
+ * Tout d'abord nous avons besoin d'initialiser le générateur aléatoire.
+ * 
+ * Nous répondons ensuite aux questions du sujet dans l'ordre.
+ * 
+ * @return int 
+ */
 int main()
 {
+	double values[NB_VALUES]; 	// Valeurs de PI calculées par la méthode de Monte-Carlo
+	unsigned long fib[100]; 	// Valeurs de la suite de Fibonacci
+	int i;						// Variable d'itération
+	double mean;				// Moyenne de values
+	double variance;			// Variance de values
+	double r;					// Rayon de l'intervalle de confiance de values
+	double minR, maxR;			// Intervalle de confiance de values
+
 	// Initialisation du générateur de nombre pseudo-aléatoire
     unsigned long init[4]={0x123, 0x234, 0x345, 0x456}, length=4;
     init_by_array(init, length);
 
-	double values[NB_VALUES];
-	unsigned long fib[100];
-/*
-	printf("PI (%10d) : %.10lf\n",1000, monte_carlo(1000));
-	printf("PI (%10d) : %.10lf\n",1000000, monte_carlo(1000000));
-	printf("PI (%10d) : %.10lf\n",1000000000, monte_carlo(1000000000));
-*/
+	printf("Nombre de valeurs : %d\n Nombre de points : %d\n\n", NB_VALUES, NB_POINTS); // Affichage des paramètres utilisés pour obtenir le résultat suivant
 
-	double mean = replicates_monte_carlo(NB_VALUES, values);
-	double variance = calcVariance(NB_VALUES, values, mean);
-	double r = calcRadius(NB_VALUES, values, variance);
-	double minR = mean - r;
-	double maxR = mean + r;
+	printf("Question 1 : \n");
 
-	printf("Mean : %.10f\nVar : %.10f\nR : %.10f\n[%.10f;%.10f]\n", mean, variance, r, minR, maxR);
+	printf("PI (%10d) : %.10lf\n",1000, monte_carlo(1000)); // Calcule de Pi par la methode de Monte-Carlo avec 1 000 points
+	printf("PI (%10d) : %.10lf\n",1000000, monte_carlo(1000000)); // Calcule de Pi par la methode de Monte-Carlo avec 1 000 000 points
+	printf("PI (%10d) : %.10lf\n",1000000000, monte_carlo(1000000000)); // Calcule de Pi par la methode de Monte-Carlo avec 1 000 000 000 points
 
-	printf("Fibo : %lu\n", fibo(90, fib));
+	printf("Question 2 : \n"); // A partir de maintenant chaque génération de Monte-Carlo se fera avec NB_POINTS points
+
+	mean = replicates_monte_carlo(NB_VALUES, values); // Calcul de Pi comme étant la moyenne des valeurs données par NB_VALUES génération de Monte-Carlo
+	printf("Mean : %.10f\n", mean); // Affichage de la moyenne calculée
+	
+	printf("Question 3 : \n");
+
+	variance = calc_variance(NB_VALUES, values, mean); // Calcul de la variance du jeu de valeur
+	r = calc_radius(NB_VALUES, values, variance); // Calcul du rayon de l'intervalle de confiance
+	minR = mean - r; // Calcul de l'intervalle de confiance
+	maxR = mean + r;
+
+	printf("Var : %.10f\nR : %.10f\n[%.10f;%.10f]\n", variance, r, minR, maxR); // Affichage des valeurs calculées pour la question 3
+
+	printf("Question 4 : \n");
+	fibo(95, fib); // Calcul des 96 premières valeurs de la suite de Fibonacci
+
+	for (i = 0; i < 10; ++i) // Affichage des 10 dernières valeurs calculées
+		printf("Fibo[%d] = %lu\n", 85 + i, fib[85 + i]);
+
+	return 0;
 }
