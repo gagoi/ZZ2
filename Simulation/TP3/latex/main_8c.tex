@@ -1,0 +1,230 @@
+\hypertarget{main_8c}{}\section{Référence du fichier main.\+c}
+\label{main_8c}\index{main.\+c@{main.\+c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}mt19937ar.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de main.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=281pt]{main_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{main_8c_ac2b9f4886ac2ac5ea260564b536e3038}\label{main_8c_ac2b9f4886ac2ac5ea260564b536e3038}} 
+\#define \hyperlink{main_8c_ac2b9f4886ac2ac5ea260564b536e3038}{N\+B\+\_\+\+V\+A\+L\+U\+ES}~10000
+\begin{DoxyCompactList}\small\item\em Nombre de valeurs de  utilisées pour faire les statistiques. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{main_8c_a33cd3c36e4c686ad8942cf8a1a570908}\label{main_8c_a33cd3c36e4c686ad8942cf8a1a570908}} 
+\#define \hyperlink{main_8c_a33cd3c36e4c686ad8942cf8a1a570908}{N\+B\+\_\+\+P\+O\+I\+N\+TS}~1000000
+\begin{DoxyCompactList}\small\item\em Nombre de points utilisés pour le calcule de PI via la méthode de Monte-\/\+Carlo, lors des statistiques. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{main_8c_a6c32a1c22d480688358e8eace35efd0c}{monte\+\_\+carlo} (int nb\+\_\+points)
+\begin{DoxyCompactList}\small\item\em Calcule la valeur de PI en utilisant la méthode de Monte-\/\+Carlo. \end{DoxyCompactList}\item 
+double \hyperlink{main_8c_a23fd60453a31f69345bb02d3a5b17b0f}{replicates\+\_\+monte\+\_\+carlo} (int nb\+\_\+replicates, double $\ast$values)
+\begin{DoxyCompactList}\small\item\em Réitère la méthode de Monte-\/\+Carlo pour en faire des statistiques. \end{DoxyCompactList}\item 
+double \hyperlink{main_8c_a5b0141d8591476a744c1d4f16db46d14}{calc\+\_\+variance} (int nb, double $\ast$vals, double mean)
+\begin{DoxyCompactList}\small\item\em Calcule de la variance du jeu de valeur. \end{DoxyCompactList}\item 
+double \hyperlink{main_8c_a5b6fa438fd077d32c3f8c730d34dbd8f}{get\+\_\+t} (int nb)
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}obtenir le quantile correspondant au nombre de valeurs que l\textquotesingle{}on utilisent. \end{DoxyCompactList}\item 
+double \hyperlink{main_8c_a0cfe536eba4b91f6a51e52c2a22029af}{calc\+\_\+radius} (int nb, double $\ast$vals, double variance)
+\begin{DoxyCompactList}\small\item\em Calcule le rayon de l\textquotesingle{}intervalle de confiance. \end{DoxyCompactList}\item 
+unsigned long \hyperlink{main_8c_ad4eb5e673c4233cf423cbbfcdb49f7ba}{fibo} (int n, unsigned long $\ast$vals)
+\begin{DoxyCompactList}\small\item\em Calcul de la suite de fibonnaci de manière itérative. \end{DoxyCompactList}\item 
+int \hyperlink{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\begin{DoxyCompactList}\small\item\em Point d\textquotesingle{}entrée du programme. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{main_8c_a2e52354c490dd2c4b74033562fec1739}{t\+\_\+values} \mbox{[}$\,$\mbox{]}
+\begin{DoxyCompactList}\small\item\em Tableau contenant les quantiles pour le calcul de l\textquotesingle{}intervalle de confiance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+\begin{DoxyAuthor}{Auteur}
+Jérémy Z\+A\+N\+G\+LA (\href{mailto:zangla.jeremy@gmail.com}{\tt zangla.\+jeremy@gmail.\+com}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2019-\/11-\/01
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2019 
+\end{DoxyCopyright}
+
+
+\subsection{Documentation des fonctions}
+\mbox{\Hypertarget{main_8c_a0cfe536eba4b91f6a51e52c2a22029af}\label{main_8c_a0cfe536eba4b91f6a51e52c2a22029af}} 
+\index{main.\+c@{main.\+c}!calc\+\_\+radius@{calc\+\_\+radius}}
+\index{calc\+\_\+radius@{calc\+\_\+radius}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{calc\+\_\+radius()}{calc\_radius()}}
+{\footnotesize\ttfamily double calc\+\_\+radius (\begin{DoxyParamCaption}\item[{int}]{nb,  }\item[{double $\ast$}]{vals,  }\item[{double}]{variance }\end{DoxyParamCaption})}
+
+
+
+Calcule le rayon de l\textquotesingle{}intervalle de confiance. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em nb} & Nombre de valeur dans le jeu. \\
+\hline
+{\em vals} & Tableau contenant les valeurs du jeu. \\
+\hline
+{\em variance} & Variance du jeu de valeurs.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+double Rayon de l\textquotesingle{}intervalle de confiance. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{main_8c_a5b0141d8591476a744c1d4f16db46d14}\label{main_8c_a5b0141d8591476a744c1d4f16db46d14}} 
+\index{main.\+c@{main.\+c}!calc\+\_\+variance@{calc\+\_\+variance}}
+\index{calc\+\_\+variance@{calc\+\_\+variance}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{calc\+\_\+variance()}{calc\_variance()}}
+{\footnotesize\ttfamily double calc\+\_\+variance (\begin{DoxyParamCaption}\item[{int}]{nb,  }\item[{double $\ast$}]{vals,  }\item[{double}]{mean }\end{DoxyParamCaption})}
+
+
+
+Calcule de la variance du jeu de valeur. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em nb} & Nombre de valeur dans le jeu. \\
+\hline
+{\em vals} & Tableau contenant les valeurs. \\
+\hline
+{\em mean} & Moyenne des valeurs du tableau.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+double La variance du jeu. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{main_8c_ad4eb5e673c4233cf423cbbfcdb49f7ba}\label{main_8c_ad4eb5e673c4233cf423cbbfcdb49f7ba}} 
+\index{main.\+c@{main.\+c}!fibo@{fibo}}
+\index{fibo@{fibo}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{fibo()}{fibo()}}
+{\footnotesize\ttfamily unsigned long fibo (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{unsigned long $\ast$}]{vals }\end{DoxyParamCaption})}
+
+
+
+Calcul de la suite de fibonnaci de manière itérative. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em n} & Indice de l\textquotesingle{}élément que l\textquotesingle{}on veut calculer \\
+\hline
+{\em vals} & Liste des valeurs de la suite de fibonnaci jusqu\textquotesingle{}a l\textquotesingle{}élément n. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+unsigned long Valeur numéro n de la suite de fibonacci. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{main_8c_a5b6fa438fd077d32c3f8c730d34dbd8f}\label{main_8c_a5b6fa438fd077d32c3f8c730d34dbd8f}} 
+\index{main.\+c@{main.\+c}!get\+\_\+t@{get\+\_\+t}}
+\index{get\+\_\+t@{get\+\_\+t}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{get\+\_\+t()}{get\_t()}}
+{\footnotesize\ttfamily double get\+\_\+t (\begin{DoxyParamCaption}\item[{int}]{nb }\end{DoxyParamCaption})}
+
+
+
+Permet d\textquotesingle{}obtenir le quantile correspondant au nombre de valeurs que l\textquotesingle{}on utilisent. 
+
+Les 30 premières valeurs du tableau sont en accès direct. ~\newline
+Les suivantes correspondent à des intervalles \+: ~\newline
+ \mbox{[}30; 40\mbox{[} \+: case 30 du tableau ~\newline
+ \mbox{[}40; 80\mbox{[} \+: case 31 du tableau ~\newline
+ \mbox{[}80; 120\mbox{[} \+: case 32 du tableau ~\newline
+ \mbox{[}120; +inf\mbox{[} \+: case 33 du tableau
+
+
+\begin{DoxyParams}{Paramètres}
+{\em nb} & Nombre de valeurs utilisées.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+double Valeur du quantile. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{main.\+c@{main.\+c}!main@{main}}
+\index{main@{main}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Point d\textquotesingle{}entrée du programme. 
+
+Tout d\textquotesingle{}abord nous avons besoin d\textquotesingle{}initialiser le générateur aléatoire.
+
+Nous répondons ensuite aux questions du sujet dans l\textquotesingle{}ordre.
+
+\begin{DoxyReturn}{Renvoie}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{main_8c_a6c32a1c22d480688358e8eace35efd0c}\label{main_8c_a6c32a1c22d480688358e8eace35efd0c}} 
+\index{main.\+c@{main.\+c}!monte\+\_\+carlo@{monte\+\_\+carlo}}
+\index{monte\+\_\+carlo@{monte\+\_\+carlo}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{monte\+\_\+carlo()}{monte\_carlo()}}
+{\footnotesize\ttfamily double monte\+\_\+carlo (\begin{DoxyParamCaption}\item[{int}]{nb\+\_\+points }\end{DoxyParamCaption})}
+
+
+
+Calcule la valeur de PI en utilisant la méthode de Monte-\/\+Carlo. 
+
+La méthode de Monte-\/\+Carlo utilise un cercle de rayon 1 centré en (0; 0) pour calculer PI. Cette méthode utilise la surface du cercle et celle du carrée pour calculer PI, respectivement P\+I$\ast$r² = PI et c² = 4 où r est le rayon du cercle (1) et c est le coté du carré (2). Le rapport de ces surfaces donne la probabilité que le point généré soit dans le cercle. On peut donc déduire PI de la manière suivante \+: \begin{eqnarray*} p &=& \frac{surface_{cercle}}{surface_{carre}} \\ \frac{nb\_inner}{nb\_points} &=& \frac{surface_{cercle}}{surface_{carre}} \\ \frac{nb\_inner}{nb\_points} &=& \frac{\pi \times r^2}{c^2} \\ \frac{nb\_inner}{nb\_points} &=& \frac{\pi}{4} \\ 4*\frac{nb\_inner}{nb\_points} &=& \pi \\ \end{eqnarray*}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em nb\+Points} & Nombre de points générés pour calculer PI.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+double Valeur de PI calculée. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{main_8c_a23fd60453a31f69345bb02d3a5b17b0f}\label{main_8c_a23fd60453a31f69345bb02d3a5b17b0f}} 
+\index{main.\+c@{main.\+c}!replicates\+\_\+monte\+\_\+carlo@{replicates\+\_\+monte\+\_\+carlo}}
+\index{replicates\+\_\+monte\+\_\+carlo@{replicates\+\_\+monte\+\_\+carlo}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{replicates\+\_\+monte\+\_\+carlo()}{replicates\_monte\_carlo()}}
+{\footnotesize\ttfamily double replicates\+\_\+monte\+\_\+carlo (\begin{DoxyParamCaption}\item[{int}]{nb\+\_\+replicates,  }\item[{double $\ast$}]{values }\end{DoxyParamCaption})}
+
+
+
+Réitère la méthode de Monte-\/\+Carlo pour en faire des statistiques. 
+
+Chaque valeur de  utilisée pour les statistiques sera calculée à parti de 1 000 000 000 de points.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em nb\+Replicates} & Nombre de valeur que l\textquotesingle{}on veut utilisé pour les futures statistiques. \\
+\hline
+{\em values} & Tableau dans lequel on va mettre les valeurs de  calculées.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+double Moyenne de toutes les valeurs calculées. 
+\end{DoxyReturn}
+
+
+\subsection{Documentation des variables}
+\mbox{\Hypertarget{main_8c_a2e52354c490dd2c4b74033562fec1739}\label{main_8c_a2e52354c490dd2c4b74033562fec1739}} 
+\index{main.\+c@{main.\+c}!t\+\_\+values@{t\+\_\+values}}
+\index{t\+\_\+values@{t\+\_\+values}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{t\+\_\+values}{t\_values}}
+{\footnotesize\ttfamily t\+\_\+values}
+
+{\bfseries Valeur initiale \+:}
+\begin{DoxyCode}
+= \{
+    12.706, 4.303, 3.182, 2.776, 2.571, 2.447, 2.365, 2.308, 2.262, 2.228, 2.201, 2.179, 
+    2.160, 2.145, 2.131, 2.120, 2.110, 2.101, 2.093, 2.086, 2.080, 2.074, 2.069, 2.064, 
+    2.060, 2.056, 2.020, 2.048, 2.045, 2.042, 2.021, 2, 1.980, 1.960
+\}
+\end{DoxyCode}
+
+
+Tableau contenant les quantiles pour le calcul de l\textquotesingle{}intervalle de confiance. 
+

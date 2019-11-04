@@ -1,0 +1,17 @@
+	double monte_carlo(int nb_points)
+	{
+		double x, y; 		// Coordonnée du point généré
+		int i;				// Variable d'itération
+		int nb_inner = 0;	// Nombre de point à l'intérieur du quart de cercle trigonométrique
+	
+		for (i = 0; i < nb_points; ++i)
+		{
+			x = genrand_real1(); // On génère un nouveau point
+			y = genrand_real1();
+	
+			if (pow(x, 2) + pow(y, 2) < 1) // Si il est dans le cercle, on incrémente le compteur
+				nb_inner++;
+		}
+	
+		return 4.0 * nb_inner / nb_points; // On renvoie la valeur de PI (explications plus haut)
+	}

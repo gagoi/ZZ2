@@ -1,0 +1,406 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>TP3 Simulation: Référence du fichier main.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">TP3 Simulation
+   </div>
+   <div id="projectbrief">Intervalle de confiance &amp; Fibonnacci</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Fonctions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier main.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;math.h&gt;</code><br />
+<code>#include &quot;mt19937ar.h&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de main.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8c__incl.png" border="0" usemap="#main_8c" alt=""/></div>
+<map name="main_8c" id="main_8c">
+<area shape="rect" id="node4" href="mt19937ar_8h_source.html" title="mt19937ar.h" alt="" coords="178,80,273,107"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ac2b9f4886ac2ac5ea260564b536e3038"><td class="memItemLeft" align="right" valign="top"><a id="ac2b9f4886ac2ac5ea260564b536e3038"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ac2b9f4886ac2ac5ea260564b536e3038">NB_VALUES</a>&#160;&#160;&#160;10000</td></tr>
+<tr class="memdesc:ac2b9f4886ac2ac5ea260564b536e3038"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nombre de valeurs de  utilisées pour faire les statistiques. <br /></td></tr>
+<tr class="separator:ac2b9f4886ac2ac5ea260564b536e3038"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33cd3c36e4c686ad8942cf8a1a570908"><td class="memItemLeft" align="right" valign="top"><a id="a33cd3c36e4c686ad8942cf8a1a570908"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a33cd3c36e4c686ad8942cf8a1a570908">NB_POINTS</a>&#160;&#160;&#160;1000000</td></tr>
+<tr class="memdesc:a33cd3c36e4c686ad8942cf8a1a570908"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nombre de points utilisés pour le calcule de PI via la méthode de Monte-Carlo, lors des statistiques. <br /></td></tr>
+<tr class="separator:a33cd3c36e4c686ad8942cf8a1a570908"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a6c32a1c22d480688358e8eace35efd0c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a6c32a1c22d480688358e8eace35efd0c">monte_carlo</a> (int nb_points)</td></tr>
+<tr class="memdesc:a6c32a1c22d480688358e8eace35efd0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcule la valeur de PI en utilisant la méthode de Monte-Carlo.  <a href="#a6c32a1c22d480688358e8eace35efd0c">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a6c32a1c22d480688358e8eace35efd0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23fd60453a31f69345bb02d3a5b17b0f"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a23fd60453a31f69345bb02d3a5b17b0f">replicates_monte_carlo</a> (int nb_replicates, double *values)</td></tr>
+<tr class="memdesc:a23fd60453a31f69345bb02d3a5b17b0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Réitère la méthode de Monte-Carlo pour en faire des statistiques.  <a href="#a23fd60453a31f69345bb02d3a5b17b0f">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a23fd60453a31f69345bb02d3a5b17b0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b0141d8591476a744c1d4f16db46d14"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a5b0141d8591476a744c1d4f16db46d14">calc_variance</a> (int nb, double *vals, double mean)</td></tr>
+<tr class="memdesc:a5b0141d8591476a744c1d4f16db46d14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcule de la variance du jeu de valeur.  <a href="#a5b0141d8591476a744c1d4f16db46d14">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a5b0141d8591476a744c1d4f16db46d14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b6fa438fd077d32c3f8c730d34dbd8f"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a5b6fa438fd077d32c3f8c730d34dbd8f">get_t</a> (int nb)</td></tr>
+<tr class="memdesc:a5b6fa438fd077d32c3f8c730d34dbd8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet d'obtenir le quantile correspondant au nombre de valeurs que l'on utilisent.  <a href="#a5b6fa438fd077d32c3f8c730d34dbd8f">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a5b6fa438fd077d32c3f8c730d34dbd8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cfe536eba4b91f6a51e52c2a22029af"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a0cfe536eba4b91f6a51e52c2a22029af">calc_radius</a> (int nb, double *vals, double variance)</td></tr>
+<tr class="memdesc:a0cfe536eba4b91f6a51e52c2a22029af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcule le rayon de l'intervalle de confiance.  <a href="#a0cfe536eba4b91f6a51e52c2a22029af">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a0cfe536eba4b91f6a51e52c2a22029af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4eb5e673c4233cf423cbbfcdb49f7ba"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ad4eb5e673c4233cf423cbbfcdb49f7ba">fibo</a> (int n, unsigned long *vals)</td></tr>
+<tr class="memdesc:ad4eb5e673c4233cf423cbbfcdb49f7ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcul de la suite de fibonnaci de manière itérative.  <a href="#ad4eb5e673c4233cf423cbbfcdb49f7ba">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ad4eb5e673c4233cf423cbbfcdb49f7ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
+<tr class="memdesc:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Point d'entrée du programme.  <a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a2e52354c490dd2c4b74033562fec1739"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a2e52354c490dd2c4b74033562fec1739">t_values</a> []</td></tr>
+<tr class="memdesc:a2e52354c490dd2c4b74033562fec1739"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tableau contenant les quantiles pour le calcul de l'intervalle de confiance.  <a href="#a2e52354c490dd2c4b74033562fec1739">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a2e52354c490dd2c4b74033562fec1739"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><dl class="section author"><dt>Auteur</dt><dd>Jérémy ZANGLA (<a href="#" onclick="location.href='mai'+'lto:'+'zan'+'gl'+'a.j'+'er'+'emy'+'@g'+'mai'+'l.'+'com'; return false;">zangl<span style="display: none;">.nosp@m.</span>a.je<span style="display: none;">.nosp@m.</span>remy@<span style="display: none;">.nosp@m.</span>gmai<span style="display: none;">.nosp@m.</span>l.com</a>) </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>0.1 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2019-11-01</dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2019 </dd></dl>
+</div><h2 class="groupheader">Documentation des fonctions</h2>
+<a id="a0cfe536eba4b91f6a51e52c2a22029af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cfe536eba4b91f6a51e52c2a22029af">&#9670;&nbsp;</a></span>calc_radius()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double calc_radius </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>vals</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>variance</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calcule le rayon de l'intervalle de confiance. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nb</td><td>Nombre de valeur dans le jeu. </td></tr>
+    <tr><td class="paramname">vals</td><td>Tableau contenant les valeurs du jeu. </td></tr>
+    <tr><td class="paramname">variance</td><td>Variance du jeu de valeurs.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>double Rayon de l'intervalle de confiance. </dd></dl>
+
+</div>
+</div>
+<a id="a5b0141d8591476a744c1d4f16db46d14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b0141d8591476a744c1d4f16db46d14">&#9670;&nbsp;</a></span>calc_variance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double calc_variance </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>vals</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>mean</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calcule de la variance du jeu de valeur. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nb</td><td>Nombre de valeur dans le jeu. </td></tr>
+    <tr><td class="paramname">vals</td><td>Tableau contenant les valeurs. </td></tr>
+    <tr><td class="paramname">mean</td><td>Moyenne des valeurs du tableau.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>double La variance du jeu. </dd></dl>
+
+</div>
+</div>
+<a id="ad4eb5e673c4233cf423cbbfcdb49f7ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4eb5e673c4233cf423cbbfcdb49f7ba">&#9670;&nbsp;</a></span>fibo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long fibo </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned long *&#160;</td>
+          <td class="paramname"><em>vals</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calcul de la suite de fibonnaci de manière itérative. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>Indice de l'élément que l'on veut calculer </td></tr>
+    <tr><td class="paramname">vals</td><td>Liste des valeurs de la suite de fibonnaci jusqu'a l'élément n. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>unsigned long Valeur numéro n de la suite de fibonacci. </dd></dl>
+
+</div>
+</div>
+<a id="a5b6fa438fd077d32c3f8c730d34dbd8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b6fa438fd077d32c3f8c730d34dbd8f">&#9670;&nbsp;</a></span>get_t()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double get_t </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nb</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Permet d'obtenir le quantile correspondant au nombre de valeurs que l'on utilisent. </p>
+<p>Les 30 premières valeurs du tableau sont en accès direct. <br />
+Les suivantes correspondent à des intervalles : <br />
+ [30; 40[ : case 30 du tableau <br />
+ [40; 80[ : case 31 du tableau <br />
+ [80; 120[ : case 32 du tableau <br />
+ [120; +inf[ : case 33 du tableau</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nb</td><td>Nombre de valeurs utilisées.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>double Valeur du quantile. </dd></dl>
+
+</div>
+</div>
+<a id="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&nbsp;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Point d'entrée du programme. </p>
+<p>Tout d'abord nous avons besoin d'initialiser le générateur aléatoire.</p>
+<p>Nous répondons ensuite aux questions du sujet dans l'ordre.</p>
+<dl class="section return"><dt>Renvoie</dt><dd>int </dd></dl>
+
+</div>
+</div>
+<a id="a6c32a1c22d480688358e8eace35efd0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c32a1c22d480688358e8eace35efd0c">&#9670;&nbsp;</a></span>monte_carlo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double monte_carlo </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nb_points</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calcule la valeur de PI en utilisant la méthode de Monte-Carlo. </p>
+<p>La méthode de Monte-Carlo utilise un cercle de rayon 1 centré en (0; 0) pour calculer PI. Cette méthode utilise la surface du cercle et celle du carrée pour calculer PI, respectivement PI*r² = PI et c² = 4 où r est le rayon du cercle (1) et c est le coté du carré (2). Le rapport de ces surfaces donne la probabilité que le point généré soit dans le cercle. On peut donc déduire PI de la manière suivante : </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\begin{eqnarray*} p &amp;=&amp; \frac{surface_{cercle}}{surface_{carre}} \\ \frac{nb\_inner}{nb\_points} &amp;=&amp; \frac{surface_{cercle}}{surface_{carre}} \\ \frac{nb\_inner}{nb\_points} &amp;=&amp; \frac{\pi \times r^2}{c^2} \\ \frac{nb\_inner}{nb\_points} &amp;=&amp; \frac{\pi}{4} \\ 4*\frac{nb\_inner}{nb\_points} &amp;=&amp; \pi \\ \end{eqnarray*}" src="form_8.png"/>
+</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nbPoints</td><td>Nombre de points générés pour calculer PI.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>double Valeur de PI calculée. </dd></dl>
+
+</div>
+</div>
+<a id="a23fd60453a31f69345bb02d3a5b17b0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23fd60453a31f69345bb02d3a5b17b0f">&#9670;&nbsp;</a></span>replicates_monte_carlo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double replicates_monte_carlo </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nb_replicates</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>values</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Réitère la méthode de Monte-Carlo pour en faire des statistiques. </p>
+<p>Chaque valeur de  utilisée pour les statistiques sera calculée à parti de 1 000 000 000 de points.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nbReplicates</td><td>Nombre de valeur que l'on veut utilisé pour les futures statistiques. </td></tr>
+    <tr><td class="paramname">values</td><td>Tableau dans lequel on va mettre les valeurs de  calculées.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>double Moyenne de toutes les valeurs calculées. </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des variables</h2>
+<a id="a2e52354c490dd2c4b74033562fec1739"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e52354c490dd2c4b74033562fec1739">&#9670;&nbsp;</a></span>t_values</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">t_values</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur initiale :</b><div class="fragment"><div class="line">= {</div><div class="line">    12.706, 4.303, 3.182, 2.776, 2.571, 2.447, 2.365, 2.308, 2.262, 2.228, 2.201, 2.179, </div><div class="line">    2.160, 2.145, 2.131, 2.120, 2.110, 2.101, 2.093, 2.086, 2.080, 2.074, 2.069, 2.064, </div><div class="line">    2.060, 2.056, 2.020, 2.048, 2.045, 2.042, 2.021, 2, 1.980, 1.960</div><div class="line">}</div></div><!-- fragment -->
+<p>Tableau contenant les quantiles pour le calcul de l'intervalle de confiance. </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

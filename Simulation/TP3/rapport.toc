@@ -1,0 +1,15 @@
+\contentsline {section}{\numberline {1}Pr\IeC {\'e}ambule}{3}% 
+\contentsline {subsection}{\numberline {1.1}Contenu du programme}{3}% 
+\contentsline {section}{\numberline {2}M\IeC {\'e}thode de Monte-Carlo}{4}% 
+\contentsline {subsection}{\numberline {2.1}Description de la m\IeC {\'e}thode}{4}% 
+\contentsline {subsection}{\numberline {2.2}Impl\IeC {\'e}mentation de la m\IeC {\'e}thode}{4}% 
+\contentsline {subsection}{\numberline {2.3}Etude approfondie des r\IeC {\'e}sultats}{5}% 
+\contentsline {subsubsection}{\numberline {2.3.1}Configuration}{5}% 
+\contentsline {subsubsection}{\numberline {2.3.2}Impl\IeC {\'e}mentation}{5}% 
+\contentsline {subsubsection}{\numberline {2.3.3}Moyennes des r\IeC {\'e}sultats}{6}% 
+\contentsline {subsubsection}{\numberline {2.3.4}Impl\IeC {\'e}mentation de l'intervalle de confiance}{6}% 
+\contentsline {subsubsection}{\numberline {2.3.5}Intervalles de confiance}{7}% 
+\contentsline {subsection}{\numberline {2.4}Conclusion}{8}% 
+\contentsline {section}{\numberline {3}Suite de Fibonacci}{8}% 
+\contentsline {subsection}{\numberline {3.1}Impl\IeC {\'e}mentation}{8}% 
+\contentsline {subsection}{\numberline {3.2}R\IeC {\'e}sultats}{8}% 

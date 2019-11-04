@@ -1,0 +1,41 @@
+\begin{theindex}
+
+  \item {calc\+\_\+radius}
+    \subitem {main.\+c}, \hyperpage{4}
+  \item {calc\+\_\+variance}
+    \subitem {main.\+c}, \hyperpage{4}
+
+  \indexspace
+
+  \item {fibo}
+    \subitem {main.\+c}, \hyperpage{5}
+
+  \indexspace
+
+  \item {get\+\_\+t}
+    \subitem {main.\+c}, \hyperpage{5}
+
+  \indexspace
+
+  \item {main.\+c}, \hyperpage{3}
+    \subitem {calc\+\_\+radius}, \hyperpage{4}
+    \subitem {calc\+\_\+variance}, \hyperpage{4}
+    \subitem {fibo}, \hyperpage{5}
+    \subitem {get\+\_\+t}, \hyperpage{5}
+    \subitem {monte\+\_\+carlo}, \hyperpage{6}
+    \subitem {replicates\+\_\+monte\+\_\+carlo}, \hyperpage{6}
+    \subitem {t\+\_\+values}, \hyperpage{7}
+  \item {monte\+\_\+carlo}
+    \subitem {main.\+c}, \hyperpage{6}
+
+  \indexspace
+
+  \item {replicates\+\_\+monte\+\_\+carlo}
+    \subitem {main.\+c}, \hyperpage{6}
+
+  \indexspace
+
+  \item {t\+\_\+values}
+    \subitem {main.\+c}, \hyperpage{7}
+
+\end{theindex}

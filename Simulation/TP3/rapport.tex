@@ -5,9 +5,10 @@
 \usepackage[utf8]{inputenc}
 \usepackage[dvipsnames]{xcolor}
 \usepackage{mdframed}
+\usepackage{multicol}
 \usepackage{geometry}
 
-\geometry{hmargin=2.5cm,vmargin=1.5cm}
+\geometry{hmargin=2.2cm,vmargin=1.5cm}
 \definecolor{light-gray}{gray}{0.95} %the shade of grey that stack exchange uses
 
 \title{Compte Rendu TP3\\Intervalle de confiance et Fibonacci}
@@ -49,9 +50,23 @@
 \tableofcontents
 \pagebreak
 \section{Préambule}
-	Nous utilisons pour la génération des nombres aléatoires le code de Matsumoto reprennant le générateur de Mersenne Twister. Nous ne décrirons pas son code, et nous n'utiliseront que la fonction genrand\_real1 qui nous renvoie un nombre pseudo-aléatoire appartenant à [0; 1].
-	\\
-	Tout le code que nous avons développé sera décrit ici. De plus une documentation sera jointe à ce rapport. Enfin une série de résultats obtenus avec différents paramètres sera également jointe.
+Nous utilisons pour la génération des nombres aléatoires le code de Matsumoto reprennant le générateur de Mersenne Twister. Nous ne décrirons pas son code, et nous n'utiliseront que la fonction genrand\_real1 qui nous renvoie un nombre pseudo-aléatoire appartenant à [0; 1].
+\\
+Tout le code que nous avons développé sera décrit ici. De plus une documentation sera jointe à ce rapport. Enfin une série de résultats obtenus avec différents paramètres sera également jointe.
+
+\subsection{Contenu du programme}
+Le programme va tout d'abord initialisé le générateur pseudo-aléatoire. Ensuite, il affichera 3 estimations de $pi$ en utilisant la méthode de Monte-Carlo avec respectivement 1 000, 1 000 000 et enfin 1 000 000 000 de points.
+Puis le programme fera une série d'estimations de $pi$ avec la méthode de Monte-Carlo, en calculera la moyenne et l'intervalle de confiance.
+Enfin il calculera les 95 premières valeurs de la suite de Fibonacci.
+
+\begin{mdframed}[backgroundcolor=light-gray, roundcorner=20pt,
+	leftmargin=-45, rightmargin=-45, 
+	innerleftmargin=20, innertopmargin=1, innerbottommargin=1, 
+	outerlinewidth=1, linecolor=darkgray]
+	\lstinputlisting[language=C, firstline=186, lastline=248]{main.c}
+\end{mdframed}
+
+
 \section{Méthode de Monte-Carlo}
 \subsection{Description de la méthode}
 L'algorithme suivi ici est tout simple, on travaille dans le carré déterminé par les points (0; 0) et (1; 1). 
@@ -72,7 +87,7 @@ Donc, nous pouvons déduire $pi$ de la manière suivante :
 	leftmargin=-45, rightmargin=-45, 
 	innerleftmargin=20, innertopmargin=1, innerbottommargin=1, 
 	outerlinewidth=1, linecolor=darkgray]
-	\lstinputlisting[language=C, firstline=59, lastline=77]{main.c}
+	\lstinputlisting[language=C, firstline=62, lastline=80]{main.c}
 \end{mdframed}
 
 Nous nous posons la question de la précision de ce résultat. Nous avons donc utilisé cette fonction\\ avec 1 000, 1 000 000 et enfin 1 000 000 000 de points.
@@ -84,14 +99,211 @@ Nous nous posons la question de la précision de ce résultat. Nous avons donc u
 		\\\hline
 		Valeur de $pi$ obtenue & 3.124 00 & 3.144 72 & 3.141 54
 		\\\hline
-		Ordre de grandeur de l'erreur & $10^{-2}$ & $10^{-3}$ & $10^{-4}$
+		Ordre de grandeur de la précision & $10^{-1}$ & $10^{-2}$ & $10^{-3}$
 		\\\hline
 	\end{tabular}
 \end{center}
 
 On peut conclure rapidement qu'il faut multiplier par 1 000 le nombre de points pour obtenir une précision seulement 10 fois meilleure.
+On remarque alors la limite de cette méthode de calcul, il faut générer beaucoup de nombres aléatoires pour obtenir une précision assez faible.
+
+\subsection{Etude approfondie des résultats}
+Nous allons maintenant étudié plus en détails les résultats précédents. Pour celà nous allons construire un tableau contenant 100, 1 000 et enfin 10 000 estimations de $pi$. 
+Pour chacun de ses essaies nous allons aussi étudier l'importance du nombre de points, nous allons reprendre les paliers de la question précédente à savoir 1 000 et 1 000 000 de points par estimation de $pi$.
+Nous ne travailleront plus avec 1 000 000 000 de points par estimations, car le temps de calcul est beaucoup trop important.
+
+\subsubsection{Configuration}
+Pour changer le nombre de points utilisés par estimation de $pi$
+nous modifierons la constante NB\_POINTS.
+Pour choisir le nombre d'estimations, 
+il faudra changer la valeur de la constante NB\_VALUES.
+
+\begin{mdframed}[backgroundcolor=light-gray, roundcorner=20pt,
+	leftmargin=-45, rightmargin=-45, 
+	innerleftmargin=20, innertopmargin=1, innerbottommargin=1, 
+	outerlinewidth=1, linecolor=darkgray]
+	\lstinputlisting[language=C, firstline=16, lastline=21]{main.c}
+\end{mdframed}
+
+\begin{mdframed}[backgroundcolor=light-gray, roundcorner=20pt,
+	leftmargin=-45, rightmargin=-45, 
+	innerleftmargin=20, innertopmargin=1, innerbottommargin=1, 
+	outerlinewidth=1, linecolor=darkgray]
+	\lstinputlisting[language=C, firstline=24, lastline=30]{main.c}
+\end{mdframed}
+
+\subsubsection{Implémentation}
+
+Nous avons décidé ici de faire une fonction qui stock les estimations de $pi$ dans un tableau, tout en calculant la moyenne de ces valeurs.
+
+\begin{mdframed}[backgroundcolor=light-gray, roundcorner=20pt,
+	leftmargin=-45, rightmargin=-45, 
+	innerleftmargin=20, innertopmargin=1, innerbottommargin=1, 
+	outerlinewidth=1, linecolor=darkgray]
+	\lstinputlisting[language=C, firstline=82, lastline=106]{main.c}
+\end{mdframed}
+
+\subsubsection{Moyennes des résultats}
+Nous nous intéressons tout d'abord à la moyenne des valeurs obtenues. Nous faisons une troncataure à 7 chiffres significatifs.
+\smallskip
+	
+\begin{multicols}{2}
+	\begin{center}
+		Avec 1 000 points \\
+		\begin{tabular}{|c||c|}
+			\hline
+			Nombre d'estimations & Moyenne
+			\\\hline
+			100 & 3.135 120
+			\\\hline
+			1 000 & 3.140 084
+			\\\hline
+			10 000 & 3.142 187
+			\\\hline
+		\end{tabular}\\
+		Avec 1 000 000 de points \\
+		\begin{tabular}{|c||c|}
+			\hline
+			Nombre d'estimations & Moyenne
+			\\\hline
+			100 & 3.141 660
+			\\\hline
+			1 000 & 3.141 582
+			\\\hline
+			10 000 & 3.141 569
+			\\\hline
+		\end{tabular}
+	\end{center}
+\end{multicols}
+
+On remarque ici que sur seulement 100 estimations de PI avec 1 000 points la précision est très faible $10^{-1}$.
+Cependant lorsque l'on augmente le nombre de valeurs à 1 000, la précision semble s'améliorer pour atteindre $10^{-2}$, 
+ce qui serait confirmer par la moyenne à 10 000 estimations qui n'a pas régressé en précision.
+
+Avec 1 000 000 de points par estimation la conclusion est la même la précision avec seulement 100 estimations est moins 
+précise que pour 1 000 et 10 000 (respectivement $10^{-3}$ et $10^{-4}$).
+
+La question est donc de savoir pourquoi. Faire 1 000 estimations à 1 000 points chacune, nous fait générer 1 000 000 de points
+et l'on retombe bien sur la précision de $10^{-2}$ mesurée précédemment. 
+Idem pour 1 000 estimations de 1 000 000 de points, on retombe sur une estimation à 1 000 000 000 de points (précision de $10^{-4}$).
+
+Il faut faire attention en traitant ces résultats, en effet, ce sont des moyennes.
+Nous ne somme donc pas assuré que chacun des éléments du jeu de valeurs possède la même précision que la moyenne.
+Nous sommes même sûr du contraire, si chaque élément pris individuellement avait la même précision que la moyenne, le nombre d'estimations n'influencerait pas la précision de cette dernière.
+
+\subsubsection{Implémentation de l'intervalle de confiance}
+
+Pour calculer l'intervalle de confiance d'un jeu de valeurs, 
+il faut tout d'abord calculer sa variance.
+\smallskip
+\begin{mdframed}[backgroundcolor=light-gray, roundcorner=20pt,
+	leftmargin=-45, rightmargin=-45, 
+	innerleftmargin=20, innertopmargin=1, innerbottommargin=1, 
+	outerlinewidth=1, linecolor=darkgray]
+	\lstinputlisting[language=C, firstline=108, lastline=128]{main.c}
+\end{mdframed}
+
+On a ensuite besoin du quantile à 95\%, il est donné par la table suivante :
+\begin{mdframed}[backgroundcolor=light-gray, roundcorner=20pt,
+	leftmargin=-45, rightmargin=-45, 
+	innerleftmargin=20, innertopmargin=1, innerbottommargin=1, 
+	outerlinewidth=1, linecolor=darkgray]
+	\lstinputlisting[language=C, firstline=33, lastline=42]{main.c}
+\end{mdframed}
+
+Le quantile dépendant du nombre de valeurs dans le jeu, nous avons donc une fonction qui nous donne 
+directement le bon quantile à partir du tableau et du nombre de valeurs.
+\begin{mdframed}[backgroundcolor=light-gray, roundcorner=20pt,
+	leftmargin=-45, rightmargin=-45, 
+	innerleftmargin=20, innertopmargin=1, innerbottommargin=1, 
+	outerlinewidth=1, linecolor=darkgray]
+	\lstinputlisting[language=C, firstline=130, lastline=151]{main.c}
+\end{mdframed}
+
+Il faut ensuite calculer le rayon de confiance, c'est à dire la distance entre la moyenne et chaque borne de l'intervalle de confiance.
+
+\begin{mdframed}[backgroundcolor=light-gray, roundcorner=20pt,
+	leftmargin=-45, rightmargin=-45, 
+	innerleftmargin=20, innertopmargin=1, innerbottommargin=1, 
+	outerlinewidth=1, linecolor=darkgray]
+	\lstinputlisting[language=C, firstline=153, lastline=165]{main.c}
+\end{mdframed}
+
+\subsubsection{Intervalles de confiance}
+Nous allons reprendre ici les mêmes paramètres que pour la moyenne ainsi que la troncature à $10^{-6}$.
+	
+	\begin{center}
+		Avec 1 000 points \\
+		\begin{tabular}{|c||c|c|c|}
+			\hline
+			Nombre d'estimations & Intervalle de confiance & Rayon de confiance & Distance à $pi$
+			\\\hline
+			100 & [3.124 303; 3.145 936] & 0.0108164344 & 0.017 289
+			\\\hline
+			1 000 & [3.136 786; 3.143 381] & 0.0032974956 & 0.004 806
+			\\\hline
+			10 000 & [3.141 170; 3.143 204] & 0.0010171427 & 0.001 611
+			\\\hline
+		\end{tabular}\\
+		\medskip
+		Avec 1 000 000 de points \\
+		\begin{tabular}{|c||c|c|c|}
+			\hline
+			Nombre d'estimations & Intervalle de confiance & Rayon de confiance & Distance à $pi$
+			\\\hline
+			100 & [3.141 314; 3.142 005] & 0.0003458297 & 0.000 412
+			\\\hline
+			1 000 & [3.141 477; 3.141 687] & 0.0001049311 & 0.000 115
+			\\\hline
+			10 000 & [3.141 537; 3.141 602] & 0.0000324047 & 0.000 055
+			\\\hline
+		\end{tabular}
+	\end{center}
+
+L'intervalle de confiance à 95\% nous donne comme information que 95\% des valeurs du jeu sont dans les bornes.
+La première chose à étudier en voyant ces intervalles est si $pi$ y appartient bel et bien. Ici, c'est vérifié, 
+ensuite on peut étudier la précision des valeurs. C'est à dire regarder la précision de 95\% des estimations.
+Ici, on voit que 95\% des valeurs du premiers jeu d'estimations (1 000 points, 100 valeurs) sont approchés à moins de 0.02 de $pi$.
+Ainsi on sait que pour une utilisation ne nécessitant que cette précision, on peut travailler avec ces valeurs 
+et s'attendre à ce que 95\% des valeurs soient fonctionnelles. C'est à dire avoir 5\% de résultats qui seront erronés.
+
+Enfin on peut comparer les intervalles entre eux, plus particulièrement les rayons de confiance. 
+On remarque qu'ils se réduisent lorsque l'on augmente le nombre de points par estimations et/ou le nombre d'estimations.
+
+\subsection{Conclusion}
+Cette méthode de calcul de $pi$, n'est vraiment pas performante. Pour obtenir une précision très faible il faut faire beaucoup de calculs (et de générations de nombres aléatoires). 
+On atteint donc plusieurs limitations, la première étant le temps de calcul. Supposons que ça n'est pas un problème, que l'on peut paralléliser suffisamment l'algorithme pour que le calcul soit fait instantanémment,
+la seconde étant la génération des nombres aléatoires. Nous utilisons ici un génératoire pseudo aléatoire,
+pour pouvoir reproduire les résultats. Malheureusement, comme il est nécessaire d'avoir un nombre de points très grand pour augmenter la précision du résultat, on peut craindre le dépassement 
+de la période du générateur aléatoire lorsque l'on voudrait obtenir une précision supérieure (ou bien même vouloir continuer la découverte des décimales de $pi$).
+
+On peut donc conclure que cette méthode n'est pas efficace pour déterminer des décimales de $pi$.
+
 \section{Suite de Fibonacci}
 
+Cette partie simule de manière très basique l'accroissement d'une population de lapin (sans décés). L'itération x signifie qu'au bout de x mois, la population de lapins sera de fibo(x) couples, donc 2*fibo(x) lapins.
 
+\subsection{Implémentation}
+
+Nous implémentons ici la version itérative de la suite de Fibonacci.
+
+\begin{mdframed}[backgroundcolor=light-gray, roundcorner=20pt,
+	leftmargin=-45, rightmargin=-45, 
+	innerleftmargin=20, innertopmargin=1, innerbottommargin=1, 
+	outerlinewidth=1, linecolor=darkgray]
+	\lstinputlisting[language=C, firstline=167, lastline=184]{main.c}
+\end{mdframed}
+
+\subsection{Résultats}
+
+On remarque que les résultats sont valables jusqu'à l'itération 92, la 93 n'étant pas la sommes de la 91 et la 92.
+Cette erreur est causée par la limite de la taille de la donnée (unsigned long) : on dépasse le maximum de ce type.
+
+\begin{mdframed}[backgroundcolor=light-gray, roundcorner=20pt,
+	leftmargin=-45, rightmargin=-45, 
+	innerleftmargin=20, innertopmargin=1, innerbottommargin=1, 
+	outerlinewidth=1, linecolor=darkgray]
+	\lstinputlisting[language=C, firstline=15, lastline=24]{out_100_1000.txt}
+\end{mdframed}
 
 \end{document}
