@@ -18,11 +18,22 @@ private:
 	ItList(Cell<T> * el);
 public:
 	ItList();
-	T operator*();
+
+
+	void remove();
+
+	T& operator*();
+	const T& operator*() const;
+	ItList<T>& operator++();
+	ItList<T> operator++(int);
+	ItList<T>& operator--();
+	ItList<T> operator--(int);
+
+
+	template <typename T2>
+	friend bool operator!=(const ItList<T2> & i, const ItList<T2> & i2);
 };
 
-template <typename T>
-bool operator!=(const ItList<T> & i, const ItList<T> & i2);
 
 #include "ItList.tpp"
 

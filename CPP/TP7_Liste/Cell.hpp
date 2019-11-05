@@ -18,7 +18,8 @@ public:
 	Cell<T> * prev() const;
 	void setNext(Cell<T> * next);
 	void setPrev(Cell<T> * prev);
-	T getValue() const;
+	const T& getValue() const;
+	T& getValue();
 
 	template<typename T2>
 	friend std::ostream operator<<(std::ostream & out, Cell<T2> & cell);

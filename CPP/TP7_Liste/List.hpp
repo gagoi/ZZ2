@@ -33,6 +33,7 @@ public:
 	void display(std::ostream & os) const;
 	ItList<T> begin() const;
 	ItList<T> end() const;
+	ItList<T> find(T t) const;
 
 	template<typename T2>
 	friend std::ostream & operator<<(std::ostream & out, List<T2> & t);

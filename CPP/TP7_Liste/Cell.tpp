@@ -29,7 +29,14 @@ void Cell<T>::setPrev(Cell<T> * prev)
 }
 
 template<typename T>
-T Cell<T>::getValue() const
+const T& Cell<T>::getValue() const
+{
+	return _value;
+}
+
+
+template<typename T>
+T& Cell<T>::getValue()
 {
 	return _value;
 }

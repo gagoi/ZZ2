@@ -116,7 +116,43 @@ TEST_CASE("Operator=", "[List]"){
    REQUIRE(oss1.str() == oss2.str());
 }
 
-TEST_CASE("Initialisation par défaut it", "[ItList]") {
+TEST_CASE("Parcourt it", "[ItList]") {
    List_int l1;
+   l1.push_back(1);  
+   l1.push_back(2);
    auto i = l1.begin();
+   REQUIRE(*i++ == 1);
+   REQUIRE(*i == 2);
+}
+
+TEST_CASE("Modification via it", "[ItList]") {
+   List_int l1;
+   l1.push_back(1);
+   auto i = l1.begin();
+   REQUIRE(*i == 1);
+   *i = 3;
+   REQUIRE(*i == 3);
+}
+
+TEST_CASE("Find", "[ItList]") {
+   List_int l1;
+   l1.push_back(1);
+   l1.push_back(2);
+   l1.push_back(3);
+   l1.push_back(4);
+   l1.push_back(5);
+
+   auto i = l1.find(2);
+   REQUIRE(*i == 2);
+   i = l1.find(5);
+   REQUIRE(*i == 5);
+   /*
+   i = l1.find(-1);
+   REQUIRE_THROWS_AS(*i, std::exception);
+   */
+}
+
+TEST_CASE("Remove", "[ItList]")
+{
+
 }

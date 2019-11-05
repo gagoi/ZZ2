@@ -148,6 +148,14 @@ ItList<T> List<T>::end() const
 }
 
 template<typename T>
+ItList<T> List<T>::find(T t) const
+{
+	auto it(begin());
+	while(*it != t && it != end()) it++;
+	return it;
+}
+
+template<typename T>
 std::ostream & operator<<(std::ostream & out, List<T> & t)
 {
 	for(Cell<T> * act = t._first; act != nullptr; act = act->next())
