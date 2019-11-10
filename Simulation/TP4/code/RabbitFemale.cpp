@@ -2,4 +2,5 @@
 
 RabbitFemale::RabbitFemale()
 {
+	
 }
