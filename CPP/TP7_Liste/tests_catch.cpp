@@ -146,10 +146,10 @@ TEST_CASE("Find", "[ItList]") {
    REQUIRE(*i == 2);
    i = l1.find(5);
    REQUIRE(*i == 5);
-   /*
+   
    i = l1.find(-1);
-   REQUIRE_THROWS_AS(*i, std::exception);
-   */
+   REQUIRE_THROWS_AS(*i, std::exception&);
+   
 }
 
 TEST_CASE("Remove", "[ItList]")
