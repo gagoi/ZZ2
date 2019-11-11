@@ -64,8 +64,21 @@ ItList<T> ItList<T>::operator--(int)
 template<typename T>
 void ItList<T>::remove()
 {
-	_c->prev()->setNext(_c->next());
-	auto c = _c;
-	operator++();
-	delete c;
+	if (_c != nullptr)
+	{
+		_c->prev()->setNext(_c->next());
+		auto c = _c;
+		operator++();
+		delete c;
+	}
+}
+
+template<typename T>
+void ItList<T>::insert(T val)
+{
+	if (_c != nullptr)
+	{
+		Cell<T> * c = new Cell<T>(val, _c, _c->next());
+		_c.prev().setNext(c);
+	}
 }

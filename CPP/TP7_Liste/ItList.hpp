@@ -21,6 +21,7 @@ public:
 
 
 	void remove();
+	void insert(T val);
 
 	T& operator*();
 	const T& operator*() const;
