@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.10.9)  4 NOV 2019 18:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2019.11.12)  12 NOV 2019 13:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -135,20 +135,21 @@ LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Ccount=\count84
 \calc@Cskip=\skip55
 ) (/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty (/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2019-02-15 L3 programming layer (loader) 
+Package: expl3 2019-07-01 L3 programming layer (loader) 
  (/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3-code.tex
-Package: expl3 2019-02-15 L3 programming layer (code)
+Package: expl3 2019-07-01 L3 programming layer (code)
 \c_max_int=\count85
 \l_tmpa_int=\count86
 \l_tmpb_int=\count87
 \g_tmpa_int=\count88
 \g_tmpb_int=\count89
 \g__kernel_prg_map_int=\count90
-\c_log_iow=\count91
-\l_iow_line_count_int=\count92
-\l__iow_line_target_int=\count93
-\l__iow_one_indent_int=\count94
-\l__iow_indent_int=\count95
+\c__ior_term_ior=\count91
+\c_log_iow=\count92
+\l_iow_line_count_int=\count93
+\l__iow_line_target_int=\count94
+\l__iow_one_indent_int=\count95
+\l__iow_indent_int=\count96
 \c_zero_dim=\dimen108
 \c_max_dim=\dimen109
 \l_tmpa_dim=\dimen110
@@ -167,78 +168,80 @@ Package: expl3 2019-02-15 L3 programming layer (code)
 \l_tmpb_muskip=\muskip14
 \g_tmpa_muskip=\muskip15
 \g_tmpb_muskip=\muskip16
-\l_keys_choice_int=\count96
-\l__intarray_loop_int=\count97
+\l_keys_choice_int=\count97
+\l__intarray_loop_int=\count98
 \c__intarray_sp_dim=\dimen114
-\g__intarray_font_int=\count98
-\c__fp_leading_shift_int=\count99
-\c__fp_middle_shift_int=\count100
-\c__fp_trailing_shift_int=\count101
-\c__fp_big_leading_shift_int=\count102
-\c__fp_big_middle_shift_int=\count103
-\c__fp_big_trailing_shift_int=\count104
-\c__fp_Bigg_leading_shift_int=\count105
-\c__fp_Bigg_middle_shift_int=\count106
-\c__fp_Bigg_trailing_shift_int=\count107
-\c__kernel_randint_max_int=\count108
-\g__fp_array_int=\count109
-\l__fp_array_loop_int=\count110
-\l__sort_length_int=\count111
-\l__sort_min_int=\count112
-\l__sort_top_int=\count113
-\l__sort_max_int=\count114
-\l__sort_true_max_int=\count115
-\l__sort_block_int=\count116
-\l__sort_begin_int=\count117
-\l__sort_end_int=\count118
-\l__sort_A_int=\count119
-\l__sort_B_int=\count120
-\l__sort_C_int=\count121
-\l__tl_analysis_normal_int=\count122
-\l__tl_analysis_index_int=\count123
-\l__tl_analysis_nesting_int=\count124
-\l__tl_analysis_type_int=\count125
-\l__regex_internal_a_int=\count126
-\l__regex_internal_b_int=\count127
-\l__regex_internal_c_int=\count128
-\l__regex_balance_int=\count129
-\l__regex_group_level_int=\count130
-\l__regex_mode_int=\count131
-\c__regex_cs_in_class_mode_int=\count132
-\c__regex_cs_mode_int=\count133
-\l__regex_catcodes_int=\count134
-\l__regex_default_catcodes_int=\count135
-\c__regex_catcode_D_int=\count136
-\c__regex_catcode_S_int=\count137
-\c__regex_catcode_L_int=\count138
-\c__regex_catcode_O_int=\count139
-\c__regex_catcode_A_int=\count140
-\c__regex_all_catcodes_int=\count141
-\l__regex_show_lines_int=\count142
-\l__regex_min_state_int=\count143
-\l__regex_max_state_int=\count144
-\l__regex_left_state_int=\count145
-\l__regex_right_state_int=\count146
-\l__regex_capturing_group_int=\count147
-\l__regex_min_pos_int=\count148
-\l__regex_max_pos_int=\count149
-\l__regex_curr_pos_int=\count150
-\l__regex_start_pos_int=\count151
-\l__regex_success_pos_int=\count152
-\l__regex_curr_char_int=\count153
-\l__regex_curr_catcode_int=\count154
-\l__regex_last_char_int=\count155
-\l__regex_case_changed_char_int=\count156
-\l__regex_curr_state_int=\count157
-\l__regex_step_int=\count158
-\l__regex_min_active_int=\count159
-\l__regex_max_active_int=\count160
-\l__regex_replacement_csnames_int=\count161
-\l__regex_match_count_int=\count162
-\l__regex_min_submatch_int=\count163
-\l__regex_submatch_int=\count164
-\l__regex_zeroth_submatch_int=\count165
-\g__regex_trace_regex_int=\count166
+\g__intarray_font_int=\count99
+\c__fp_leading_shift_int=\count100
+\c__fp_middle_shift_int=\count101
+\c__fp_trailing_shift_int=\count102
+\c__fp_big_leading_shift_int=\count103
+\c__fp_big_middle_shift_int=\count104
+\c__fp_big_trailing_shift_int=\count105
+\c__fp_Bigg_leading_shift_int=\count106
+\c__fp_Bigg_middle_shift_int=\count107
+\c__fp_Bigg_trailing_shift_int=\count108
+\c__kernel_randint_max_int=\count109
+\g__fp_array_int=\count110
+\l__fp_array_loop_int=\count111
+\l__sort_length_int=\count112
+\l__sort_min_int=\count113
+\l__sort_top_int=\count114
+\l__sort_max_int=\count115
+\l__sort_true_max_int=\count116
+\l__sort_block_int=\count117
+\l__sort_begin_int=\count118
+\l__sort_end_int=\count119
+\l__sort_A_int=\count120
+\l__sort_B_int=\count121
+\l__sort_C_int=\count122
+\l__str_internal_int=\count123
+\c__str_replacement_char_int=\count124
+\l__tl_analysis_normal_int=\count125
+\l__tl_analysis_index_int=\count126
+\l__tl_analysis_nesting_int=\count127
+\l__tl_analysis_type_int=\count128
+\l__regex_internal_a_int=\count129
+\l__regex_internal_b_int=\count130
+\l__regex_internal_c_int=\count131
+\l__regex_balance_int=\count132
+\l__regex_group_level_int=\count133
+\l__regex_mode_int=\count134
+\c__regex_cs_in_class_mode_int=\count135
+\c__regex_cs_mode_int=\count136
+\l__regex_catcodes_int=\count137
+\l__regex_default_catcodes_int=\count138
+\c__regex_catcode_D_int=\count139
+\c__regex_catcode_S_int=\count140
+\c__regex_catcode_L_int=\count141
+\c__regex_catcode_O_int=\count142
+\c__regex_catcode_A_int=\count143
+\c__regex_all_catcodes_int=\count144
+\l__regex_show_lines_int=\count145
+\l__regex_min_state_int=\count146
+\l__regex_max_state_int=\count147
+\l__regex_left_state_int=\count148
+\l__regex_right_state_int=\count149
+\l__regex_capturing_group_int=\count150
+\l__regex_min_pos_int=\count151
+\l__regex_max_pos_int=\count152
+\l__regex_curr_pos_int=\count153
+\l__regex_start_pos_int=\count154
+\l__regex_success_pos_int=\count155
+\l__regex_curr_char_int=\count156
+\l__regex_curr_catcode_int=\count157
+\l__regex_last_char_int=\count158
+\l__regex_case_changed_char_int=\count159
+\l__regex_curr_state_int=\count160
+\l__regex_step_int=\count161
+\l__regex_min_active_int=\count162
+\l__regex_max_active_int=\count163
+\l__regex_replacement_csnames_int=\count164
+\l__regex_match_count_int=\count165
+\l__regex_min_submatch_int=\count166
+\l__regex_submatch_int=\count167
+\l__regex_zeroth_submatch_int=\count168
+\g__regex_trace_regex_int=\count169
 \c_empty_box=\box29
 \l_tmpa_box=\box30
 \l_tmpb_box=\box31
@@ -268,61 +271,62 @@ Package: expl3 2019-02-15 L3 programming layer (code)
 \l_tmpb_coffin=\box40
 \g_tmpa_coffin=\box41
 \g_tmpb_coffin=\box42
+\l__coffin_bounding_shift_dim=\dimen130
+\l__coffin_left_corner_dim=\dimen131
+\l__coffin_right_corner_dim=\dimen132
+\l__coffin_bottom_corner_dim=\dimen133
+\l__coffin_top_corner_dim=\dimen134
+\l__coffin_scaled_total_height_dim=\dimen135
+\l__coffin_scaled_width_dim=\dimen136
 \c__coffin_empty_coffin=\box43
 \l__coffin_display_coffin=\box44
 \l__coffin_display_coord_coffin=\box45
 \l__coffin_display_pole_coffin=\box46
-\l__coffin_display_offset_dim=\dimen130
-\l__coffin_display_x_dim=\dimen131
-\l__coffin_display_y_dim=\dimen132
+\l__coffin_display_offset_dim=\dimen137
+\l__coffin_display_x_dim=\dimen138
+\l__coffin_display_y_dim=\dimen139
 \g__file_internal_ior=\read1
-\l__coffin_bounding_shift_dim=\dimen133
-\l__coffin_left_corner_dim=\dimen134
-\l__coffin_right_corner_dim=\dimen135
-\l__coffin_bottom_corner_dim=\dimen136
-\l__coffin_top_corner_dim=\dimen137
-\l__coffin_scaled_total_height_dim=\dimen138
-\l__coffin_scaled_width_dim=\dimen139
-\l__seq_internal_a_int=\count167
-\l__seq_internal_b_int=\count168
-) (/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3pdfmode.def
-File: l3pdfmode.def 2019-02-15 v L3 Experimental driver: PDF mode
-\l__driver_color_stack_int=\count169
+\l__seq_internal_a_int=\count170
+\l__seq_internal_b_int=\count171
+\c__deprecation_minus_one=\count172
+) (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
+File: l3backend-pdfmode.def 2019-04-06 v L3 Experimental backend support: PDF mode
+\l__kernel_color_stack_int=\count173
+\l__pdf_internal_box=\box47
 ))
-Package: xparse 2018-10-17 L3 Experimental document command parser
-\l__xparse_current_arg_int=\count170
-\g__xparse_grabber_int=\count171
-\l__xparse_m_args_int=\count172
-\l__xparse_mandatory_args_int=\count173
-\l__xparse_v_nesting_int=\count174
+Package: xparse 2019-05-28 L3 Experimental document command parser
+\l__xparse_current_arg_int=\count174
+\g__xparse_grabber_int=\count175
+\l__xparse_m_args_int=\count176
+\l__xparse_v_nesting_int=\count177
 ) (/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.sty
-Package: microtype 2018/01/14 v2.7a Micro-typographical refinements (RS)
+Package: microtype 2019/02/28 v2.7b Micro-typographical refinements (RS)
 \MT@toks=\toks17
-\MT@count=\count175
-LaTeX Info: Redefining \textls on input line 793.
+\MT@count=\count178
+LaTeX Info: Redefining \textls on input line 790.
 \MT@outer@kern=\dimen140
-LaTeX Info: Redefining \textmicrotypecontext on input line 1339.
-\MT@listname@count=\count176
+LaTeX Info: Redefining \textmicrotypecontext on input line 1336.
+\MT@listname@count=\count179
  (/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype-pdftex.def
-File: microtype-pdftex.def 2018/01/14 v2.7a Definitions specific to pdftex (RS)
-LaTeX Info: Redefining \lsstyle on input line 913.
-LaTeX Info: Redefining \lslig on input line 913.
+File: microtype-pdftex.def 2019/02/28 v2.7b Definitions specific to pdftex (RS)
+LaTeX Info: Redefining \lsstyle on input line 914.
+LaTeX Info: Redefining \lslig on input line 914.
 \MT@outer@space=\skip62
 )
 Package microtype Info: Loading configuration file microtype.cfg.
  (/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.cfg
-File: microtype.cfg 2018/01/14 v2.7a microtype main configuration file (RS)
+File: microtype.cfg 2019/02/28 v2.7b microtype main configuration file (RS)
 )) (/usr/share/texlive/texmf-dist/tex/latex/moderncv/moderncvcollection.sty
 Package: moderncvcollection 2015/07/28 v2.0.0 moderncv collections
-\c@collection@iterator=\count177
+\c@collection@iterator=\count180
 ) (/usr/share/texlive/texmf-dist/tex/latex/moderncv/moderncvcompatibility.sty
 Package: moderncvcompatibility 2015/07/28 v2.0.0 modern curriculum vitae and letter compatibility patches
 )
-\c@collection@phones@count=\count178
-\c@collection@socials@count=\count179
-\c@cvcolumnscounter=\count180
-\c@cvcolumnsautowidthcounter=\count181
-\c@tmpiteratorcounter=\count182
+\c@collection@phones@count=\count181
+\c@collection@socials@count=\count182
+\c@cvcolumnscounter=\count183
+\c@cvcolumnsautowidthcounter=\count184
+\c@tmpiteratorcounter=\count185
 \cvcolumnsdummywidth=\skip63
 \cvcolumnswidth=\skip64
 \cvcolumnsautowidth=\skip65
@@ -334,28 +338,27 @@ Package: inputenc 2018/08/11 v1.3c Input encoding file
 \inpenc@posthook=\toks19
 ) (/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
 Package: multicol 2018/12/27 v1.8v multicolumn formatting (FMi)
-\c@tracingmulticols=\count183
-\mult@box=\box47
+\c@tracingmulticols=\count186
+\mult@box=\box48
 \multicol@leftmargin=\dimen141
-\c@unbalance=\count184
-\c@collectmore=\count185
-\doublecol@number=\count186
-\multicoltolerance=\count187
-\multicolpretolerance=\count188
+\c@unbalance=\count187
+\c@collectmore=\count188
+\doublecol@number=\count189
+\multicoltolerance=\count190
+\multicolpretolerance=\count191
 \full@width=\dimen142
 \page@free=\dimen143
 \premulticols=\dimen144
 \postmulticols=\dimen145
 \multicolsep=\skip68
 \multicolbaselineskip=\skip69
-\partial@page=\box48
-\last@line=\box49
+\partial@page=\box49
+\last@line=\box50
 \maxbalancingoverflow=\dimen146
-\mult@rightbox=\box50
-\mult@grightbox=\box51
-\mult@gfirstbox=\box52
-\mult@firstbox=\box53
-\@tempa=\box54
+\mult@rightbox=\box51
+\mult@grightbox=\box52
+\mult@gfirstbox=\box53
+\mult@firstbox=\box54
 \@tempa=\box55
 \@tempa=\box56
 \@tempa=\box57
@@ -372,17 +375,18 @@ Package: multicol 2018/12/27 v1.8v multicolumn formatting (FMi)
 \@tempa=\box68
 \@tempa=\box69
 \@tempa=\box70
-\c@columnbadness=\count189
-\c@finalcolumnbadness=\count190
+\@tempa=\box71
+\c@columnbadness=\count192
+\c@finalcolumnbadness=\count193
 \last@try=\dimen147
 \multicolovershoot=\dimen148
 \multicolundershoot=\dimen149
-\mult@nat@firstbox=\box71
-\colbreak@box=\box72
-\mc@col@check@num=\count191
+\mult@nat@firstbox=\box72
+\colbreak@box=\box73
+\mc@col@check@num=\count194
 ) (/usr/share/texlive/texmf-dist/tex/latex/graphbox/graphbox.sty
 Package: graphbox 2018/01/17 v1.1 extension for graphicx to adjust containing box
-\Gin@box@box=\box73
+\Gin@box@box=\box74
 \Gin@box@width=\skip70
 \Gin@box@height=\skip71
 \Gin@box@raise=\skip72
@@ -390,13 +394,13 @@ Package: graphbox 2018/01/17 v1.1 extension for graphicx to adjust containing bo
 \Gin@box@bwidth=\skip74
 \Gin@box@bheight=\skip75
 ) (/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
-Package: enumitem 2019/02/04 v3.8 Customized lists
+Package: enumitem 2019/06/20 v3.9 Customized lists
 \labelindent=\skip76
 \enit@outerparindent=\dimen150
 \enit@toks=\toks20
-\enit@inbox=\box74
-\enit@count@id=\count192
-\enitdp@description=\count193
+\enit@inbox=\box75
+\enit@count@id=\count195
+\enitdp@description=\count196
 ) (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
@@ -430,8 +434,8 @@ LaTeX Warning: You have requested package `moderncvheadii',
                but the package provides `moderncvheadii'.
 
 Package: moderncvheadii 2015/07/28 v2.0.0 modern curriculum vitae and letter header variant: 2
-\makeheaddetailsbox=\box75
-\makeheaddetailstempbox=\box76
+\makeheaddetailsbox=\box76
+\makeheaddetailstempbox=\box77
 \makeheaddetailswidth=\skip77
 \makeheaddetailsboxwidth=\skip78
 \quotewidth=\skip79
@@ -454,7 +458,7 @@ File: ufontawesometwo.fd 2016/05/22 Font definitions for U/fontawesometwo.
 \listitemcolumnwidth=\skip86
 \listdoubleitemcolumnwidth=\skip87
 \baseletterheight=\skip88
-\cvitemwithcommentbox=\box77
+\cvitemwithcommentbox=\box78
 \cvitemwithcommentskilllength=\skip89
 \cvitemwithcommentcommentlength=\skip90
 ) (/usr/share/texlive/texmf-dist/tex/latex/moderncv/moderncvfooti.sty
@@ -464,11 +468,11 @@ LaTeX Warning: You have requested package `moderncvfooti',
 
 Package: moderncvfooti 2015/07/28 v2.0.0 modern curriculum vitae and letter footer variant: 1
 \footwidth=\skip91
-\footbox=\box78
-\foottempbox=\box79
+\footbox=\box79
+\foottempbox=\box80
 \footboxwidth=\skip92
-)) (/usr/share/texlive/texmf-dist/tex/latex/moderncv/moderncvcolorgreen.sty
-Package: moderncvcolorgreen 2015/07/28 v2.0.0 modern curriculum vitae and letter color scheme: green
+)) (/usr/share/texlive/texmf-dist/tex/latex/moderncv/moderncvcolorblack.sty
+Package: moderncvcolorblack 2015/07/28 v2.0.0 modern curriculum vitae and letter color scheme: black
 ) (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2018/11/30 v6.88e Hypertext links for LaTeX
  (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
@@ -510,14 +514,14 @@ Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 )
 \@linkdim=\dimen155
-\Hy@linkcounter=\count194
-\Hy@pagecounter=\count195
+\Hy@linkcounter=\count197
+\Hy@pagecounter=\count198
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2018/11/30 v6.88e Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-\Hy@SavedSpaceFactor=\count196
+\Hy@SavedSpaceFactor=\count199
  (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
@@ -534,10 +538,10 @@ Package hyperref Info: Plain pages OFF on input line 4534.
 Package hyperref Info: Backreferencing OFF on input line 4539.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4772.
-\c@Hy@tempcnt=\count197
+\c@Hy@tempcnt=\count266
 LaTeX Info: Redefining \url on input line 5125.
 \XeTeXLinkMargin=\dimen156
-\Fld@menulength=\count198
+\Fld@menulength=\count267
 \Field@Width=\dimen157
 \Fld@charsize=\dimen158
 Package hyperref Info: Hyper figures OFF on input line 6380.
@@ -549,15 +553,15 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6405.
 Package hyperref Info: PDF/A mode OFF on input line 6410.
 LaTeX Info: Redefining \ref on input line 6450.
 LaTeX Info: Redefining \pageref on input line 6454.
-\Hy@abspage=\count199
-\c@Item=\count266
-\c@Hfootnote=\count267
+\Hy@abspage=\count268
+\c@Item=\count269
+\c@Hfootnote=\count270
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2018/11/30 v6.88e Hyperref driver for pdfTeX
-\Fld@listcount=\count268
-\c@bookmark@seq@number=\count269
+\Fld@listcount=\count271
+\c@bookmark@seq@number=\count272
  (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 282.
@@ -590,16 +594,16 @@ LaTeX Font Info:    Try loading font information for T1+lmr on input line 19.
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count270
+\scratchcounter=\count273
 \scratchdimen=\dimen159
-\scratchbox=\box80
-\nofMPsegments=\count271
-\nofMParguments=\count272
+\scratchbox=\box81
+\nofMPsegments=\count274
+\nofMParguments=\count275
 \everyMPshowfont=\toks22
-\MPscratchCnt=\count273
+\MPscratchCnt=\count276
 \MPscratchDim=\dimen160
-\MPnumerator=\count274
-\makeMPintoPDFobject=\count275
+\MPnumerator=\count277
+\makeMPintoPDFobject=\count278
 \everyMPtoPDFconversion=\toks23
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -634,14 +638,14 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmss' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-\AtBeginShipoutBox=\box81
+\AtBeginShipoutBox=\box82
 Package hyperref Info: Link coloring OFF on input line 19.
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
  (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count276
+\c@section@level=\count279
 )
 LaTeX Info: Redefining \ref on input line 19.
 LaTeX Info: Redefining \pageref on input line 19.
@@ -689,23 +693,23 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 46.
-LaTeX Font Info:    Try loading font information for OMS+lmss on input line 46.
-LaTeX Font Info:    No file OMSlmss.fd. on input line 46.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 47.
+LaTeX Font Info:    Try loading font information for OMS+lmss on input line 47.
+LaTeX Font Info:    No file OMSlmss.fd. on input line 47.
 
 
 LaTeX Font Warning: Font shape `OMS/lmss/m/n' undefined
 (Font)              using `OMS/cmsy/m/n' instead
-(Font)              for symbol `textbullet' on input line 46.
+(Font)              for symbol `textbullet' on input line 47.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 99.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 100.
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 99.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 100.
  (/home/gagoi/Documents/zz/ZZ2/Allemand/CV/cv.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 99.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 99.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 100.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 100.
 Package rerunfilecheck Info: File `cv.out' has not changed.
 (rerunfilecheck)             Checksum: A5CB61607A55A43556FB3F4D0DCA82CB;863.
 
@@ -714,10 +718,10 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 23141 strings out of 492615
- 386817 string characters out of 6131390
- 476299 words of memory out of 5000000
- 26800 multiletter control sequences out of 15000+600000
+ 23729 strings out of 492609
+ 400140 string characters out of 6131461
+ 486084 words of memory out of 5000000
+ 27395 multiletter control sequences out of 15000+600000
  581189 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  47i,12n,65p,836b,410s stack positions out of 5000i,500n,10000p,200000b,80000s
