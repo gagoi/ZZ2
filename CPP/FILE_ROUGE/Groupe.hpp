@@ -3,16 +3,14 @@
 
 #include <iostream>
 #include <cstring>
+#include <vector>
 
 #include "Forme.hpp"
-
-constexpr static int size = 40;
 
 class Groupe : public Forme
 {
 	private:
-		unsigned int _nbFormes;
-		Forme* _formes[size];
+		std::vector<Forme*> _formes;
 	public:
 		Groupe();
 		Groupe(Groupe& g);
