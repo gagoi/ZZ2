@@ -3,16 +3,20 @@
 
 #include <iostream>
 #include <string>
-#include <vector>
-#include <map>
+#include <queue>
+#include <list>
+#include <cstring>
 #include "Rabbit.hpp"
-
-
-extern std::map<int, int> hist;
 
 class RabbitFemale : public Rabbit
 {
 private:
+	struct litter{
+		unsigned int week;
+		short males;
+		short females;
+	};
+
 	static constexpr size_t MAX_LITTERS = 8; 		// Nombre maximum de portées par an
 	static constexpr ushort GESTATION_DURATION = 4;	// Temps de gestation du lapin moyen
 
@@ -21,11 +25,14 @@ private:
 	static std::uniform_int_distribution<> dist_litters_dates;
 	static std::uniform_int_distribution<short> dist_gender; 
 
-	short _weeks_of_birth[MAX_LIFESPAN];	// Semaines où il y aura des naissances
+	std::queue<litter*> litters;
 
 	void init_birth();
 public:
-	RabbitFemale();
+	RabbitFemale(unsigned int week_offset = 0);
+	~RabbitFemale();
+
+	void give_birth(unsigned int week, std::list<Rabbit*>& males, std::list<RabbitFemale*>& females);
 
 };
 

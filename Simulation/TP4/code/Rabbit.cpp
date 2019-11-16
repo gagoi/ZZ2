@@ -13,8 +13,8 @@ std::piecewise_linear_distribution<double> Rabbit::dist_death_end(Rabbit::interv
 
 
 
-Rabbit::Rabbit():
-	_age(0), _maturity_week(dist_maturity(generator)), _death_week(init_death())
+Rabbit::Rabbit(unsigned int week_offset):
+	_age(0), _week_offset(week_offset), _maturity_week(dist_maturity(generator)), _death_week(init_death())
 {
 }
 
@@ -43,4 +43,19 @@ unsigned int Rabbit::init_death()
 	}
 
 	return death_week;
+}
+
+void Rabbit::grow()
+{
+	_age++;
+}
+
+unsigned int Rabbit::get_age()
+{
+	return _age;
+}
+
+unsigned int Rabbit::get_maturity()
+{
+	return _maturity_week;
 }

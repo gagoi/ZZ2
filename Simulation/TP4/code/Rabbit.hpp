@@ -9,6 +9,8 @@
 
 class Rabbit
 {
+public:
+	enum GENDER {NOTHING, MALE, FEMALE};
 protected:
 	static constexpr unsigned short WEEK_PER_YEAR = 52;
 	static constexpr unsigned int MAX_LIFESPAN = 15 * WEEK_PER_YEAR; // Durée de vie max en semaine
@@ -23,6 +25,7 @@ private:
 	unsigned int init_death();
 
 protected:
+	unsigned int _week_offset;
 	static std::random_device rand_device;
 	static std::mt19937 generator;
 	static std::uniform_real_distribution<> unifor_real_distribution;
@@ -34,11 +37,14 @@ protected:
 	unsigned int _maturity_week; // Age en semaine auquel le lapin sera mature
 	unsigned int _death_week; // Age en semaine auquel le lapin va mourir
 
-	public:
-	Rabbit();
-	int grow();
+public:
+	Rabbit(unsigned int week_offset = 0);
+	void grow();
 
-	inline unsigned int get_death_week() {return _death_week;};
+	unsigned int get_age();
+	unsigned int get_maturity();
+
+	inline unsigned int get_death_week() {return _death_week + _week_offset;};
 };
 
 #endif
