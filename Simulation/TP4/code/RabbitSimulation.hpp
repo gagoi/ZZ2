@@ -7,7 +7,6 @@
 
 #include "Rabbit.hpp"
 #include "RabbitFemale.hpp"
-#include "RabbitChild.hpp"
 
 class RabbitSimulation
 {
