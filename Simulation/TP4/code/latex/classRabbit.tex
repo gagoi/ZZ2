@@ -1,0 +1,135 @@
+\hypertarget{classRabbit}{}\section{Référence de la classe Rabbit}
+\label{classRabbit}\index{Rabbit@{Rabbit}}
+
+
+Graphe d\textquotesingle{}héritage de Rabbit\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=157pt]{classRabbit__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classRabbit_aaddfbafa67919bec58e9a32e65946cd9}{Rabbit} (unsigned int week\+\_\+offset=0)
+\begin{DoxyCompactList}\small\item\em Construction d\textquotesingle{}un nouveau \hyperlink{classRabbit}{Rabbit}\+:\+: \hyperlink{classRabbit}{Rabbit}. \end{DoxyCompactList}\item 
+void \hyperlink{classRabbit_a404af8877c99ddc98108d88c8e466013}{grow} ()
+\begin{DoxyCompactList}\small\item\em Fait viellir le lapin. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classRabbit_acf461328f7979c337f17d61fd6c6750b}{get\+\_\+age} ()
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}obtenir l\textquotesingle{}âge du lapin. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classRabbit_aedcad8063a668372630c56bdaf2520da}{get\+\_\+maturity} ()
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}obtenir la date de maturité du lapin. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classRabbit_a2cab4ce38fcf10950adfdf4141f516c3}\label{classRabbit_a2cab4ce38fcf10950adfdf4141f516c3}} 
+unsigned int {\bfseries get\+\_\+death\+\_\+week} ()
+\end{DoxyCompactItemize}
+\subsection*{Attributs protégés}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRabbit_aa06aa6bf42defb922f187de5b84770b5}\label{classRabbit_aa06aa6bf42defb922f187de5b84770b5}} 
+unsigned int {\bfseries \+\_\+week\+\_\+offset}
+\item 
+\mbox{\Hypertarget{classRabbit_a2e459e414d60ce11184b0031c77d22a3}\label{classRabbit_a2e459e414d60ce11184b0031c77d22a3}} 
+unsigned int {\bfseries \+\_\+maturity\+\_\+week}
+\item 
+\mbox{\Hypertarget{classRabbit_ab5d6671969df82d4feb1c87778a7878d}\label{classRabbit_ab5d6671969df82d4feb1c87778a7878d}} 
+unsigned int {\bfseries \+\_\+death\+\_\+week}
+\end{DoxyCompactItemize}
+\subsection*{Attributs protégés statiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRabbit_a5dfc97704fe0f61d4e476bb27baa93ff}\label{classRabbit_a5dfc97704fe0f61d4e476bb27baa93ff}} 
+static constexpr unsigned short {\bfseries W\+E\+E\+K\+\_\+\+P\+E\+R\+\_\+\+Y\+E\+AR} = 52
+\item 
+\mbox{\Hypertarget{classRabbit_ae71738c607e344447003e92d45ab290e}\label{classRabbit_ae71738c607e344447003e92d45ab290e}} 
+static constexpr unsigned int {\bfseries M\+A\+X\+\_\+\+L\+I\+F\+E\+S\+P\+AN} = 15 $\ast$ W\+E\+E\+K\+\_\+\+P\+E\+R\+\_\+\+Y\+E\+AR
+\item 
+\mbox{\Hypertarget{classRabbit_a2e5e7f6d62f1018fcb5b6417a554d7e9}\label{classRabbit_a2e5e7f6d62f1018fcb5b6417a554d7e9}} 
+static constexpr unsigned int {\bfseries M\+A\+T\+U\+R\+I\+T\+Y\+\_\+\+M\+IN} = 4 $\ast$ 4
+\item 
+\mbox{\Hypertarget{classRabbit_abdf1b2078353109ae7421059c9eec860}\label{classRabbit_abdf1b2078353109ae7421059c9eec860}} 
+static constexpr unsigned int {\bfseries M\+A\+T\+U\+R\+I\+T\+Y\+\_\+\+M\+AX} = 8 $\ast$ 4
+\item 
+\mbox{\Hypertarget{classRabbit_a85b69f5d6032b5e8ff32f3fc420df351}\label{classRabbit_a85b69f5d6032b5e8ff32f3fc420df351}} 
+static std\+::mt19937 {\bfseries generator}
+\item 
+\mbox{\Hypertarget{classRabbit_abd28bc45242f07e70b6fdaaedf9165b7}\label{classRabbit_abd28bc45242f07e70b6fdaaedf9165b7}} 
+static std\+::uniform\+\_\+real\+\_\+distribution {\bfseries dist\+\_\+rand}
+\item 
+\mbox{\Hypertarget{classRabbit_ad4ed491df3ea1522f6f220b16e3c3030}\label{classRabbit_ad4ed491df3ea1522f6f220b16e3c3030}} 
+static std\+::uniform\+\_\+int\+\_\+distribution {\bfseries dist\+\_\+maturity}
+\item 
+\mbox{\Hypertarget{classRabbit_a091bd3287716c3c26c56595ca0e11032}\label{classRabbit_a091bd3287716c3c26c56595ca0e11032}} 
+static std\+::geometric\+\_\+distribution$<$ int $>$ {\bfseries dist\+\_\+maturity\+\_\+death}
+\item 
+\mbox{\Hypertarget{classRabbit_acca437a06bf05a4afe817f1ac58c3cee}\label{classRabbit_acca437a06bf05a4afe817f1ac58c3cee}} 
+static std\+::geometric\+\_\+distribution$<$ int $>$ {\bfseries dist\+\_\+baby\+\_\+death}
+\item 
+\mbox{\Hypertarget{classRabbit_a0f1cd42717f7c40b0f062c7d00752b1b}\label{classRabbit_a0f1cd42717f7c40b0f062c7d00752b1b}} 
+static std\+::piecewise\+\_\+linear\+\_\+distribution$<$ double $>$ {\bfseries dist\+\_\+death\+\_\+end}
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{classRabbit_aaddfbafa67919bec58e9a32e65946cd9}\label{classRabbit_aaddfbafa67919bec58e9a32e65946cd9}} 
+\index{Rabbit@{Rabbit}!Rabbit@{Rabbit}}
+\index{Rabbit@{Rabbit}!Rabbit@{Rabbit}}
+\subsubsection{\texorpdfstring{Rabbit()}{Rabbit()}}
+{\footnotesize\ttfamily Rabbit\+::\+Rabbit (\begin{DoxyParamCaption}\item[{unsigned int}]{week\+\_\+offset = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Construction d\textquotesingle{}un nouveau \hyperlink{classRabbit}{Rabbit}\+:\+: \hyperlink{classRabbit}{Rabbit}. 
+
+Initialise tous les paramêtres du lapins.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em week\+\_\+offset} & décalage entre l\textquotesingle{}échelle temporelle de la simulation et celle du lapin. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{classRabbit_acf461328f7979c337f17d61fd6c6750b}\label{classRabbit_acf461328f7979c337f17d61fd6c6750b}} 
+\index{Rabbit@{Rabbit}!get\+\_\+age@{get\+\_\+age}}
+\index{get\+\_\+age@{get\+\_\+age}!Rabbit@{Rabbit}}
+\subsubsection{\texorpdfstring{get\+\_\+age()}{get\_age()}}
+{\footnotesize\ttfamily unsigned int Rabbit\+::get\+\_\+age (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Permet d\textquotesingle{}obtenir l\textquotesingle{}âge du lapin. 
+
+\begin{DoxyReturn}{Renvoie}
+unsigned int âge du lapin. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRabbit_aedcad8063a668372630c56bdaf2520da}\label{classRabbit_aedcad8063a668372630c56bdaf2520da}} 
+\index{Rabbit@{Rabbit}!get\+\_\+maturity@{get\+\_\+maturity}}
+\index{get\+\_\+maturity@{get\+\_\+maturity}!Rabbit@{Rabbit}}
+\subsubsection{\texorpdfstring{get\+\_\+maturity()}{get\_maturity()}}
+{\footnotesize\ttfamily unsigned int Rabbit\+::get\+\_\+maturity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Permet d\textquotesingle{}obtenir la date de maturité du lapin. 
+
+\begin{DoxyReturn}{Renvoie}
+unsigned int date de maturité du lapin. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRabbit_a404af8877c99ddc98108d88c8e466013}\label{classRabbit_a404af8877c99ddc98108d88c8e466013}} 
+\index{Rabbit@{Rabbit}!grow@{grow}}
+\index{grow@{grow}!Rabbit@{Rabbit}}
+\subsubsection{\texorpdfstring{grow()}{grow()}}
+{\footnotesize\ttfamily void Rabbit\+::grow (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Fait viellir le lapin. 
+
+Comme la date de mort est choisie à la naissance, pas besoin de faire des générations de nombres aléatoires chaque semaine. 
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Rabbit_8hpp}{Rabbit.\+hpp}\item 
+\hyperlink{Rabbit_8cpp}{Rabbit.\+cpp}\end{DoxyCompactItemize}

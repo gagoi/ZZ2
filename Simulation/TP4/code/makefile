@@ -1,7 +1,7 @@
 SRC=$(wildcard *.cpp)  
 EXE=out
 
-CXXFLAGS+=-Wall -Wextra -MMD -g -O2
+CXXFLAGS+=-Wall -Wextra -MMD -g -O2 -std=c++17
 LDFLAGS= 
 
 OBJ=$(addprefix build/,$(SRC:.cpp=.o))

@@ -1,0 +1,178 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage{makeidx}
+\usepackage{formular}
+\usepackage{listings}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{mdframed}
+\usepackage{multicol}
+\usepackage{pgfplots}
+\usepackage{courier}
+\usepackage{dirtytalk}
+\usepackage[left=2cm,right=2cm,top=1.9cm,bottom=1.9cm]{geometry}
+
+\pgfplotsset{compat=1.16}
+\definecolor{light-gray}{gray}{0.95}
+
+\title{Compte Rendu TP4\\Simulation d'une population de lapin}
+\author{Jérémy ZANGLA}
+\lstset{
+  literate=
+  {á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
+  {Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1
+  {à}{{\`a}}1 {è}{{\`e}}1 {ì}{{\`i}}1 {ò}{{\`o}}1 {ù}{{\`u}}1
+  {À}{{\`A}}1 {È}{{\'E}}1 {Ì}{{\`I}}1 {Ò}{{\`O}}1 {Ù}{{\`U}}1
+  {ä}{{\"a}}1 {ë}{{\"e}}1 {ï}{{\"i}}1 {ö}{{\"o}}1 {ü}{{\"u}}1
+  {Ä}{{\"A}}1 {Ë}{{\"E}}1 {Ï}{{\"I}}1 {Ö}{{\"O}}1 {Ü}{{\"U}}1
+  {â}{{\^a}}1 {ê}{{\^e}}1 {î}{{\^i}}1 {ô}{{\^o}}1 {û}{{\^u}}1
+  {Â}{{\^A}}1 {Ê}{{\^E}}1 {Î}{{\^I}}1 {Ô}{{\^O}}1 {Û}{{\^U}}1
+  {œ}{{\oe}}1 {Œ}{{\OE}}1 {æ}{{\ae}}1 {Æ}{{\AE}}1 {ß}{{\ss}}1
+  {ű}{{\H{u}}}1 {Ű}{{\H{U}}}1 {ő}{{\H{o}}}1 {Ő}{{\H{O}}}1
+  {ç}{{\c c}}1 {Ç}{{\c C}}1 {ø}{{\o}}1 {å}{{\r a}}1 {Å}{{\r A}}1
+  {€}{{\EUR}}1 {£}{{\pounds}}1,
+  numbers=left,
+  numbersep=10pt,
+  showspaces=false,
+  showstringspaces=false,
+  showtabs=false,
+  stepnumber=1,
+  stringstyle=\color{gray},
+  tabsize=4,
+  basicstyle=\small,
+  keywordstyle=\bf\color{blue},
+  backgroundcolor=\color{light-gray},
+  commentstyle=\color{ForestGreen},
+  showstringspaces=false
+}
+
+\begin{document}
+
+\maketitle
+\pagebreak
+\tableofcontents
+\pagebreak
+
+\section{Analyse}
+    \subsection{Rappel du sujet}
+        Le but de ce TP est de simuler l'évolution d'une population de lapin au cours du temps.
+        La population ne sera affectée par aucun élément extérieur. Les seuls facteurs influants l'évolution seront les naissances et morts naturelles.
+        Ainsi, les données que nous implémenterons seront les suivantes : 
+        \begin{itemize}
+            \item Une lapine peut donner vie à une portée de lapins tous les 1 mois (temps de gestation).
+            \item Une lapine aura de 4 à 8 portée par ans.
+            \item Un laperau aura 20\% de chances de survivre avant sa maturité.
+            \item Un lapin aura 50\% de chance de survie au dela de ses 11 ans.
+            \item Pour chaque année suivante les lapins auront 10\% de chances de mourir supplémentaire.
+            \item Ainsi aucun lapin ne pourra vivre plus de 15 ans.
+        \end{itemize}
+        Enfin le travail devra être fait en programmation objet dans le langage C++.
+    \subsection{Choix d'implémentation}
+        \subsubsection{Génération de nombres aléatoires}
+            Comme pour les travaux précédents, nous allons utiliser l'algorithme de Mersenne-Twister pour la génération des nombres pseudos aléatoires.
+            Nous utiliserons son implémentation dans la libraire standard du C++ (bibliothèque : random). 
+            \\
+            Cependant les nombres pseudo-aléatoires ne seront pas utilisés directement, contrairement aux travaux en C. Nous utiliserons les distributions de libraire standard.
+            Nous parlerons par la suite de nombres aléatoires pour alléger le discours, il faut bien garder en tête que tous les nombres seront générés à partir de ce générateur pseudo-aléatoire.
+        \subsection{Définition du temps}
+            Nous ne pouvions ici pas faire une simulation en temps réelle de l'évolution de la population, pour une raison simple : le but est d'étudier des résultats obtenus après plusieurs mois ou années.
+            Nous avons donc décidé d'accélérer le temps en intégrant un intervalle de temps. Cet intervalle correspond à la durée simulée entre deux mises à jours du code. Cet intervalle a été choisi à 1 semaine.
+            Nous obtenons donc une simulation \say{précise} à la semaine près.
+        \subsection{Fonctionnement des mises à jours}
+            Au lieu de faire fonctionner notre simulation au fur et à mesure de son évolution, le choix a été fait de déterminer toute la vie d'un lapin dès sa naissance.
+            Ainsi à la naissance d'un lapin, la semaine à laquelle il mourra sera décidée. De plus, pour une femelle, la date ainsi que les spécificités de chaque portée qu'elle aura seront fixée au même moment.
+            Il y aura tout de même une unique vérification en \say{temps réel}, c'est la présence ou non d'un lapin mâle pour la reproduction.
+        \subsection{Déroulement des mises à jours et lancement d'une simulation}
+            Chaque mise à jour se fera de la manière suivante, traitement de la semaine actuelle : naissances puis morts des lapins. On passera ensuite à la semaine suivante.
+            Une fois la simulation créée, on doit pourra la lancer pour une durée choisis et la reprendre autant de fois que désirée.
+        \subsection{Performances}
+            Le choix de la déterminisation de la vie d'un lapin à sa naissance, devrait permettre d'améliorer les performances du simulateur en simplifant les calculs, et en évitant d'en faire certains.
+            L'espace mémoire occupée par la simulation peut être un point sensible, cependant nous avons décidés ici de ne pas s'en occuper.
+\section{Implémentation}
+    \subsection{Nombres aléatoires}
+        \subsubsection{Distributions de nombres aléatoires}
+        Une distribution est un objet implémenté dans la librairie standard (bibliothèque random), qui d'obtenir un nombre aléatoire qui suit une loi de probabilité.
+        Nous en utiliserons ici 4 types en expliquant leur intérêt.
+        Nous utilisons l'implémentation standard du générateur de Mersenne-Twister pour la génération de nombres pseudo-aléatoires.
+        \begin{mdframed}[backgroundcolor=light-gray, roundcorner=20pt, innerleftmargin=20, innertopmargin=1, innerbottommargin=1, outerlinewidth=1, linecolor=darkgray]
+            \center{\underline{Rabbit.cpp}}
+            \lstinputlisting[language=C++, firstline=18, lastline=18]{../code/Rabbit.cpp}
+        \end{mdframed}
+        \subsubsection{Distribution uniforme}
+            La distribution uniforme est la plus simple, elle nous permet d'obtenir un nombre aléatoire
+            compris dans un intervalle suivant une loi de probabilité uniforme, c'est à dire que chaque tirage est équiprobable.
+            Il existe deux versions de cette distribution : réelle et entière, comme on pourrait le supposer la première permet la génération d'un nombre réelle et la seconde d'un nombre entier.
+            \par
+            La première utilisée permet de choisir le sexe d'un lapin à naître lors de la génération des portées d'une lapine.
+            C'est donc une distribution uniforme de nombres entiers avec deux possibilitées : 1 et 2.
+            Ces possibilités correspondent respectivement à Mâle et Femelle.
+            \begin{mdframed}[backgroundcolor=light-gray, roundcorner=20pt, innerleftmargin=20, innertopmargin=1, innerbottommargin=1, outerlinewidth=1, linecolor=darkgray]
+                \center{\underline{RabbitFemale.hpp}}
+                \lstinputlisting[language=C++, firstline=45, lastline=46]{../code/RabbitFemale.hpp}
+            \end{mdframed}
+            \begin{mdframed}[backgroundcolor=light-gray, roundcorner=20pt, innerleftmargin=20, innertopmargin=1, innerbottommargin=1, outerlinewidth=1, linecolor=darkgray]
+                \center{\underline{RabbitFemale.cpp}}
+                \lstinputlisting[language=C++, firstline=16, lastline=16]{../code/RabbitFemale.cpp}
+            \end{mdframed}
+            \par
+            La seconde est une distribution de nombres réels dans l'intervalle [0; 1]. Le nombre obtenu est très facilement comparable à un pourcentage.
+            On l'utiliser pour décidé à quel période de sa vie le lapin va mourir (avant la maturité ou non, puis avant 11 ans ou non).
+            \begin{mdframed}[backgroundcolor=light-gray, roundcorner=20pt, innerleftmargin=20, innertopmargin=1, innerbottommargin=1, outerlinewidth=1, linecolor=darkgray]
+                \center{\underline{Rabbit.hpp}}
+                \lstinputlisting[language=C++, firstline=50, lastline=52]{../code/Rabbit.hpp}
+            \end{mdframed}
+            \begin{mdframed}[backgroundcolor=light-gray, roundcorner=20pt, innerleftmargin=20, innertopmargin=1, innerbottommargin=1, outerlinewidth=1, linecolor=darkgray]
+                \center{\underline{Rabbit.cpp}}
+                \lstinputlisting[language=C++, firstline=19, lastline=19]{../code/Rabbit.cpp}
+            \end{mdframed}
+            \par
+            La dernière sert à calculer la date de maturité d'un laperau, donc entre 4 et 8 mois (converti en semaine).
+            \begin{mdframed}[backgroundcolor=light-gray, roundcorner=20pt, innerleftmargin=20, innertopmargin=1, innerbottommargin=1, outerlinewidth=1, linecolor=darkgray]
+                \center{\underline{Rabbit.hpp}}
+                \lstinputlisting[language=C++, firstline=29, lastline=32]{../code/Rabbit.hpp}
+            \end{mdframed}
+            \begin{mdframed}[backgroundcolor=light-gray, roundcorner=20pt, innerleftmargin=20, innertopmargin=1, innerbottommargin=1, outerlinewidth=1, linecolor=darkgray]
+                \center{\underline{Rabbit.hpp}}
+                \lstinputlisting[language=C++, firstline=53, lastline=54]{../code/Rabbit.hpp}
+            \end{mdframed}
+            \begin{mdframed}[backgroundcolor=light-gray, roundcorner=20pt, innerleftmargin=20, innertopmargin=1, innerbottommargin=1, outerlinewidth=1, linecolor=darkgray]
+                \center{\underline{Rabbit.cpp}}
+                \lstinputlisting[language=C++, firstline=20, lastline=21]{../code/Rabbit.cpp}
+            \end{mdframed}
+        \subsubsection{Distribution linéaire}
+            Une distribution linéaire, permet d'avoir une densité de probabilité qui suit une fonction linéaire 
+            (ou un ensemble de fonctions linéaires). Nous n'en utilisons qu'une seule, qui n'utilise qu'une seule pente.
+            L'implémentation dans la librairie standard utilise la méthode de Piecewise et a besoin de 2 tableaux pour le paramétrage.
+            Le premier contient les intervalles des pentes, et le second contient les poids de chaque points, pour définir l'inclinaison de la pente.
+            \par
+            Nous avons décidé d'utiliser cette distribution pour simuler l'accroissement de la mortalité à partir de 11 ans. Cette accroissement étant de 10\% par an, il est linéaire.
+            \begin{mdframed}[backgroundcolor=light-gray, roundcorner=20pt, innerleftmargin=20, innertopmargin=1, innerbottommargin=1, outerlinewidth=1, linecolor=darkgray]
+                \center{\underline{Rabbit.hpp}}
+                \lstinputlisting[language=C++, firstline=41, lastline=44]{../code/Rabbit.hpp}
+            \end{mdframed}
+            \begin{mdframed}[backgroundcolor=light-gray, roundcorner=20pt, innerleftmargin=20, innertopmargin=1, innerbottommargin=1, outerlinewidth=1, linecolor=darkgray]
+                \center{\underline{Rabbit.hpp}}
+                \lstinputlisting[language=C++, firstline=59, lastline=60]{../code/Rabbit.hpp}
+            \end{mdframed}
+            \begin{mdframed}[backgroundcolor=light-gray, roundcorner=20pt, innerleftmargin=20, innertopmargin=1, innerbottommargin=1, outerlinewidth=1, linecolor=darkgray]
+                \center{\underline{Rabbit.cpp}}
+                \lstinputlisting[language=C++, firstline=14, lastline=16]{../code/Rabbit.cpp}
+            \end{mdframed}
+            \begin{mdframed}[backgroundcolor=light-gray, roundcorner=20pt, innerleftmargin=20, innertopmargin=1, innerbottommargin=1, outerlinewidth=1, linecolor=darkgray]
+                \center{\underline{Rabbit.cpp}}
+                \lstinputlisting[language=C++, firstline=24, lastline=27]{../code/Rabbit.cpp}
+            \end{mdframed}
+        \subsubsection{Distribution géométrique}
+        \subsubsection{Distribution normale}
+
+\begin{tikzpicture}
+    \begin{axis} 
+        [width=\textwidth, height=0.6\textwidth,]
+        \addplot table {0/total_females.rab};
+        \addplot table {1/total_females.rab};
+        \addplot table {2/total_females.rab};
+        \addplot table {3/total_females.rab};
+        \addplot table {4/total_females.rab};
+    \end{axis}
+\end{tikzpicture}
+\end{document}
