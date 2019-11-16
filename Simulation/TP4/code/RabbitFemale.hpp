@@ -19,8 +19,9 @@ private:
 	static std::normal_distribution<> dist_birth;
 	static std::normal_distribution<> dist_nb_litters;
 	static std::uniform_int_distribution<> dist_litters_dates;
+	static std::uniform_int_distribution<short> dist_gender; 
 
-	bool _weeks_of_birth[MAX_LIFESPAN];	// Semaines où il y aura des naissances
+	short _weeks_of_birth[MAX_LIFESPAN];	// Semaines où il y aura des naissances
 
 	void init_birth();
 public:
