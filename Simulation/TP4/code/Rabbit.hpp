@@ -15,26 +15,28 @@
 
 #include <iostream>
 #include <string>
-#include <vector>
+#include <map>
 #include <random>
 #include <array>
 
 class Rabbit
 {
 protected:
+	// Générateur de nombres pseudo-aléatoires de Mersenne-Twister
+	std::mt19937& generator;
+
 	// Constante du nombre de semaines par an.
-	static constexpr unsigned short WEEK_PER_YEAR = 52;
+	static constexpr unsigned short WEEK_PER_YEAR = 48;
 	// Constante de la durée de vie maximum d'un lapin en semaine
 	static constexpr unsigned int MAX_LIFESPAN = 15 * WEEK_PER_YEAR;
 	// Age en semaine à partir duquel un lapin peut devenir mature 
-	static constexpr unsigned int MATURITY_MIN = 4 * 4; 
+	static constexpr unsigned int MATURITY_MIN = 5 * 4; 
 	// Age en semaine jusqu'auquel un lapin peut devenir mature
 	static constexpr unsigned int MATURITY_MAX = 8 * 4; 
 
-
-	// Générateur de nombres pseudo-aléatoires de Mersenne-Twister
-	static std::mt19937 generator;
-
+	std::map<int, int>& _death_histo;
+	std::map<int, int>& _death_period_histo;
+	std::map<int, int>& _maturity_histo;
 private:
 	// Age en semaine
 	unsigned int _age;	
@@ -45,6 +47,7 @@ private:
 
 	// Fonction initialisant la mort des lapins
 	unsigned int init_death();
+
 
 protected:
 	// Distribution permettant de faire un nombre aléatoire 
@@ -68,7 +71,7 @@ protected:
 
 public:
 	// Créer un lapin
-	Rabbit(unsigned int week_offset = 0);
+	Rabbit(std::mt19937& generator, std::map<int, int>& death_histo, std::map<int, int>& death_period_histo, std::map<int, int>& maturity_histo, unsigned int week_offset = 0);
 
 	// Fais grandir le lapin
 	void grow();

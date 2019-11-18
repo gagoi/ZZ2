@@ -13,9 +13,11 @@
 #define RABBITFEMALE_HPP_
 
 #include <iostream>
+#include <fstream>
 #include <string>
 #include <queue>
 #include <list>
+#include <map>
 #include <cstring>
 #include "Rabbit.hpp"
 
@@ -50,14 +52,24 @@ private:
 
 	// Initialisation des portées
 	void init_birth();
+
+	/////////////////////////////////////////////////////////
+	///////////////////// Measurement ///////////////////////
+	/////////////////////////////////////////////////////////
+    std::map<int, int>& _gender_histo;
+    std::map<int, int>& _baby_histo;
+    std::map<int, int>& _delay_histo;
+
 public:
 	// Créer un lapin femelle
-	RabbitFemale(unsigned int week_offset = 0);
+	RabbitFemale(std::mt19937& generator, std::map<int, int>& death_histo, std::map<int, int>& _death_period_histo, std::map<int, int>& _maturity_histo,  std::map<int, int>& _gender_histo, std::map<int, int>& _baby_histo, std::map<int, int>& _delay_histo, unsigned int week_offset = 0);
 	// Libération de la mémoire
 	~RabbitFemale();
 
 	// Donne naissance à une portée si nécessaire
 	void give_birth(unsigned int week, std::list<Rabbit*>& males, std::list<RabbitFemale*>& females);
+	// Sauvegarde les informations des portées dans un fichier pour analyse
+	void log_litters();
 };
 
 #endif

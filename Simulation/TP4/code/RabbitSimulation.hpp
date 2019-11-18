@@ -13,6 +13,7 @@
 #define RABBITSIMULATION_HPP_
 
 #include <iostream>
+#include <iomanip>
 #include <sstream>
 #include <fstream>
 #include <filesystem>
@@ -25,6 +26,9 @@
 class RabbitSimulation
 {
 private:
+	// Générateur de Mersenne-Twister de cette simulation.
+	std::mt19937 _generator;
+
 	// Identifiant de la prochaine simulation créée
 	static ushort run_id;
 	// Version string de cette identifiant, pour les fichiers.
@@ -46,6 +50,9 @@ private:
 
 	// Age de la simulation en semaine
 	unsigned int _week;
+
+	unsigned int _nb_males_init;
+	unsigned int _nb_females_init;
 
 	/////////////////////////////////////////////////////////
 	///////////////////// Measurement ///////////////////////
@@ -72,20 +79,42 @@ private:
 	unsigned int get_childs_nb(std::list<RabbitFemale*> _list);
 
 	// Fichier qui contiendra l'évolution du nombre de lapins
-	std::ofstream file1;
+	std::ofstream _file1;
 	// Fichier qui contiendra l'évolution du nombre de lapins femelles
-	std::ofstream file2;
+	std::ofstream _file2;
 	// Fichier qui contiendra l'évolution du nombre de lapins mâles
-	std::ofstream file3;
+	std::ofstream _file3;
+	// Fichier qui contiendra le nombre de portées de chaque lapine
+	std::ofstream _file4;
+	// Fichier qui contiendra le nombre de bébés par portée
+	std::ofstream _file5;
+	// Fichier qui contiendra le sexe des bébés
+	std::ofstream _file6;
+	// Fichier qui contiendra la date de mort des lapins
+	std::ofstream _file7;
+	// Fichier qui contiendra le ratio de période de la mort des lapins
+	std::ofstream _file8;
+	// Fichier qui contiendra l'age de maturité des lapins
+	std::ofstream _file9;
+	// Fichier qui contiendra le nombre de portées normalisé
+	std::ofstream _file10;
 
 	// Prépare les fichiers
 	void init_datas();
 	// Ajouteles informations au fichier
 	void log_datas();
 
+
+    std::map<int, int> _gender_histo{};
+    std::map<int, int> _baby_histo{};
+    std::map<int, int> _delay_histo{};
+	std::map<int, int> _death_histo{};
+    std::map<int, int> _death_period_histo{};
+	std::map<int, int> _maturity_histo{};
+	
 public:
 	// Créer une nouvelle simulation de population de lapins
-	RabbitSimulation(unsigned int nb_males_init = 2, unsigned int nb_females_init = 2);
+	RabbitSimulation(unsigned int rand_init, unsigned int nb_males_init = 2, unsigned int nb_females_init = 2);
 	// Libère la mémoire allouée à une simulation
 	~RabbitSimulation();
 

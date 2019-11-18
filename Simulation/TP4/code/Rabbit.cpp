@@ -15,7 +15,6 @@ std::array<double, 3> Rabbit::intervals
 	{14 * WEEK_PER_YEAR, 14 * WEEK_PER_YEAR, MAX_LIFESPAN};
 std::array<double, 3> Rabbit::weights {0, 0, 1};
 
-std::mt19937 Rabbit::generator(8);
 std::uniform_real_distribution<double> Rabbit::dist_rand(0, 1);
 std::uniform_int_distribution<>
 	Rabbit::dist_maturity(MATURITY_MIN, MATURITY_MAX);
@@ -33,9 +32,11 @@ std::piecewise_linear_distribution<double> Rabbit::dist_death_end
  * 
  * @param week_offset décalage entre l'échelle temporelle de la simulation et celle du lapin.
  */
-Rabbit::Rabbit(unsigned int week_offset):
-	_age(0), _week_offset(week_offset), _maturity_week(dist_maturity(generator)), _death_week(init_death())
+Rabbit::Rabbit(std::mt19937& generator, std::map<int, int>& death_histo, std::map<int, int>& death_period_histo, std::map<int, int>& maturity_histo, unsigned int week_offset):
+	generator(generator),_death_histo(death_histo), _death_period_histo(death_period_histo), _maturity_histo(maturity_histo), _age(0), _week_offset(week_offset), _maturity_week(dist_maturity(generator)), _death_week(init_death())
 {
+	++_maturity_histo[_maturity_week];
+	++_death_histo[_death_week];
 }
 
 /**
@@ -56,14 +57,17 @@ unsigned int Rabbit::init_death()
 	// Chances de mourir avant la maturité
 	constexpr double _mortality_before_maturity = 0.8;
 	// Chances de mourir entre la maturité et 11 ans
-	constexpr double _mortality_before_increments = 0.5;
+	constexpr double _mortality_before_increments = 1-0.000976562;
 
 	// Date de la mort
 	unsigned int death_week = 0;
 
-	// dist_rand nous donne un nombre aléatoire entre 0 et 1
-	// ainsi si il est inférieur à 0.8, le lapins va mourir avant la maturité (80%)
+	// dist_rand nous donne un nombre aléatoire entre 0 et 1 ainsi si il est 
+	// inférieur à 0.8, le lapins va mourir avant la maturité (80%)
 	if (dist_rand(generator) < _mortality_before_maturity)
+	{
+		// Statistiques
+		++_death_period_histo[1];
 		// On génère une date de mort suivant une loi géométrique.
 		// Comme la loi géométrique n'est pas bornée, nous répétons le tirage
 		// jusqu'à obtention d'une valeur valide
@@ -72,19 +76,26 @@ unsigned int Rabbit::init_death()
 			death_week = dist_baby_death(generator);
 		}	
 		while(death_week > _maturity_week);
+	}
 	// Même principe que précédemment mais avec 50%
 	else if (dist_rand(generator) < _mortality_before_increments)
-		// Même principe que précédemment mais avec d'autres paramètres pour la loi
+	{	// Statistiques
+		++_death_period_histo[2];
+		// Même principe que précédemment une autre loi
 		do
 		{
 			// La nombre donné par la distribution appartient à [0; +inf[,
-			// On ajoute donc la date de maturité pour bien placer la date de la mort
+			// On ajoute la date de maturité pour bien placer la date de la mort
 			death_week = dist_maturity_death(generator) + _maturity_week;
 		// On répète tant que l'on n'a pas une date avant les 11 ans
 		} while (death_week > 14 * WEEK_PER_YEAR);
-	// Si le lapin n'est pas mort avant, on le tue suivant une loi linéaire entre ses 11 et 15 ans
+	}
+	// Si le lapin n'est pas mort avant,
+	// on le tue suivant une loi linéaire entre ses 11 et 15 ans
 	else 
 	{
+		// Statistiques
+		++_death_period_histo[3];
 		death_week = dist_death_end(generator);
 	}
 
@@ -103,7 +114,7 @@ unsigned int Rabbit::init_death()
 void Rabbit::grow()
 {
 	// Incrémentation de l'âge du lapin.
-	_age++;
+	++_age;
 }
 
 /**

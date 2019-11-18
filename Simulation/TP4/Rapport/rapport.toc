@@ -1,16 +1,35 @@
 \babel@toc {french}{}
-\contentsline {section}{\numberline {1}Analyse}{3}% 
-\contentsline {subsection}{\numberline {1.1}Rappel du sujet}{3}% 
-\contentsline {subsection}{\numberline {1.2}Choix d'impl\IeC {\'e}mentation}{3}% 
-\contentsline {subsubsection}{\numberline {1.2.1}G\IeC {\'e}n\IeC {\'e}ration de nombres al\IeC {\'e}atoires}{3}% 
-\contentsline {subsection}{\numberline {1.3}D\IeC {\'e}finition du temps}{3}% 
-\contentsline {subsection}{\numberline {1.4}Fonctionnement des mises \IeC {\`a} jours}{3}% 
-\contentsline {subsection}{\numberline {1.5}D\IeC {\'e}roulement des mises \IeC {\`a} jours et lancement d'une simulation}{3}% 
-\contentsline {subsection}{\numberline {1.6}Performances}{3}% 
-\contentsline {section}{\numberline {2}Impl\IeC {\'e}mentation}{4}% 
-\contentsline {subsection}{\numberline {2.1}Nombres al\IeC {\'e}atoires}{4}% 
-\contentsline {subsubsection}{\numberline {2.1.1}Distributions de nombres al\IeC {\'e}atoires}{4}% 
-\contentsline {subsubsection}{\numberline {2.1.2}Distribution uniforme}{4}% 
-\contentsline {subsubsection}{\numberline {2.1.3}Distribution lin\IeC {\'e}aire}{5}% 
-\contentsline {subsubsection}{\numberline {2.1.4}Distribution g\IeC {\'e}om\IeC {\'e}trique}{6}% 
-\contentsline {subsubsection}{\numberline {2.1.5}Distribution normale}{6}% 
+\contentsline {section}{\numberline {1}Analyse}{3}{section.1}% 
+\contentsline {subsection}{\numberline {1.1}Rappel du sujet}{3}{subsection.1.1}% 
+\contentsline {subsection}{\numberline {1.2}Choix d'impl\IeC {\'e}mentation}{3}{subsection.1.2}% 
+\contentsline {subsubsection}{\numberline {1.2.1}G\IeC {\'e}n\IeC {\'e}ration de nombres al\IeC {\'e}atoires}{3}{subsubsection.1.2.1}% 
+\contentsline {subsubsection}{\numberline {1.2.2}D\IeC {\'e}finition du temps}{3}{subsubsection.1.2.2}% 
+\contentsline {subsubsection}{\numberline {1.2.3}Fonctionnement des mises \IeC {\`a} jour}{3}{subsubsection.1.2.3}% 
+\contentsline {subsubsection}{\numberline {1.2.4}D\IeC {\'e}roulement des mises \IeC {\`a} jour et lancement d'une simulation}{3}{subsubsection.1.2.4}% 
+\contentsline {subsubsection}{\numberline {1.2.5}Performances}{3}{subsubsection.1.2.5}% 
+\contentsline {section}{\numberline {2}Impl\IeC {\'e}mentation}{4}{section.2}% 
+\contentsline {subsection}{\numberline {2.1}Nombres al\IeC {\'e}atoires}{4}{subsection.2.1}% 
+\contentsline {subsubsection}{\numberline {2.1.1}Distributions de nombres al\IeC {\'e}atoires}{4}{subsubsection.2.1.1}% 
+\contentsline {subsubsection}{\numberline {2.1.2}Distribution uniforme}{4}{subsubsection.2.1.2}% 
+\contentsline {subsubsection}{\numberline {2.1.3}Distribution lin\IeC {\'e}aire}{5}{subsubsection.2.1.3}% 
+\contentsline {subsubsection}{\numberline {2.1.4}Distribution g\IeC {\'e}om\IeC {\'e}trique}{5}{subsubsection.2.1.4}% 
+\contentsline {subsubsection}{\numberline {2.1.5}Distribution normale}{6}{subsubsection.2.1.5}% 
+\contentsline {subsection}{\numberline {2.2}Algorithmes d'\IeC {\'e}volution de la population}{6}{subsection.2.2}% 
+\contentsline {subsubsection}{\numberline {2.2.1}Algortithme de choix des naissances}{6}{subsubsection.2.2.1}% 
+\contentsline {subsubsection}{\numberline {2.2.2}Algorithme de naissance des lapins}{7}{subsubsection.2.2.2}% 
+\contentsline {subsubsection}{\numberline {2.2.3}Algorithme de maturit\IeC {\'e}}{8}{subsubsection.2.2.3}% 
+\contentsline {subsubsection}{\numberline {2.2.4}Algorithme de gestion des morts}{8}{subsubsection.2.2.4}% 
+\contentsline {subsection}{\numberline {2.3}Fonctionnement de la simulation}{9}{subsection.2.3}% 
+\contentsline {subsubsection}{\numberline {2.3.1}Donn\IeC {\'e}es export\IeC {\'e}es}{9}{subsubsection.2.3.1}% 
+\contentsline {subsection}{\numberline {2.4}Compilation et ex\IeC {\'e}cution}{10}{subsection.2.4}% 
+\contentsline {section}{\numberline {3}Analyse des r\IeC {\'e}sultats}{10}{section.3}% 
+\contentsline {subsection}{\numberline {3.1}Naissances}{10}{subsection.3.1}% 
+\contentsline {subsubsection}{\numberline {3.1.1}Sexe des laperaux}{10}{subsubsection.3.1.1}% 
+\contentsline {subsubsection}{\numberline {3.1.2}Nombre de laperaux dans une port\IeC {\'e}e}{10}{subsubsection.3.1.2}% 
+\contentsline {subsubsection}{\numberline {3.1.3}Nombre de port\IeC {\'e}es par an d'une lapine}{11}{subsubsection.3.1.3}% 
+\contentsline {subsection}{\numberline {3.2}Maturit\IeC {\'e}}{12}{subsection.3.2}% 
+\contentsline {subsection}{\numberline {3.3}Mort}{13}{subsection.3.3}% 
+\contentsline {subsubsection}{\numberline {3.3.1}P\IeC {\'e}riode de la mort}{13}{subsubsection.3.3.1}% 
+\contentsline {subsubsection}{\numberline {3.3.2}Date de la mort}{13}{subsubsection.3.3.2}% 
+\contentsline {subsection}{\numberline {3.4}Population}{14}{subsection.3.4}% 
+\contentsline {section}{\numberline {4}Conclusion}{15}{section.4}% 

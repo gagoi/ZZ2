@@ -3,23 +3,27 @@
 ushort RabbitSimulation::run_id = 0;
 std::string RabbitSimulation::run_id_str = "0";
 
-RabbitSimulation::RabbitSimulation(unsigned int nb_males_init, unsigned int nb_females_init):
- _run_id(run_id), _week(0), _nb_rabbits_total(nb_males_init + nb_females_init), _nb_males_total(nb_males_init), _nb_females_total(nb_females_init), _nb_childs_males_deaths(0), _nb_childs_females_deaths(0), _nb_adults_males_deaths(0),  _nb_adults_females_deaths(0)
+RabbitSimulation::RabbitSimulation(unsigned int rand_init, unsigned int nb_males_init, unsigned int nb_females_init):
+  _generator(rand_init), _run_id(run_id), _week(0), _nb_males_init(nb_males_init), _nb_females_init(nb_females_init),
+  _nb_rabbits_total(nb_males_init + nb_females_init), _nb_males_total(nb_males_init), _nb_females_total(nb_females_init), 
+  _nb_childs_males_deaths(0), _nb_childs_females_deaths(0), _nb_adults_males_deaths(0),  _nb_adults_females_deaths(0)
 {
-	init_datas();
-	
 	std::cout << "Création de la simulation n°" << _run_id << ". Males : " << nb_males_init << ", Femelles : " << nb_females_init << std::endl;
+
+	init_datas();
 
 	std::filesystem::create_directories(std::string("../Rapport/" + run_id_str).c_str());
 	
-	file1 = std::ofstream(std::string("../../Rapport/" + run_id_str + "/total_rabbits.rab", std::ios_base::app).c_str());
-	file2 = std::ofstream(std::string("../../Rapport/" + run_id_str + "/total_females.rab", std::ios_base::app).c_str());
-	file3 = std::ofstream(std::string("../../Rapport/" + run_id_str + "/total_males.rab", std::ios_base::app).c_str());
-
-	for (unsigned int i = 0; i < nb_males_init; i++)
-		_males.push_back(new Rabbit);
-	for (unsigned int i = 0; i < nb_females_init; i++)
-		_females.push_back(new RabbitFemale);
+	_file1 = std::ofstream(std::string("../../Rapport/" + run_id_str + "/total_rabbits.rab", std::ios_base::app).c_str());
+	_file2 = std::ofstream(std::string("../../Rapport/" + run_id_str + "/total_females.rab", std::ios_base::app).c_str());
+	_file3 = std::ofstream(std::string("../../Rapport/" + run_id_str + "/total_males.rab", std::ios_base::app).c_str());
+	_file4 = std::ofstream(std::string("./../Rapport/" + run_id_str + "/nb_litters.rab", std::ios_base::ate).c_str());
+	_file5 = std::ofstream(std::string("./../Rapport/" + run_id_str + "/nb_baby_litters.rab", std::ios_base::ate).c_str());
+	_file6 = std::ofstream(std::string("./../Rapport/" + run_id_str + "/gender_baby.rab", std::ios_base::ate).c_str());
+	_file7 = std::ofstream(std::string("./../Rapport/" + run_id_str + "/death_dates.rab", std::ios_base::ate).c_str());
+	_file8 = std::ofstream(std::string("./../Rapport/" + run_id_str + "/death_periodes.rab", std::ios_base::ate).c_str());
+	_file9 = std::ofstream(std::string("./../Rapport/" + run_id_str + "/maturity.rab", std::ios_base::ate).c_str());
+	_file10 = std::ofstream(std::string("./../Rapport/" + run_id_str + "/nb_litters_norm.rab", std::ios_base::ate).c_str());
 
 	run_id++;
 	std::ostringstream oss;
@@ -34,14 +38,66 @@ RabbitSimulation::~RabbitSimulation()
 	
 	for (auto &&female : _females)
 		delete female;
+
+
+	float total = 0;
+	for (auto &&p : _gender_histo)
+		total+=p.second;
+	for (auto &&p : _gender_histo)
+		_file6 << p.first << ' ' << p.second*100/total << std::endl;
+	_file6.flush();
+
+	total = 0;
+	for (auto &&p : _baby_histo)
+		total+=p.second;
+	for (auto &&p : _baby_histo)
+		_file5 << p.first << ' ' << p.second*100/total << std::endl;
+	_file5.flush();
+
+
+	for (auto &&p : _delay_histo)
+		_file4 << p.first << ' ' << p.second << std::endl;
+	_file4.flush();
+
+	for (auto &&p : _death_histo)
+		_file7 << p.first << ' ' << p.second << std::endl;
+
+	for (auto &&p : _death_period_histo)
+		_file8 << p.first << ' ' << p.second << std::endl;
+
+	for (auto &&p : _maturity_histo)
+		_file9 << p.first << ' ' << p.second << std::endl;
+
+	total=0;
+	for (auto &&p : _delay_histo)
+		total+=p.second;
+
+	for (auto &&p : _delay_histo)
+		_file10 << 2./3*p.first << ' ' << p.second*100.0/total << std::endl;
+	
 }
 
 void RabbitSimulation::run(unsigned int week)
 {
-	std::cout << "Travail sur la simulation n°" << _run_id << " pendant " << week << " semaines (à partir de " << _week << ")." << std::endl;
+	if (_week == 0)
+	{
+		for (unsigned int i = 0; i < _nb_males_init; i++)
+			_males.push_back(new Rabbit(_generator, _death_histo, _death_period_histo, _maturity_histo));
+		for (unsigned int i = 0; i < _nb_females_init; i++)
+		{
+			RabbitFemale * rabbit = new RabbitFemale(_generator, _death_histo, _death_period_histo, _maturity_histo, _gender_histo, _baby_histo, _delay_histo);
+			_females.push_back(rabbit);
+		}
+	}
+	std::cout << std::endl;
 
+	unsigned int start_week = _week;
 	for (unsigned int i = 0; i < week; ++i)
+	{
 		grow();
+		std::cout << "\rTravail sur la simulation n°" << _run_id << " pendant " << week << " semaines (à partir de " << start_week << ") : " << std::round(i*100./week) << "% [" << _males.size() + _females.size() << " lapins]";
+		std::cout.flush();
+	}
 }
 
 unsigned int RabbitSimulation::get_childs_nb(std::list<Rabbit*> list)
@@ -138,18 +194,26 @@ void RabbitSimulation::init_datas()
 	remove(std::string("../Rapport/" + run_id_str + "/total_rabbits.rab").c_str());
 	remove(std::string("../Rapport/" + run_id_str + "/total_females.rab").c_str());
 	remove(std::string("../Rapport/" + run_id_str + "/total_males.rab").c_str());
+	remove(std::string("../Rapport/" + run_id_str + "/nb_litters.rab").c_str());
+	remove(std::string("../Rapport/" + run_id_str + "/nb_baby_litters.rab").c_str());
+	remove(std::string("../Rapport/" + run_id_str + "/gender_baby.rab").c_str());
+	remove(std::string("../Rapport/" + run_id_str + "/death_dates.rab").c_str());
+	remove(std::string("../Rapport/" + run_id_str + "/death_periodes.rab").c_str());
+	remove(std::string("../Rapport/" + run_id_str + "/maturity.rab").c_str());
+	remove(std::string("../Rapport/" + run_id_str + "/nb_litters_norm.rab").c_str());
+
 }
 
 void RabbitSimulation::log_datas()
 {
 	if (_week % 16 == 0)
 	{	
-		file1 << _week << ' ' << _nb_rabbits_total << std::endl;
-		file2 << _week << ' ' << _nb_females_total << std::endl;
-		file3 << _week << ' ' << _nb_males_total << std::endl;
+		_file1 << _week << ' ' << _nb_rabbits_total << std::endl;
+		_file2 << _week << ' ' << _nb_females_total << std::endl;
+		_file3 << _week << ' ' << _nb_males_total << std::endl;
 
-		file1.flush();
-		file2.flush();
-		file3.flush();
+		_file1.flush();
+		_file2.flush();
+		_file3.flush();
 	}
 }
