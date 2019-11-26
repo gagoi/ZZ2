@@ -68,7 +68,7 @@ Chaine& Chaine::operator=(const Chaine& c)
 char& Chaine::operator[](const int & i)
 {
 	if(_tab == nullptr)
-		throw null_pointer();
+		throw Null_pointer("Erreur");
 	else if (i < 0)
 		throw std::out_of_range("indice inférieur à 0");
 	else if (i > _capa)

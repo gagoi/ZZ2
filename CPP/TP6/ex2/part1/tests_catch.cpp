@@ -121,7 +121,7 @@ TEST_CASE("exception sur pointeur null") {
   Chaine s(0);
 
   // verification que l'heritage est bien fait
-  std::logic_error * pe = new Null_pointer;
+  std::logic_error * pe = new Null_pointer("Erreur");
   delete pe;
 
   REQUIRE_THROWS_AS( s[1] == 0, Null_pointer);
