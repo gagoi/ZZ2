@@ -9,7 +9,9 @@
 class AnonymeException : public std::exception
 {
 public:
-	std::string what(){return "identite anonyme";};
+	AnonymeException() : std::exception() {}
+	~AnonymeException() {}
+	const char * what() const noexcept {return "identite anonyme";}
 };
 
 class Personne

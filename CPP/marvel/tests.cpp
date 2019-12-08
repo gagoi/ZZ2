@@ -72,8 +72,8 @@ TEST_CASE("Anonyme2") {
 
 TEST_CASE("Anonyme3") {
     Super spider("Spiderman", Personne("Peter", "Parker", Personne::HOMME));
-    CHECK_THROWS_AS  ( spider.getIdentite(), AnonymeException);
-    REQUIRE_THROWS_AS( spider.getIdentite(), std::exception);
+    CHECK_THROWS_AS  ( spider.getIdentite(), AnonymeException&);
+    REQUIRE_THROWS_AS( spider.getIdentite(), std::exception&);
 
 }
 
@@ -81,7 +81,7 @@ TEST_CASE("Super2") {
     Super venom("Venom", Personne("Peter", "Parker", Personne::HOMME));
     venom.enregistrer();
     venom.setIdentite(Personne("Eddie", "Brock"));
-    CHECK_THROWS_AS( venom.getIdentite(), std::exception);
+    CHECK_THROWS_AS( venom.getIdentite(), std::exception&);
     venom.enregistrer();
     CHECK( "Brock"  == venom.getIdentite().getNom() );
     CHECK( "Parker" != venom.getIdentite().getNom() );
