@@ -1,5 +1,5 @@
 SRC=main.cpp marvel.cpp tests.cpp
-EXE=marvel
+EXE=a.out
 CXX=g++
 CXXFLAGS+=-Wall -Wextra -MMD -g
 LDFLAGS= 
