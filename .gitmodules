@@ -4,3 +4,6 @@
 [submodule "Simulation/TP5"]
 	path = Simulation/TP5
 	url = git@github.com:gagoi/ZZ2_Simulation_TP_4.git
+[submodule "Web/td1/Web/td1/sports-car"]
+	path = Web/td1/Web/td1/sports-car
+	url = git@gitlab.isima.fr:bcaure/sports-cars.git

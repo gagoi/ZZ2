@@ -1,7 +1,0 @@
-{
-	"files.associations": {
-		"*.tpp": "cpp",
-		"array": "cpp",
-		"fstream": "cpp"
-	}
-}
