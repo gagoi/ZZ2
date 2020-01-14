@@ -1,6 +1,0 @@
-[submodule "Projet-ZZ2"]
-	path = Projet-ZZ2
-	url = git@github.com:wiyochi/Projet-ZZ2.git
-[submodule "Simulation/tp5"]
-	path = Simulation/tp5
-	url = git@github.com:gagoi/ZZ2_Simulation_TP_5.git

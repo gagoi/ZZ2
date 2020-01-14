@@ -1,9 +1,0 @@
-<map id="main" name="main">
-<area shape="rect" id="node2" href="$classPopulation.html#a4a4eef2f12f2f46c1fafef5ca4db2933" title="passe le temps pour la population de lapins " alt="" coords="136,5,284,32"/>
-<area shape="rect" id="node3" href="$classPopulation.html#a7388e8d8308abe505b7fa95c759a03ea" title="getter pour le nombre de lapins de la population à l&#39;instant t " alt="" coords="107,56,313,83"/>
-<area shape="rect" id="node4" href="$classPopulation.html#a8cf700f7fa2dfd54035322c05bfc9914" title="getter pour le nombre de morts depuis le début de la population " alt="" coords="138,107,282,133"/>
-<area shape="rect" id="node5" href="$classPopulation.html#a703218d79e0d156a10c19e70d7433fa9" title="getter pour le nombre de naissances depuis le début de la population " alt="" coords="142,157,278,184"/>
-<area shape="rect" id="node6" href="$classPopulation.html#a13d2cee6f6bf940eea261b61c5999e1f" title="getter pour le nombre de femelles dans la poplation à l&#39;instant t " alt="" coords="104,209,316,250"/>
-<area shape="rect" id="node7" href="$classPopulation.html#a74dc9a5e829548a16d7910d7c17bb751" title="getter pour le nombre de mâles dans la poplation à l&#39;instant t " alt="" coords="111,274,309,315"/>
-<area shape="rect" id="node8" href="$classPopulation.html#aa5a0becf703f219c9e1a4270d54c397e" title="getter pour la moyenne d&#39;age auquel les lapins meurent " alt="" coords="111,340,309,367"/>
-</map>

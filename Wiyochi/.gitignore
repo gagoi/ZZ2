@@ -1,8 +1,0 @@
-.vscode
-*Debug/
-*Release/
-*.git/
-*.vs/
-*build/
-*.exe
-*.out

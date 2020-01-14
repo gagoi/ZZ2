@@ -1,6 +1,0 @@
-<map id="FemaleRabbit::grow" name="FemaleRabbit::grow">
-<area shape="rect" id="node2" href="$classRabbit.html#a404af8877c99ddc98108d88c8e466013" title="Méthode qui fait veillir l&#39;instance d&#39;un lapin de 1 mois. " alt="" coords="240,5,336,32"/>
-<area shape="rect" id="node3" href="$classRabbit.html#a8087ee3ab0acaa6108e6982933b0f79a" title="Méthode pour savoir si le lapin est jeune ou adulte. " alt="" coords="221,56,355,83"/>
-<area shape="rect" id="node4" href="$classRabbit.html#ae2093988d2ba8f561213a9767e8a31dd" title="Construit un nouvel objet &quot;Rabbit&quot;. " alt="" coords="235,107,341,133"/>
-<area shape="rect" id="node5" href="$classFemaleRabbit.html#a40a2809fb73bb2edf2cf4c4d9147d2d9" title="Construit un nouvel objet &quot;Female Rabbit&quot;. " alt="" coords="192,157,384,184"/>
-</map>
