@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>TP4 Simulation:  Fichier source de global.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">TP4 Simulation
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">global.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="global_8hpp.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef GLOBAL_H_</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define GLOBAL_H_</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;random&gt;</span></div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;cstring&gt;</span></div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;list&gt;</span></div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;cmath&gt;</span></div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">extern</span> std::mt19937 <a class="code" href="global_8hpp.html#a35141b83b1ff5df9c3aa9fb104eb906b">generator</a>;</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">extern</span> std::uniform_real_distribution&lt;&gt;    <a class="code" href="global_8hpp.html#a30c25655b299c9f04fe054eb393d3690">dis_real_0_1</a>;</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">extern</span> std::uniform_int_distribution&lt;&gt;     <a class="code" href="global_8hpp.html#aa0c430aa1304ea1e210a3492724f484a">dis_int_3_6</a>;</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">extern</span> std::uniform_int_distribution&lt;&gt;     <a class="code" href="global_8hpp.html#a96625a3261ea5e001125b5240cfa7b4f">dis_int_0_11</a>;</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">extern</span> std::uniform_int_distribution&lt;&gt;     <a class="code" href="global_8hpp.html#a3f684258e2fe639454c3f3b51ad5761c">dis_int_5_8</a>;</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">extern</span> std::normal_distribution&lt;&gt;          <a class="code" href="global_8hpp.html#a46324f02cd0355e7fce730e49b476d00">dis_normal_6_1</a>;</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="global_8hpp_html_a96625a3261ea5e001125b5240cfa7b4f"><div class="ttname"><a href="global_8hpp.html#a96625a3261ea5e001125b5240cfa7b4f">dis_int_0_11</a></div><div class="ttdeci">std::uniform_int_distribution dis_int_0_11</div></div>
+<div class="ttc" id="global_8hpp_html_a35141b83b1ff5df9c3aa9fb104eb906b"><div class="ttname"><a href="global_8hpp.html#a35141b83b1ff5df9c3aa9fb104eb906b">generator</a></div><div class="ttdeci">std::mt19937 generator</div></div>
+<div class="ttc" id="global_8hpp_html_aa0c430aa1304ea1e210a3492724f484a"><div class="ttname"><a href="global_8hpp.html#aa0c430aa1304ea1e210a3492724f484a">dis_int_3_6</a></div><div class="ttdeci">std::uniform_int_distribution dis_int_3_6</div></div>
+<div class="ttc" id="global_8hpp_html_a46324f02cd0355e7fce730e49b476d00"><div class="ttname"><a href="global_8hpp.html#a46324f02cd0355e7fce730e49b476d00">dis_normal_6_1</a></div><div class="ttdeci">std::normal_distribution dis_normal_6_1</div></div>
+<div class="ttc" id="global_8hpp_html_a3f684258e2fe639454c3f3b51ad5761c"><div class="ttname"><a href="global_8hpp.html#a3f684258e2fe639454c3f3b51ad5761c">dis_int_5_8</a></div><div class="ttdeci">std::uniform_int_distribution dis_int_5_8</div></div>
+<div class="ttc" id="global_8hpp_html_a30c25655b299c9f04fe054eb393d3690"><div class="ttname"><a href="global_8hpp.html#a30c25655b299c9f04fe054eb393d3690">dis_real_0_1</a></div><div class="ttdeci">std::uniform_real_distribution dis_real_0_1</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

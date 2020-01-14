@@ -1,0 +1,42 @@
+## Question
+-De plus , il nous faudrait une séparation dans les résultats par exemple mettre une couleur différente pour chaque type de résultat ou un fond différent
+ou un grand espace entre les différents groupes de résultats  (assistante sociale, aides à domicile, CSG)et serait il possible de ranger les résultats avec
+des titres et si possible avec une petite icône + qui déroulerai tous les résultats pour un groupe donné qd on clique dessus?
+
+Ex : assistante sociale : + = (assistante sociale entreprise , assistante sociale CCAS, assistance sociale conseil départemental)
+Dans celui ci, nous redoutons que le médecin ne s’y retrouve pas dans la liste
+
+## Reponse
+Je ne peut pas regrouper les résultats (ou alors c'est pas mal de boulot) mais je peux leur mettre une couleur différente. Pour ça par contre il
+faut quelque chose qui les caractérises parce que je ne sais pas quelles structures fait partie de quel groupe.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## Question
+-Nous souhaiterions que le bouton valider soit localiser entre les 2 colonnes. De plus, lorsque l’on a lancé une recherche en sélectionnant les critères
+si l’on modifie les critères et q’on appuie sur valider rien ne ce passe, on ne peut pas relancer de recherche. Cela suppose de valider à vide puis
+de recommencer. Peut être faudrait il pouvoir mettre « nouvelle recherche »? Et dans ce cas, la recherche précédente serait effacée.
+
+## Reponse
+La je ne comprend pas, le bouton est bien placé entre les 2 colonnes et plusieurs recherches à la suite fonctionne très bien chez moi, je ne vois
+vraiment pas pourquoi ça ne marcherai pas ailleurs (les joies du HTML/CSS/JS sur différents navigateurs). Pour ma part j'ai testé chrome et firefox.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## Question
+-Enfin : concernant la manipulation du début : à savoir sélectionner la liste des structures dans les fichiers de l’ordinateur serait il possible d’intégrer
+directement le fichier dans l’application sans avoir besoin de le chercher. Rappel: le logiciel est destiné à des médecins généralistes, qui en s’y
+connaissent pas forcément en informatique et cette manipulation peut être un frein à l’utilisation
+
+## Reponse
+Impossible sur cette version sauf si on en fait un site web (voir question suivante)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## Question
+-Concernant la diffusion de l’application comment cela sera elle possible ( via lien?  via hébergement sur un site?) pour une plus grande distribution??
+
+## Reponse
+La version simple pour la diffusion est de passer tous les fichiers et de lancer le .html sur un navigateur.
+On peut également le faire héberger via un hébergeur afin que ça devienne un site internet et la il serait accessible de partout.
+De plus si le .csv fourni est le seul fichier à utiliser, alors on peut surement le mettre "sur le site" et e pas avoir a le selectionner

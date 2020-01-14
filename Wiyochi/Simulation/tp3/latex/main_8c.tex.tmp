@@ -1,0 +1,258 @@
+\hypertarget{main_8c}{}\section{Référence du fichier main.\+c}
+\label{main_8c}\index{main.\+c@{main.\+c}}
+
+
+Implémentations et tests des fonctions créees pour le TP n°3 de Simulation.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}mt19937ar.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de main.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=281pt]{main_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{main_8c_a003a6336831c638f315bd28d987cd6ae}{get\+\_\+quantil} (int ind)
+\begin{DoxyCompactList}\small\item\em Fonction qui permet d\textquotesingle{}obtenir les quantils à partir du tableau t\+\_\+values. \end{DoxyCompactList}\item 
+double \hyperlink{main_8c_ac29441dc1e67ba3bdf8ff2fd6e80b590}{approx\+\_\+pi} (int number)
+\begin{DoxyCompactList}\small\item\em Fonction permettant d\textquotesingle{}approximer le nombre PI. \end{DoxyCompactList}\item 
+double \hyperlink{main_8c_a9dc62e75fa2e58d2ebad4921c30c1b1f}{mean\+\_\+pi} (int n, double $\ast$pis, int number)
+\begin{DoxyCompactList}\small\item\em Fonction utilisant plusieurs fois la fonction \hyperlink{main_8c_ac29441dc1e67ba3bdf8ff2fd6e80b590}{approx\+\_\+pi()} afin d\textquotesingle{}en faire une moyenne. \end{DoxyCompactList}\item 
+double \hyperlink{main_8c_a9b205782961c1259d3a9f39dffa995bb}{variance} (int n, double $\ast$pis, double mean)
+\begin{DoxyCompactList}\small\item\em Fonction calculant une estimation sans biais de la variance d\textquotesingle{}un tableau (en l\textquotesingle{}occurence de PI) \end{DoxyCompactList}\item 
+void \hyperlink{main_8c_ad89cd222c09aca0d2a6f5309eaf1eb1f}{confidences\+\_\+intervals\+\_\+95} (int n, double mean, double v, double $\ast$b\+\_\+inf, double $\ast$b\+\_\+sup)
+\begin{DoxyCompactList}\small\item\em Fonction qui calcule les intervalles de confiances à 95\%. \end{DoxyCompactList}\item 
+void \hyperlink{main_8c_a7633736232754889999b8605b977795e}{gen\+\_\+lapins} (int mois, unsigned long $\ast$population)
+\begin{DoxyCompactList}\small\item\em Fonction générant une population de lapins (Suite de Fibonacci) \end{DoxyCompactList}\item 
+int \hyperlink{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const double \hyperlink{main_8c_a001b1492c3bdf863e991eb1ffb0f0c3c}{t\+\_\+values} \mbox{[}$\,$\mbox{]}
+\begin{DoxyCompactList}\small\item\em Tableau des quantiles. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Implémentations et tests des fonctions créees pour le TP n°3 de Simulation. 
+
+\begin{DoxyAuthor}{Auteur}
+Mathieu Arquilliere (\href{mailto:mathieu.arquilliere@etu.uca.fr}{\tt mathieu.\+arquilliere@etu.\+uca.\+fr}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2019-\/10-\/15
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2019 
+\end{DoxyCopyright}
+
+
+\subsection{Documentation des fonctions}
+\mbox{\Hypertarget{main_8c_ac29441dc1e67ba3bdf8ff2fd6e80b590}\label{main_8c_ac29441dc1e67ba3bdf8ff2fd6e80b590}} 
+\index{main.\+c@{main.\+c}!approx\+\_\+pi@{approx\+\_\+pi}}
+\index{approx\+\_\+pi@{approx\+\_\+pi}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{approx\+\_\+pi()}{approx\_pi()}}
+{\footnotesize\ttfamily double approx\+\_\+pi (\begin{DoxyParamCaption}\item[{int}]{number }\end{DoxyParamCaption})}
+
+
+
+Fonction permettant d\textquotesingle{}approximer le nombre PI. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em number} & Nombre d\textquotesingle{}itérations sur la méthode Monte-\/\+Carlo -\/$>$ précision du retour \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+double Approximation du nombre PI 
+\end{DoxyReturn}
+
+
+Définition à la ligne 104 du fichier main.\+c.
+
+Voici le graphe des appelants de cette fonction \+:
+% FIG 0
+\mbox{\Hypertarget{main_8c_ad89cd222c09aca0d2a6f5309eaf1eb1f}\label{main_8c_ad89cd222c09aca0d2a6f5309eaf1eb1f}} 
+\index{main.\+c@{main.\+c}!confidences\+\_\+intervals\+\_\+95@{confidences\+\_\+intervals\+\_\+95}}
+\index{confidences\+\_\+intervals\+\_\+95@{confidences\+\_\+intervals\+\_\+95}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{confidences\+\_\+intervals\+\_\+95()}{confidences\_intervals\_95()}}
+{\footnotesize\ttfamily void confidences\+\_\+intervals\+\_\+95 (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{double}]{mean,  }\item[{double}]{v,  }\item[{double $\ast$}]{b\+\_\+inf,  }\item[{double $\ast$}]{b\+\_\+sup }\end{DoxyParamCaption})}
+
+
+
+Fonction qui calcule les intervalles de confiances à 95\%. 
+
+
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em n} & nombre d\textquotesingle{}occurences \\
+\hline
+\mbox{\tt in}  & {\em mean} & moyenne \\
+\hline
+\mbox{\tt in}  & {\em v} & variance \\
+\hline
+\mbox{\tt out}  & {\em b\+\_\+inf} & borne inferieure de l\textquotesingle{}intervalle de confiance \\
+\hline
+\mbox{\tt out}  & {\em b\+\_\+sup} & borne supérieur de l\textquotesingle{}intervalle de confiance \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne 177 du fichier main.\+c.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+% FIG 1
+Voici le graphe des appelants de cette fonction \+:
+% FIG 2
+\mbox{\Hypertarget{main_8c_a7633736232754889999b8605b977795e}\label{main_8c_a7633736232754889999b8605b977795e}} 
+\index{main.\+c@{main.\+c}!gen\+\_\+lapins@{gen\+\_\+lapins}}
+\index{gen\+\_\+lapins@{gen\+\_\+lapins}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{gen\+\_\+lapins()}{gen\_lapins()}}
+{\footnotesize\ttfamily void gen\+\_\+lapins (\begin{DoxyParamCaption}\item[{int}]{mois,  }\item[{unsigned long $\ast$}]{population }\end{DoxyParamCaption})}
+
+
+
+Fonction générant une population de lapins (Suite de Fibonacci) 
+
+
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em mois} & nombre de mois sur lesquels on observe l\textquotesingle{}évolution de la population de lapins \\
+\hline
+\mbox{\tt in}  & {\em long} & tableau de taille {\itshape mois} représentant le nombre de lapins chaque mois \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne 189 du fichier main.\+c.
+
+Voici le graphe des appelants de cette fonction \+:
+% FIG 3
+\mbox{\Hypertarget{main_8c_a003a6336831c638f315bd28d987cd6ae}\label{main_8c_a003a6336831c638f315bd28d987cd6ae}} 
+\index{main.\+c@{main.\+c}!get\+\_\+quantil@{get\+\_\+quantil}}
+\index{get\+\_\+quantil@{get\+\_\+quantil}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{get\+\_\+quantil()}{get\_quantil()}}
+{\footnotesize\ttfamily double get\+\_\+quantil (\begin{DoxyParamCaption}\item[{int}]{ind }\end{DoxyParamCaption})}
+
+
+
+Fonction qui permet d\textquotesingle{}obtenir les quantils à partir du tableau t\+\_\+values. 
+
+
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em ind} & indice du quantil voulu (\mbox{[}1, 30\mbox{]}, 40, 80, 120, inf) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+double quantil correspondant 
+\end{DoxyReturn}
+
+
+Définition à la ligne 81 du fichier main.\+c.
+
+Voici le graphe des appelants de cette fonction \+:
+% FIG 4
+\mbox{\Hypertarget{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{main.\+c@{main.\+c}!main@{main}}
+\index{main@{main}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne 33 du fichier main.\+c.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+% FIG 5
+\mbox{\Hypertarget{main_8c_a9dc62e75fa2e58d2ebad4921c30c1b1f}\label{main_8c_a9dc62e75fa2e58d2ebad4921c30c1b1f}} 
+\index{main.\+c@{main.\+c}!mean\+\_\+pi@{mean\+\_\+pi}}
+\index{mean\+\_\+pi@{mean\+\_\+pi}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{mean\+\_\+pi()}{mean\_pi()}}
+{\footnotesize\ttfamily double mean\+\_\+pi (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{double $\ast$}]{pis,  }\item[{int}]{number }\end{DoxyParamCaption})}
+
+
+
+Fonction utilisant plusieurs fois la fonction \hyperlink{main_8c_ac29441dc1e67ba3bdf8ff2fd6e80b590}{approx\+\_\+pi()} afin d\textquotesingle{}en faire une moyenne. 
+
+
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em n} & nombre d\textquotesingle{}approximations de PI voulu \\
+\hline
+\mbox{\tt out}  & {\em pis} & tableau de taille {\itshape n} dans lequel on place les approximations de PI générées \\
+\hline
+\mbox{\tt in}  & {\em number} & nombre d\textquotesingle{}itérations pour générer chaque approximation avec la fonction \hyperlink{main_8c_ac29441dc1e67ba3bdf8ff2fd6e80b590}{approx\+\_\+pi()} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+double moyenne des {\itshape n} approximations de PI 
+\end{DoxyReturn}
+
+
+Définition à la ligne 134 du fichier main.\+c.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+% FIG 6
+Voici le graphe des appelants de cette fonction \+:
+% FIG 7
+\mbox{\Hypertarget{main_8c_a9b205782961c1259d3a9f39dffa995bb}\label{main_8c_a9b205782961c1259d3a9f39dffa995bb}} 
+\index{main.\+c@{main.\+c}!variance@{variance}}
+\index{variance@{variance}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{variance()}{variance()}}
+{\footnotesize\ttfamily double variance (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{double $\ast$}]{pis,  }\item[{double}]{mean }\end{DoxyParamCaption})}
+
+
+
+Fonction calculant une estimation sans biais de la variance d\textquotesingle{}un tableau (en l\textquotesingle{}occurence de PI) 
+
+
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em n} & taille du tableau fourni \\
+\hline
+\mbox{\tt in}  & {\em pis} & tableau de taille ~\newline
+ contenant les approximations \\
+\hline
+\mbox{\tt in}  & {\em mean} & moyenne des approximations \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+double variance des approximations 
+\end{DoxyReturn}
+
+
+Définition à la ligne 156 du fichier main.\+c.
+
+Voici le graphe des appelants de cette fonction \+:
+% FIG 8
+
+
+\subsection{Documentation des variables}
+\mbox{\Hypertarget{main_8c_a001b1492c3bdf863e991eb1ffb0f0c3c}\label{main_8c_a001b1492c3bdf863e991eb1ffb0f0c3c}} 
+\index{main.\+c@{main.\+c}!t\+\_\+values@{t\+\_\+values}}
+\index{t\+\_\+values@{t\+\_\+values}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{t\+\_\+values}{t\_values}}
+{\footnotesize\ttfamily const double t\+\_\+values\mbox{[}$\,$\mbox{]}}
+
+{\bfseries Valeur initiale \+:}
+\begin{DoxyCode}
+= \{
+    12.706, 4.303, 3.182, 2.776, 2.571, 2.447, 2.365, 2.308, 2.262, 2.228,
+    2.201, 2.179, 2.160, 2.145, 2.131, 2.120, 2.110, 2.101, 2.093, 2.086,
+    2.080, 2.074, 2.069, 2.064, 2.060, 2.056, 2.052, 2.048, 2.045, 2.042,
+    2.021, 2.000, 1.980, 1.960
+\}
+\end{DoxyCode}
+
+
+Tableau des quantiles. 
+
+
+
+Définition à la ligne 19 du fichier main.\+c.
+

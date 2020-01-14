@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>TP4 Simulation:  Fichier source de Rabbit.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">TP4 Simulation
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Rabbit.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="Rabbit_8hpp.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef RABBIT_H_</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define RABBIT_H_</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="global_8hpp.html">global.hpp</a>&quot;</span></div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div><div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classRabbit.html">   23</a></span>&#160;<span class="keyword">class </span><a class="code" href="classRabbit.html">Rabbit</a></div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="classRabbit.html#ae2093988d2ba8f561213a9767e8a31dd">Rabbit</a>();</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classRabbit.html#ac57586ffc31fffa6392638afbbd32774">~Rabbit</a>();</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    </div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span>    <a class="code" href="classRabbit.html#a404af8877c99ddc98108d88c8e466013">grow</a>();</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">bool</span>            <a class="code" href="classRabbit.html#a8087ee3ab0acaa6108e6982933b0f79a">hasMajority</a>() <span class="keyword">const</span>;</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">bool</span>            <a class="code" href="classRabbit.html#a82cf75bd520aaa775fadbf103fc12499">hasToDie</a>() <span class="keyword">const</span>;</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>    <a class="code" href="classRabbit.html#ab34450717cf7b3f9eb22747527c34922">getAge</a>() <span class="keyword">const</span>;</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span>    <a class="code" href="classRabbit.html#a913437a589519afdb9249825bd6f03bd">isMale</a>() <span class="keyword">const</span>;</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div><div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classRabbit.html#ac6dc736f2b0395fa8692461a457a5297">   35</a></span>&#160;    <span class="keyword">static</span> constexpr <span class="keywordtype">double</span> <a class="code" href="classRabbit.html#ac6dc736f2b0395fa8692461a457a5297">survival_proba_young</a> = 0.2; </div><div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classRabbit.html#a8b8affe7fcdc56e08da384d8d82ec556">   36</a></span>&#160;    <span class="keyword">static</span> constexpr <span class="keywordtype">double</span> <a class="code" href="classRabbit.html#a8b8affe7fcdc56e08da384d8d82ec556">survival_proba_adult</a> = 0.5; </div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">protected</span>:</div><div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classRabbit.html#a396c4c8693ea4f827f12afd6d1320ec0">   39</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>    <a class="code" href="classRabbit.html#a396c4c8693ea4f827f12afd6d1320ec0">_age</a>; </div><div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classRabbit.html#a7cf441478e82d384166605c69f99f39e">   40</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>    <a class="code" href="classRabbit.html#a7cf441478e82d384166605c69f99f39e">_majority</a>; </div><div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classRabbit.html#a622452eedf7ef0addf1e2ce3d8ef34dc">   41</a></span>&#160;    <span class="keywordtype">double</span>          <a class="code" href="classRabbit.html#a622452eedf7ef0addf1e2ce3d8ef34dc">_proba_to_die_young</a>; </div><div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classRabbit.html#a600d8595c407b95965497f7308d72ab1">   42</a></span>&#160;    <span class="keywordtype">double</span>          <a class="code" href="classRabbit.html#a600d8595c407b95965497f7308d72ab1">_proba_to_die_adult</a>; </div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;};</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="classRabbit_html_a396c4c8693ea4f827f12afd6d1320ec0"><div class="ttname"><a href="classRabbit.html#a396c4c8693ea4f827f12afd6d1320ec0">Rabbit::_age</a></div><div class="ttdeci">unsigned int _age</div><div class="ttdoc">L&amp;#39;age du lapin en mois. </div><div class="ttdef"><b>Definition:</b> <a href="Rabbit_8hpp_source.html#l00039">Rabbit.hpp:39</a></div></div>
+<div class="ttc" id="classRabbit_html_ac6dc736f2b0395fa8692461a457a5297"><div class="ttname"><a href="classRabbit.html#ac6dc736f2b0395fa8692461a457a5297">Rabbit::survival_proba_young</a></div><div class="ttdeci">static constexpr double survival_proba_young</div><div class="ttdoc">probabilité de survivre à la jeunesse (les 5 à 8 premiers mois) </div><div class="ttdef"><b>Definition:</b> <a href="Rabbit_8hpp_source.html#l00035">Rabbit.hpp:35</a></div></div>
+<div class="ttc" id="classRabbit_html_ac57586ffc31fffa6392638afbbd32774"><div class="ttname"><a href="classRabbit.html#ac57586ffc31fffa6392638afbbd32774">Rabbit::~Rabbit</a></div><div class="ttdeci">virtual ~Rabbit()</div><div class="ttdoc">Détruit l&amp;#39;objet &quot;Rabbit&quot;. </div><div class="ttdef"><b>Definition:</b> <a href="Rabbit_8cpp_source.html#l00029">Rabbit.cpp:29</a></div></div>
+<div class="ttc" id="classRabbit_html_ab34450717cf7b3f9eb22747527c34922"><div class="ttname"><a href="classRabbit.html#ab34450717cf7b3f9eb22747527c34922">Rabbit::getAge</a></div><div class="ttdeci">unsigned int getAge() const</div><div class="ttdoc">Getter pour l&amp;#39;age. </div><div class="ttdef"><b>Definition:</b> <a href="Rabbit_8cpp_source.html#l00068">Rabbit.cpp:68</a></div></div>
+<div class="ttc" id="classRabbit_html_a8b8affe7fcdc56e08da384d8d82ec556"><div class="ttname"><a href="classRabbit.html#a8b8affe7fcdc56e08da384d8d82ec556">Rabbit::survival_proba_adult</a></div><div class="ttdeci">static constexpr double survival_proba_adult</div><div class="ttdoc">probabilité de survivre pour un lapin adulte (11 ans moins les mois de jeunesse) </div><div class="ttdef"><b>Definition:</b> <a href="Rabbit_8hpp_source.html#l00036">Rabbit.hpp:36</a></div></div>
+<div class="ttc" id="classRabbit_html_a8087ee3ab0acaa6108e6982933b0f79a"><div class="ttname"><a href="classRabbit.html#a8087ee3ab0acaa6108e6982933b0f79a">Rabbit::hasMajority</a></div><div class="ttdeci">bool hasMajority() const</div><div class="ttdoc">Méthode pour savoir si le lapin est jeune ou adulte. </div><div class="ttdef"><b>Definition:</b> <a href="Rabbit_8cpp_source.html#l00047">Rabbit.cpp:47</a></div></div>
+<div class="ttc" id="classRabbit_html_a7cf441478e82d384166605c69f99f39e"><div class="ttname"><a href="classRabbit.html#a7cf441478e82d384166605c69f99f39e">Rabbit::_majority</a></div><div class="ttdeci">unsigned int _majority</div><div class="ttdoc">Nombre de mois avant que le lapin n&amp;#39;atteigne la majorité et passe à l&amp;#39;age adulte et puisse enfanter (...</div><div class="ttdef"><b>Definition:</b> <a href="Rabbit_8hpp_source.html#l00040">Rabbit.hpp:40</a></div></div>
+<div class="ttc" id="classRabbit_html_a404af8877c99ddc98108d88c8e466013"><div class="ttname"><a href="classRabbit.html#a404af8877c99ddc98108d88c8e466013">Rabbit::grow</a></div><div class="ttdeci">virtual void grow()</div><div class="ttdoc">Méthode qui fait veillir l&amp;#39;instance d&amp;#39;un lapin de 1 mois. </div><div class="ttdef"><b>Definition:</b> <a href="Rabbit_8cpp_source.html#l00036">Rabbit.cpp:36</a></div></div>
+<div class="ttc" id="classRabbit_html_a622452eedf7ef0addf1e2ce3d8ef34dc"><div class="ttname"><a href="classRabbit.html#a622452eedf7ef0addf1e2ce3d8ef34dc">Rabbit::_proba_to_die_young</a></div><div class="ttdeci">double _proba_to_die_young</div><div class="ttdoc">Probabilité de mourir (par mois) avant de devenir adulte, calculée avec la probabilité de survivre et...</div><div class="ttdef"><b>Definition:</b> <a href="Rabbit_8hpp_source.html#l00041">Rabbit.hpp:41</a></div></div>
+<div class="ttc" id="classRabbit_html_a913437a589519afdb9249825bd6f03bd"><div class="ttname"><a href="classRabbit.html#a913437a589519afdb9249825bd6f03bd">Rabbit::isMale</a></div><div class="ttdeci">virtual bool isMale() const</div><div class="ttdoc">Méthode permettant de savoir si l&amp;#39;instance est celle d&amp;#39;un lapin mâle ou femelle. </div><div class="ttdef"><b>Definition:</b> <a href="Rabbit_8cpp_source.html#l00076">Rabbit.cpp:76</a></div></div>
+<div class="ttc" id="classRabbit_html_ae2093988d2ba8f561213a9767e8a31dd"><div class="ttname"><a href="classRabbit.html#ae2093988d2ba8f561213a9767e8a31dd">Rabbit::Rabbit</a></div><div class="ttdeci">Rabbit()</div><div class="ttdoc">Construit un nouvel objet &quot;Rabbit&quot;. </div><div class="ttdef"><b>Definition:</b> <a href="Rabbit_8cpp_source.html#l00018">Rabbit.cpp:18</a></div></div>
+<div class="ttc" id="global_8hpp_html"><div class="ttname"><a href="global_8hpp.html">global.hpp</a></div><div class="ttdoc">Fichier d&amp;#39;include global pour que tous les fichiers ait accès aux includes et au distributions. </div></div>
+<div class="ttc" id="classRabbit_html_a82cf75bd520aaa775fadbf103fc12499"><div class="ttname"><a href="classRabbit.html#a82cf75bd520aaa775fadbf103fc12499">Rabbit::hasToDie</a></div><div class="ttdeci">bool hasToDie() const</div><div class="ttdoc">Méthode pour savoir si le lapin doit mourir ce mois. </div><div class="ttdef"><b>Definition:</b> <a href="Rabbit_8cpp_source.html#l00058">Rabbit.cpp:58</a></div></div>
+<div class="ttc" id="classRabbit_html"><div class="ttname"><a href="classRabbit.html">Rabbit</a></div><div class="ttdoc">Classe représentant un lapin (mâle ou femelle) </div><div class="ttdef"><b>Definition:</b> <a href="Rabbit_8hpp_source.html#l00023">Rabbit.hpp:23</a></div></div>
+<div class="ttc" id="classRabbit_html_a600d8595c407b95965497f7308d72ab1"><div class="ttname"><a href="classRabbit.html#a600d8595c407b95965497f7308d72ab1">Rabbit::_proba_to_die_adult</a></div><div class="ttdeci">double _proba_to_die_adult</div><div class="ttdoc">Probabilité de mourir (par mois) en étant adulte, calculée avec la probabilité de survivre et le nomb...</div><div class="ttdef"><b>Definition:</b> <a href="Rabbit_8hpp_source.html#l00042">Rabbit.hpp:42</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

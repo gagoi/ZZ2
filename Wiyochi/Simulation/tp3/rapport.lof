@@ -1,0 +1,12 @@
+\babel@toc {french}{}
+\contentsline {figure}{\numberline {1}{\ignorespaces Repr\IeC {\'e}sentation graphique de la m\IeC {\'e}thode Monte Carlo}}{3}{figure.1}% 
+\contentsline {figure}{\numberline {2}{\ignorespaces Fonction d'approximation du nombre $\pi $ en utilisant la m\IeC {\'e}thode de Monte Carlo}}{4}{figure.2}% 
+\contentsline {figure}{\numberline {3}{\ignorespaces Fonction g\IeC {\'e}n\IeC {\'e}rant plusieurs approximations de $\pi $ et en calcule la moyenne}}{5}{figure.3}% 
+\contentsline {figure}{\numberline {4}{\ignorespaces Sortie de \emph {gprof}, permettant d'observer le temps d'éxecution de chaque fonction}}{6}{figure.4}% 
+\contentsline {figure}{\numberline {5}{\ignorespaces Fonction calculant la variance à partir d'un tableau d'approximation de $\pi $}}{7}{figure.5}% 
+\contentsline {figure}{\numberline {6}{\ignorespaces Implémentation des quantils - tableau}}{7}{figure.6}% 
+\contentsline {figure}{\numberline {7}{\ignorespaces Implémentation des quantils - fonction de correspondance}}{8}{figure.7}% 
+\contentsline {figure}{\numberline {8}{\ignorespaces Fonction calculant les intervalles de confiance à 95\%}}{8}{figure.8}% 
+\contentsline {figure}{\numberline {9}{\ignorespaces Représentation de la suite de Fibonacci avec une population de lapins}}{9}{figure.9}% 
+\contentsline {figure}{\numberline {10}{\ignorespaces Fonction reproduisant la suite de fibonacci}}{9}{figure.10}% 
+\contentsline {figure}{\numberline {11}{\ignorespaces Affichage du tableau de population de couples de lapins}}{10}{figure.11}% 

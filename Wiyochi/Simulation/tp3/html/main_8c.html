@@ -1,0 +1,489 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>TP3 Simulation: Référence du fichier main.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">TP3 Simulation
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Fonctions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier main.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Implémentations et tests des fonctions créees pour le TP n°3 de Simulation.  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;math.h&gt;</code><br />
+<code>#include &quot;mt19937ar.h&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de main.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8c__incl.png" border="0" usemap="#main_8c" alt=""/></div>
+</div>
+</div>
+<p><a href="main_8c_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a003a6336831c638f315bd28d987cd6ae"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a003a6336831c638f315bd28d987cd6ae">get_quantil</a> (int ind)</td></tr>
+<tr class="memdesc:a003a6336831c638f315bd28d987cd6ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui permet d'obtenir les quantils à partir du tableau t_values.  <a href="#a003a6336831c638f315bd28d987cd6ae">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a003a6336831c638f315bd28d987cd6ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac29441dc1e67ba3bdf8ff2fd6e80b590"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ac29441dc1e67ba3bdf8ff2fd6e80b590">approx_pi</a> (int number)</td></tr>
+<tr class="memdesc:ac29441dc1e67ba3bdf8ff2fd6e80b590"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction permettant d'approximer le nombre PI.  <a href="#ac29441dc1e67ba3bdf8ff2fd6e80b590">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ac29441dc1e67ba3bdf8ff2fd6e80b590"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dc62e75fa2e58d2ebad4921c30c1b1f"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a9dc62e75fa2e58d2ebad4921c30c1b1f">mean_pi</a> (int n, double *pis, int number)</td></tr>
+<tr class="memdesc:a9dc62e75fa2e58d2ebad4921c30c1b1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction utilisant plusieurs fois la fonction <a class="el" href="main_8c.html#ac29441dc1e67ba3bdf8ff2fd6e80b590" title="Fonction permettant d&#39;approximer le nombre PI. ">approx_pi()</a> afin d'en faire une moyenne.  <a href="#a9dc62e75fa2e58d2ebad4921c30c1b1f">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a9dc62e75fa2e58d2ebad4921c30c1b1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b205782961c1259d3a9f39dffa995bb"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a9b205782961c1259d3a9f39dffa995bb">variance</a> (int n, double *pis, double mean)</td></tr>
+<tr class="memdesc:a9b205782961c1259d3a9f39dffa995bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction calculant une estimation sans biais de la variance d'un tableau (en l'occurence de PI)  <a href="#a9b205782961c1259d3a9f39dffa995bb">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a9b205782961c1259d3a9f39dffa995bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad89cd222c09aca0d2a6f5309eaf1eb1f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ad89cd222c09aca0d2a6f5309eaf1eb1f">confidences_intervals_95</a> (int n, double mean, double v, double *b_inf, double *b_sup)</td></tr>
+<tr class="memdesc:ad89cd222c09aca0d2a6f5309eaf1eb1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui calcule les intervalles de confiances à 95%.  <a href="#ad89cd222c09aca0d2a6f5309eaf1eb1f">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ad89cd222c09aca0d2a6f5309eaf1eb1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7633736232754889999b8605b977795e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a7633736232754889999b8605b977795e">gen_lapins</a> (int mois, unsigned long *population)</td></tr>
+<tr class="memdesc:a7633736232754889999b8605b977795e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction générant une population de lapins (Suite de Fibonacci)  <a href="#a7633736232754889999b8605b977795e">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a7633736232754889999b8605b977795e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
+<tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a001b1492c3bdf863e991eb1ffb0f0c3c"><td class="memItemLeft" align="right" valign="top">const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a001b1492c3bdf863e991eb1ffb0f0c3c">t_values</a> []</td></tr>
+<tr class="memdesc:a001b1492c3bdf863e991eb1ffb0f0c3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tableau des quantiles.  <a href="#a001b1492c3bdf863e991eb1ffb0f0c3c">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a001b1492c3bdf863e991eb1ffb0f0c3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Implémentations et tests des fonctions créees pour le TP n°3 de Simulation. </p>
+<dl class="section author"><dt>Auteur</dt><dd>Mathieu Arquilliere (<a href="#" onclick="location.href='mai'+'lto:'+'mat'+'hi'+'eu.'+'ar'+'qui'+'ll'+'ier'+'e@'+'etu'+'.u'+'ca.'+'fr'; return false;">mathi<span style="display: none;">.nosp@m.</span>eu.a<span style="display: none;">.nosp@m.</span>rquil<span style="display: none;">.nosp@m.</span>lier<span style="display: none;">.nosp@m.</span>e@etu<span style="display: none;">.nosp@m.</span>.uca<span style="display: none;">.nosp@m.</span>.fr</a>) </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>1 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2019-10-15</dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2019 </dd></dl>
+
+<p class="definition">Définition dans le fichier <a class="el" href="main_8c_source.html">main.c</a>.</p>
+</div><h2 class="groupheader">Documentation des fonctions</h2>
+<a id="ac29441dc1e67ba3bdf8ff2fd6e80b590"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac29441dc1e67ba3bdf8ff2fd6e80b590">&#9670;&nbsp;</a></span>approx_pi()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double approx_pi </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>number</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction permettant d'approximer le nombre PI. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">number</td><td>Nombre d'itérations sur la méthode Monte-Carlo -&gt; précision du retour </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>double Approximation du nombre PI </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="main_8c_source.html#l00104">104</a> du fichier <a class="el" href="main_8c_source.html">main.c</a>.</p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8c_ac29441dc1e67ba3bdf8ff2fd6e80b590_icgraph.png" border="0" usemap="#main_8c_ac29441dc1e67ba3bdf8ff2fd6e80b590_icgraph" alt=""/></div>
+<map name="main_8c_ac29441dc1e67ba3bdf8ff2fd6e80b590_icgraph" id="main_8c_ac29441dc1e67ba3bdf8ff2fd6e80b590_icgraph">
+<area shape="rect" id="node2" href="main_8c.html#a9dc62e75fa2e58d2ebad4921c30c1b1f" title="Fonction utilisant plusieurs fois la fonction approx_pi() afin d&#39;en faire une moyenne. " alt="" coords="132,5,203,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad89cd222c09aca0d2a6f5309eaf1eb1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad89cd222c09aca0d2a6f5309eaf1eb1f">&#9670;&nbsp;</a></span>confidences_intervals_95()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void confidences_intervals_95 </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>mean</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>b_inf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>b_sup</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction qui calcule les intervalles de confiances à 95%. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>nombre d'occurences </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mean</td><td>moyenne </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">v</td><td>variance </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">b_inf</td><td>borne inferieure de l'intervalle de confiance </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">b_sup</td><td>borne supérieur de l'intervalle de confiance </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="main_8c_source.html#l00177">177</a> du fichier <a class="el" href="main_8c_source.html">main.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8c_ad89cd222c09aca0d2a6f5309eaf1eb1f_cgraph.png" border="0" usemap="#main_8c_ad89cd222c09aca0d2a6f5309eaf1eb1f_cgraph" alt=""/></div>
+<map name="main_8c_ad89cd222c09aca0d2a6f5309eaf1eb1f_cgraph" id="main_8c_ad89cd222c09aca0d2a6f5309eaf1eb1f_cgraph">
+<area shape="rect" id="node2" href="main_8c.html#a003a6336831c638f315bd28d987cd6ae" title="Fonction qui permet d&#39;obtenir les quantils à partir du tableau t_values. " alt="" coords="223,5,308,32"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8c_ad89cd222c09aca0d2a6f5309eaf1eb1f_icgraph.png" border="0" usemap="#main_8c_ad89cd222c09aca0d2a6f5309eaf1eb1f_icgraph" alt=""/></div>
+<map name="main_8c_ad89cd222c09aca0d2a6f5309eaf1eb1f_icgraph" id="main_8c_ad89cd222c09aca0d2a6f5309eaf1eb1f_icgraph">
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7633736232754889999b8605b977795e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7633736232754889999b8605b977795e">&#9670;&nbsp;</a></span>gen_lapins()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void gen_lapins </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mois</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned long *&#160;</td>
+          <td class="paramname"><em>population</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction générant une population de lapins (Suite de Fibonacci) </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mois</td><td>nombre de mois sur lesquels on observe l'évolution de la population de lapins </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">long</td><td>tableau de taille <em>mois</em> représentant le nombre de lapins chaque mois </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="main_8c_source.html#l00189">189</a> du fichier <a class="el" href="main_8c_source.html">main.c</a>.</p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8c_a7633736232754889999b8605b977795e_icgraph.png" border="0" usemap="#main_8c_a7633736232754889999b8605b977795e_icgraph" alt=""/></div>
+<map name="main_8c_a7633736232754889999b8605b977795e_icgraph" id="main_8c_a7633736232754889999b8605b977795e_icgraph">
+<area shape="rect" id="node2" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="137,5,188,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a003a6336831c638f315bd28d987cd6ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a003a6336831c638f315bd28d987cd6ae">&#9670;&nbsp;</a></span>get_quantil()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double get_quantil </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ind</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction qui permet d'obtenir les quantils à partir du tableau t_values. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ind</td><td>indice du quantil voulu ([1, 30], 40, 80, 120, inf) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>double quantil correspondant </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="main_8c_source.html#l00081">81</a> du fichier <a class="el" href="main_8c_source.html">main.c</a>.</p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8c_a003a6336831c638f315bd28d987cd6ae_icgraph.png" border="0" usemap="#main_8c_a003a6336831c638f315bd28d987cd6ae_icgraph" alt=""/></div>
+<map name="main_8c_a003a6336831c638f315bd28d987cd6ae_icgraph" id="main_8c_a003a6336831c638f315bd28d987cd6ae_icgraph">
+<area shape="rect" id="node2" href="main_8c.html#ad89cd222c09aca0d2a6f5309eaf1eb1f" title="Fonction qui calcule les intervalles de confiances à 95%. " alt="" coords="139,5,308,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&nbsp;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="main_8c_source.html#l00033">33</a> du fichier <a class="el" href="main_8c_source.html">main.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.png" border="0" usemap="#main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" alt=""/></div>
+<map name="main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" id="main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph">
+<area shape="rect" id="node2" href="main_8c.html#a7633736232754889999b8605b977795e" title="Fonction générant une population de lapins (Suite de Fibonacci) " alt="" coords="104,5,188,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9dc62e75fa2e58d2ebad4921c30c1b1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9dc62e75fa2e58d2ebad4921c30c1b1f">&#9670;&nbsp;</a></span>mean_pi()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double mean_pi </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>pis</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>number</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction utilisant plusieurs fois la fonction <a class="el" href="main_8c.html#ac29441dc1e67ba3bdf8ff2fd6e80b590" title="Fonction permettant d&#39;approximer le nombre PI. ">approx_pi()</a> afin d'en faire une moyenne. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>nombre d'approximations de PI voulu </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">pis</td><td>tableau de taille <em>n</em> dans lequel on place les approximations de PI générées </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">number</td><td>nombre d'itérations pour générer chaque approximation avec la fonction <a class="el" href="main_8c.html#ac29441dc1e67ba3bdf8ff2fd6e80b590" title="Fonction permettant d&#39;approximer le nombre PI. ">approx_pi()</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>double moyenne des <em>n</em> approximations de PI </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="main_8c_source.html#l00134">134</a> du fichier <a class="el" href="main_8c_source.html">main.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8c_a9dc62e75fa2e58d2ebad4921c30c1b1f_cgraph.png" border="0" usemap="#main_8c_a9dc62e75fa2e58d2ebad4921c30c1b1f_cgraph" alt=""/></div>
+<map name="main_8c_a9dc62e75fa2e58d2ebad4921c30c1b1f_cgraph" id="main_8c_a9dc62e75fa2e58d2ebad4921c30c1b1f_cgraph">
+<area shape="rect" id="node2" href="main_8c.html#ac29441dc1e67ba3bdf8ff2fd6e80b590" title="Fonction permettant d&#39;approximer le nombre PI. " alt="" coords="124,5,203,32"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8c_a9dc62e75fa2e58d2ebad4921c30c1b1f_icgraph.png" border="0" usemap="#main_8c_a9dc62e75fa2e58d2ebad4921c30c1b1f_icgraph" alt=""/></div>
+<map name="main_8c_a9dc62e75fa2e58d2ebad4921c30c1b1f_icgraph" id="main_8c_a9dc62e75fa2e58d2ebad4921c30c1b1f_icgraph">
+<area shape="rect" id="node2" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="124,5,175,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9b205782961c1259d3a9f39dffa995bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b205782961c1259d3a9f39dffa995bb">&#9670;&nbsp;</a></span>variance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double variance </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>pis</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>mean</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction calculant une estimation sans biais de la variance d'un tableau (en l'occurence de PI) </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>taille du tableau fourni </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pis</td><td>tableau de taille <br />
+ contenant les approximations </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mean</td><td>moyenne des approximations </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>double variance des approximations </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="main_8c_source.html#l00156">156</a> du fichier <a class="el" href="main_8c_source.html">main.c</a>.</p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8c_a9b205782961c1259d3a9f39dffa995bb_icgraph.png" border="0" usemap="#main_8c_a9b205782961c1259d3a9f39dffa995bb_icgraph" alt=""/></div>
+<map name="main_8c_a9b205782961c1259d3a9f39dffa995bb_icgraph" id="main_8c_a9b205782961c1259d3a9f39dffa995bb_icgraph">
+<area shape="rect" id="node2" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="124,5,175,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des variables</h2>
+<a id="a001b1492c3bdf863e991eb1ffb0f0c3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a001b1492c3bdf863e991eb1ffb0f0c3c">&#9670;&nbsp;</a></span>t_values</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const double t_values[]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur initiale :</b><div class="fragment"><div class="line">= {</div><div class="line">    12.706, 4.303, 3.182, 2.776, 2.571, 2.447, 2.365, 2.308, 2.262, 2.228,</div><div class="line">    2.201, 2.179, 2.160, 2.145, 2.131, 2.120, 2.110, 2.101, 2.093, 2.086,</div><div class="line">    2.080, 2.074, 2.069, 2.064, 2.060, 2.056, 2.052, 2.048, 2.045, 2.042,</div><div class="line">    2.021, 2.000, 1.980, 1.960</div><div class="line">}</div></div><!-- fragment -->
+<p>Tableau des quantiles. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="main_8c_source.html#l00019">19</a> du fichier <a class="el" href="main_8c_source.html">main.c</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

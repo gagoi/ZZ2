@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+*{
+	background-color: white;
+	background: white;
+}	
+
+.notPrinted,
+.valider,
+.cadreCritere,
+.imprimer {
+    display: none;
+}
+
+.titre {
+    text-align: center;
+}
+
+.cadre {
+    display: grid;
+    grid-template-columns: 1fr;
+    left: 0;
+}
+
+.cadreStructure {
+    grid-column: 1;
+    overflow: visible;
+}
+
+.cadreCritere{
+	background-color: #ffffff;
+}

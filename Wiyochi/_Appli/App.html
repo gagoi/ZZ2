@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aide à l'orientation des patients</title>
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/v5.5.0/css/all.css">
+    <link rel="stylesheet" type="text/css" href="App.css">
+    <link rel="stylesheet" type="text/css" href="Impression.css" media="print">
+</head>
+
+<body>
+    <h1 class="titre">Application d'aide à l'orientation des patients atteints de troubles cognitifs</h1>
+    <div class="notPrinted">
+        <h2>Choix du fichier</h2>
+        <input id="file" class="input-file" type="file">
+
+        <h2>Choix des critères de tri</h2>
+        <h3>Zones</h3>
+        <div id="multiselectZones" class="multiselect">
+            <div class="selectBox" onclick="showZoneCheckboxes()">
+                <select>
+                <option id="optionZone">-- Choisir les zones --</option>
+            </select>
+                <div class="overSelect"></div>
+            </div>
+
+            <div id="zoneCheckboxes" class="checkboxes">
+
+            </div>
+        </div>
+
+        <h3 style="padding-top: 40px;">Type de prise en charge</h3>
+        <div id="multiselectType" class="multiselect">
+            <div class="selectBox" onclick="showTypeCheckboxes()">
+                <select>
+                <option id="optionType">-- Choisir les types --</option>
+            </select>
+                <div class="overSelect"></div>
+            </div>
+
+            <div id="typeCheckboxes" class="checkboxes">
+
+            </div>
+        </div>
+
+        <h3 style="padding-top: 40px;">Type de troubles cognitifs</h3>
+        <div>
+            <input type="radio" id="severe" name="trouble" value="severe" checked onclick="modify()">
+            <label for="severe">Sévère</label>
+        </div>
+        <div>
+            <input type="radio" id="leger" name="trouble" value="leger" onclick="modify()">
+            <label for="leger">Léger</label>
+        </div>
+    </div>
+
+    <h2 class="notPrinted">Autres critères</h2>
+    <p class="notPrinted">Si vous avez sélectionné "Troubles cognitifs sévères", merci de cocher au moins un critère supplémentaires dans la liste en-dessous</p>
+    <div class="cadre" id="cadre">
+        <div class="cadreCritere" id="critere"></div>
+        <input type="button" class="valider" id="valider" value="Valider" onclick="hideAndShow()" />
+        <div class="cadreStructure" id="structure"></div>
+        <input type="button" class="imprimer" value="imprimer" onclick="javascript:window.print()">
+    </div>
+    <div class="notPrinted">
+        <footer class="footer">
+            <p>Vous pouvez joindre un gériatre du lundi au vendredi de 8h30 à 18h30 au numéro suivant : 04 73 75 08 00.</p>
+        </footer>
+    </div>
+</body>
+<script type="text/javascript" src="App.js"></script>
+
+</html>

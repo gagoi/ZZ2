@@ -1,0 +1,17 @@
+\begin{theindex}
+
+  \item {approx\+\_\+pi}
+    \subitem {main.\+c}, \hyperpage{4}
+
+  \indexspace
+
+  \item {confidences\+\_\+intervals\+\_\+95}
+    \subitem {main.\+c}, \hyperpage{5}
+
+  \indexspace
+
+  \item {main.\+c}, \hyperpage{3}
+    \subitem {approx\+\_\+pi}, \hyperpage{4}
+    \subitem {confidences\+\_\+intervals\+\_\+95}, \hyperpage{5}
+
+\end{theindex}

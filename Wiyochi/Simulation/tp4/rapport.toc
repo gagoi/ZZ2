@@ -1,0 +1,19 @@
+\babel@toc {french}{}
+\contentsline {section}{\numberline {1}Introduction}{3}{section.1}% 
+\contentsline {section}{\numberline {2}Analyse du sujet}{3}{section.2}% 
+\contentsline {subsection}{\numberline {2.1}Naissances}{3}{subsection.2.1}% 
+\contentsline {subsection}{\numberline {2.2}Majorit\IeC {\'e}}{3}{subsection.2.2}% 
+\contentsline {subsection}{\numberline {2.3}Mort}{3}{subsection.2.3}% 
+\contentsline {section}{\numberline {3}Impl\IeC {\'e}mentation}{3}{section.3}% 
+\contentsline {subsection}{\numberline {3.1}L'objet lapin}{3}{subsection.3.1}% 
+\contentsline {subsection}{\numberline {3.2}L'objet Lapin femelle}{5}{subsection.3.2}% 
+\contentsline {subsection}{\numberline {3.3}L'objet Population}{6}{subsection.3.3}% 
+\contentsline {section}{\numberline {4}Résultats}{8}{section.4}% 
+\contentsline {subsection}{\numberline {4.1}Tests simple d'une population}{8}{subsection.4.1}% 
+\contentsline {subsection}{\numberline {4.2}Tests sur plusieurs populations}{10}{subsection.4.2}% 
+\contentsline {section}{\numberline {5}Conclusion}{10}{section.5}% 
+\contentsline {section}{\numberline {A}Manuel d'utilisation}{11}{appendix.A}% 
+\contentsline {subsection}{\numberline {A.1}Gestion d'une seule population}{11}{subsection.A.1}% 
+\contentsline {subsection}{\numberline {A.2}Moyenne sur plusieurs populations}{11}{subsection.A.2}% 
+\contentsline {section}{\numberline {B}Compilation}{11}{appendix.B}% 
+\contentsline {section}{\numberline {C}Documentation}{11}{appendix.C}% 

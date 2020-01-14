@@ -1,0 +1,315 @@
+\hypertarget{classRabbit}{}\section{Référence de la classe Rabbit}
+\label{classRabbit}\index{Rabbit@{Rabbit}}
+
+
+Classe représentant un lapin (mâle ou femelle)  
+
+
+
+
+{\ttfamily \#include $<$Rabbit.\+hpp$>$}
+
+
+
+Graphe d\textquotesingle{}héritage de Rabbit\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=157pt]{classRabbit__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classRabbit_ae2093988d2ba8f561213a9767e8a31dd}{Rabbit} ()
+\begin{DoxyCompactList}\small\item\em Construit un nouvel objet \char`\"{}\+Rabbit\char`\"{}. \end{DoxyCompactList}\item 
+virtual \hyperlink{classRabbit_ac57586ffc31fffa6392638afbbd32774}{$\sim$\+Rabbit} ()
+\begin{DoxyCompactList}\small\item\em Détruit l\textquotesingle{}objet \char`\"{}\+Rabbit\char`\"{}. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classRabbit_a404af8877c99ddc98108d88c8e466013}{grow} ()
+\begin{DoxyCompactList}\small\item\em Méthode qui fait veillir l\textquotesingle{}instance d\textquotesingle{}un lapin de 1 mois. \end{DoxyCompactList}\item 
+bool \hyperlink{classRabbit_a8087ee3ab0acaa6108e6982933b0f79a}{has\+Majority} () const
+\begin{DoxyCompactList}\small\item\em Méthode pour savoir si le lapin est jeune ou adulte. \end{DoxyCompactList}\item 
+bool \hyperlink{classRabbit_a82cf75bd520aaa775fadbf103fc12499}{has\+To\+Die} () const
+\begin{DoxyCompactList}\small\item\em Méthode pour savoir si le lapin doit mourir ce mois. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classRabbit_ab34450717cf7b3f9eb22747527c34922}{get\+Age} () const
+\begin{DoxyCompactList}\small\item\em Getter pour l\textquotesingle{}age. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classRabbit_a913437a589519afdb9249825bd6f03bd}{is\+Male} () const
+\begin{DoxyCompactList}\small\item\em Méthode permettant de savoir si l\textquotesingle{}instance est celle d\textquotesingle{}un lapin mâle ou femelle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Attributs publics statiques}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr double \hyperlink{classRabbit_ac6dc736f2b0395fa8692461a457a5297}{survival\+\_\+proba\+\_\+young} = 0.\+2
+\begin{DoxyCompactList}\small\item\em probabilité de survivre à la jeunesse (les 5 à 8 premiers mois) \end{DoxyCompactList}\item 
+static constexpr double \hyperlink{classRabbit_a8b8affe7fcdc56e08da384d8d82ec556}{survival\+\_\+proba\+\_\+adult} = 0.\+5
+\begin{DoxyCompactList}\small\item\em probabilité de survivre pour un lapin adulte (11 ans moins les mois de jeunesse) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Attributs protégés}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \hyperlink{classRabbit_a396c4c8693ea4f827f12afd6d1320ec0}{\+\_\+age}
+\begin{DoxyCompactList}\small\item\em L\textquotesingle{}age du lapin en mois. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classRabbit_a7cf441478e82d384166605c69f99f39e}{\+\_\+majority}
+\begin{DoxyCompactList}\small\item\em Nombre de mois avant que le lapin n\textquotesingle{}atteigne la majorité et passe à l\textquotesingle{}age adulte et puisse enfanter (si c\textquotesingle{}est une femelle) \end{DoxyCompactList}\item 
+double \hyperlink{classRabbit_a622452eedf7ef0addf1e2ce3d8ef34dc}{\+\_\+proba\+\_\+to\+\_\+die\+\_\+young}
+\begin{DoxyCompactList}\small\item\em Probabilité de mourir (par mois) avant de devenir adulte, calculée avec la probabilité de survivre et le nombre de mois de jeunesse. \end{DoxyCompactList}\item 
+double \hyperlink{classRabbit_a600d8595c407b95965497f7308d72ab1}{\+\_\+proba\+\_\+to\+\_\+die\+\_\+adult}
+\begin{DoxyCompactList}\small\item\em Probabilité de mourir (par mois) en étant adulte, calculée avec la probabilité de survivre et le nombre de mois de jeunesse. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Classe représentant un lapin (mâle ou femelle) 
+
+Si l\textquotesingle{}objet est créé en tant que \hyperlink{classRabbit}{Rabbit}, c\textquotesingle{}est qu\textquotesingle{}il représente un lapin mâle, sinon la classe utilisée sera \hyperlink{classFemaleRabbit}{Female\+Rabbit}. Cependant la classe \hyperlink{classRabbit}{Rabbit} synthétise les deux genres. Il n\textquotesingle{}y a juste pas de classe Male\+Rabbit puisque celle-\/ci n\textquotesingle{}implémenterait rien de plus que la classe \hyperlink{classRabbit}{Rabbit}. 
+
+Définition à la ligne 23 du fichier Rabbit.\+hpp.
+
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{classRabbit_ae2093988d2ba8f561213a9767e8a31dd}\label{classRabbit_ae2093988d2ba8f561213a9767e8a31dd}} 
+\index{Rabbit@{Rabbit}!Rabbit@{Rabbit}}
+\index{Rabbit@{Rabbit}!Rabbit@{Rabbit}}
+\subsubsection{\texorpdfstring{Rabbit()}{Rabbit()}}
+{\footnotesize\ttfamily Rabbit\+::\+Rabbit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construit un nouvel objet \char`\"{}\+Rabbit\char`\"{}. 
+
+Définit l\textquotesingle{}age de la majorité, la probabilité de mourir jeune et la probabilité de mourir en étant adulte 
+
+Définition à la ligne 18 du fichier Rabbit.\+cpp.
+
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{classRabbit_ae2093988d2ba8f561213a9767e8a31dd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classRabbit_ac57586ffc31fffa6392638afbbd32774}\label{classRabbit_ac57586ffc31fffa6392638afbbd32774}} 
+\index{Rabbit@{Rabbit}!````~Rabbit@{$\sim$\+Rabbit}}
+\index{````~Rabbit@{$\sim$\+Rabbit}!Rabbit@{Rabbit}}
+\subsubsection{\texorpdfstring{$\sim$\+Rabbit()}{~Rabbit()}}
+{\footnotesize\ttfamily Rabbit\+::$\sim$\+Rabbit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Détruit l\textquotesingle{}objet \char`\"{}\+Rabbit\char`\"{}. 
+
+
+
+Définition à la ligne 29 du fichier Rabbit.\+cpp.
+
+
+
+\subsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{classRabbit_ab34450717cf7b3f9eb22747527c34922}\label{classRabbit_ab34450717cf7b3f9eb22747527c34922}} 
+\index{Rabbit@{Rabbit}!get\+Age@{get\+Age}}
+\index{get\+Age@{get\+Age}!Rabbit@{Rabbit}}
+\subsubsection{\texorpdfstring{get\+Age()}{getAge()}}
+{\footnotesize\ttfamily unsigned int Rabbit\+::get\+Age (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter pour l\textquotesingle{}age. 
+
+\begin{DoxyReturn}{Renvoie}
+unsigned int l\textquotesingle{}age du lapin 
+\end{DoxyReturn}
+
+
+Définition à la ligne 68 du fichier Rabbit.\+cpp.
+
+\mbox{\Hypertarget{classRabbit_a404af8877c99ddc98108d88c8e466013}\label{classRabbit_a404af8877c99ddc98108d88c8e466013}} 
+\index{Rabbit@{Rabbit}!grow@{grow}}
+\index{grow@{grow}!Rabbit@{Rabbit}}
+\subsubsection{\texorpdfstring{grow()}{grow()}}
+{\footnotesize\ttfamily void Rabbit\+::grow (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Méthode qui fait veillir l\textquotesingle{}instance d\textquotesingle{}un lapin de 1 mois. 
+
+
+
+Réimplémentée dans \hyperlink{classFemaleRabbit_ad938ea7eca97c53e89d11392b6856ebd}{Female\+Rabbit}.
+
+
+
+Définition à la ligne 36 du fichier Rabbit.\+cpp.
+
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=292pt]{classRabbit_a404af8877c99ddc98108d88c8e466013_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classRabbit_a8087ee3ab0acaa6108e6982933b0f79a}\label{classRabbit_a8087ee3ab0acaa6108e6982933b0f79a}} 
+\index{Rabbit@{Rabbit}!has\+Majority@{has\+Majority}}
+\index{has\+Majority@{has\+Majority}!Rabbit@{Rabbit}}
+\subsubsection{\texorpdfstring{has\+Majority()}{hasMajority()}}
+{\footnotesize\ttfamily bool Rabbit\+::has\+Majority (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Méthode pour savoir si le lapin est jeune ou adulte. 
+
+\begin{DoxyReturn}{Renvoie}
+true si le lapin est adulte 
+
+false si le lapin est jeune 
+\end{DoxyReturn}
+
+
+Définition à la ligne 47 du fichier Rabbit.\+cpp.
+
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{classRabbit_a8087ee3ab0acaa6108e6982933b0f79a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classRabbit_a82cf75bd520aaa775fadbf103fc12499}\label{classRabbit_a82cf75bd520aaa775fadbf103fc12499}} 
+\index{Rabbit@{Rabbit}!has\+To\+Die@{has\+To\+Die}}
+\index{has\+To\+Die@{has\+To\+Die}!Rabbit@{Rabbit}}
+\subsubsection{\texorpdfstring{has\+To\+Die()}{hasToDie()}}
+{\footnotesize\ttfamily bool Rabbit\+::has\+To\+Die (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Méthode pour savoir si le lapin doit mourir ce mois. 
+
+\begin{DoxyReturn}{Renvoie}
+true si il doit mourir 
+
+false si il survit 
+\end{DoxyReturn}
+
+
+Définition à la ligne 58 du fichier Rabbit.\+cpp.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=310pt]{classRabbit_a82cf75bd520aaa775fadbf103fc12499_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classRabbit_a913437a589519afdb9249825bd6f03bd}\label{classRabbit_a913437a589519afdb9249825bd6f03bd}} 
+\index{Rabbit@{Rabbit}!is\+Male@{is\+Male}}
+\index{is\+Male@{is\+Male}!Rabbit@{Rabbit}}
+\subsubsection{\texorpdfstring{is\+Male()}{isMale()}}
+{\footnotesize\ttfamily bool Rabbit\+::is\+Male (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Méthode permettant de savoir si l\textquotesingle{}instance est celle d\textquotesingle{}un lapin mâle ou femelle. 
+
+
+
+Réimplémentée dans \hyperlink{classFemaleRabbit_a60250dbc3758c7d31537f13b4879fe33}{Female\+Rabbit}.
+
+
+
+Définition à la ligne 76 du fichier Rabbit.\+cpp.
+
+
+
+\subsection{Documentation des champs}
+\mbox{\Hypertarget{classRabbit_a396c4c8693ea4f827f12afd6d1320ec0}\label{classRabbit_a396c4c8693ea4f827f12afd6d1320ec0}} 
+\index{Rabbit@{Rabbit}!\+\_\+age@{\+\_\+age}}
+\index{\+\_\+age@{\+\_\+age}!Rabbit@{Rabbit}}
+\subsubsection{\texorpdfstring{\+\_\+age}{\_age}}
+{\footnotesize\ttfamily unsigned int Rabbit\+::\+\_\+age\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+L\textquotesingle{}age du lapin en mois. 
+
+
+
+Définition à la ligne 39 du fichier Rabbit.\+hpp.
+
+\mbox{\Hypertarget{classRabbit_a7cf441478e82d384166605c69f99f39e}\label{classRabbit_a7cf441478e82d384166605c69f99f39e}} 
+\index{Rabbit@{Rabbit}!\+\_\+majority@{\+\_\+majority}}
+\index{\+\_\+majority@{\+\_\+majority}!Rabbit@{Rabbit}}
+\subsubsection{\texorpdfstring{\+\_\+majority}{\_majority}}
+{\footnotesize\ttfamily unsigned int Rabbit\+::\+\_\+majority\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Nombre de mois avant que le lapin n\textquotesingle{}atteigne la majorité et passe à l\textquotesingle{}age adulte et puisse enfanter (si c\textquotesingle{}est une femelle) 
+
+
+
+Définition à la ligne 40 du fichier Rabbit.\+hpp.
+
+\mbox{\Hypertarget{classRabbit_a600d8595c407b95965497f7308d72ab1}\label{classRabbit_a600d8595c407b95965497f7308d72ab1}} 
+\index{Rabbit@{Rabbit}!\+\_\+proba\+\_\+to\+\_\+die\+\_\+adult@{\+\_\+proba\+\_\+to\+\_\+die\+\_\+adult}}
+\index{\+\_\+proba\+\_\+to\+\_\+die\+\_\+adult@{\+\_\+proba\+\_\+to\+\_\+die\+\_\+adult}!Rabbit@{Rabbit}}
+\subsubsection{\texorpdfstring{\+\_\+proba\+\_\+to\+\_\+die\+\_\+adult}{\_proba\_to\_die\_adult}}
+{\footnotesize\ttfamily double Rabbit\+::\+\_\+proba\+\_\+to\+\_\+die\+\_\+adult\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Probabilité de mourir (par mois) en étant adulte, calculée avec la probabilité de survivre et le nombre de mois de jeunesse. 
+
+
+
+Définition à la ligne 42 du fichier Rabbit.\+hpp.
+
+\mbox{\Hypertarget{classRabbit_a622452eedf7ef0addf1e2ce3d8ef34dc}\label{classRabbit_a622452eedf7ef0addf1e2ce3d8ef34dc}} 
+\index{Rabbit@{Rabbit}!\+\_\+proba\+\_\+to\+\_\+die\+\_\+young@{\+\_\+proba\+\_\+to\+\_\+die\+\_\+young}}
+\index{\+\_\+proba\+\_\+to\+\_\+die\+\_\+young@{\+\_\+proba\+\_\+to\+\_\+die\+\_\+young}!Rabbit@{Rabbit}}
+\subsubsection{\texorpdfstring{\+\_\+proba\+\_\+to\+\_\+die\+\_\+young}{\_proba\_to\_die\_young}}
+{\footnotesize\ttfamily double Rabbit\+::\+\_\+proba\+\_\+to\+\_\+die\+\_\+young\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Probabilité de mourir (par mois) avant de devenir adulte, calculée avec la probabilité de survivre et le nombre de mois de jeunesse. 
+
+
+
+Définition à la ligne 41 du fichier Rabbit.\+hpp.
+
+\mbox{\Hypertarget{classRabbit_a8b8affe7fcdc56e08da384d8d82ec556}\label{classRabbit_a8b8affe7fcdc56e08da384d8d82ec556}} 
+\index{Rabbit@{Rabbit}!survival\+\_\+proba\+\_\+adult@{survival\+\_\+proba\+\_\+adult}}
+\index{survival\+\_\+proba\+\_\+adult@{survival\+\_\+proba\+\_\+adult}!Rabbit@{Rabbit}}
+\subsubsection{\texorpdfstring{survival\+\_\+proba\+\_\+adult}{survival\_proba\_adult}}
+{\footnotesize\ttfamily constexpr double Rabbit\+::survival\+\_\+proba\+\_\+adult = 0.\+5\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+probabilité de survivre pour un lapin adulte (11 ans moins les mois de jeunesse) 
+
+
+
+Définition à la ligne 36 du fichier Rabbit.\+hpp.
+
+\mbox{\Hypertarget{classRabbit_ac6dc736f2b0395fa8692461a457a5297}\label{classRabbit_ac6dc736f2b0395fa8692461a457a5297}} 
+\index{Rabbit@{Rabbit}!survival\+\_\+proba\+\_\+young@{survival\+\_\+proba\+\_\+young}}
+\index{survival\+\_\+proba\+\_\+young@{survival\+\_\+proba\+\_\+young}!Rabbit@{Rabbit}}
+\subsubsection{\texorpdfstring{survival\+\_\+proba\+\_\+young}{survival\_proba\_young}}
+{\footnotesize\ttfamily constexpr double Rabbit\+::survival\+\_\+proba\+\_\+young = 0.\+2\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+probabilité de survivre à la jeunesse (les 5 à 8 premiers mois) 
+
+
+
+Définition à la ligne 35 du fichier Rabbit.\+hpp.
+
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Rabbit_8hpp}{Rabbit.\+hpp}\item 
+\hyperlink{Rabbit_8cpp}{Rabbit.\+cpp}\end{DoxyCompactItemize}
