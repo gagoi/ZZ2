@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+
+  <!--
+      Table Brand
+  -->
+  <changeSet id="20181016133052-1" author="Benjamin CAURE">
+    <createTable tableName="brand">
+      <column name="id" type="bigint" autoIncrement="true">
+        <constraints primaryKey="true" nullable="false"/>
+      </column>
+      <column name="name" type="varchar(1000)">
+        <constraints nullable="true"/>
+      </column>
+    </createTable>
+
+  </changeSet>
+
+  <!--
+      Table Model
+  -->
+  <changeSet id="20181016133053-1" author="Benjamin CAURE">
+    <createTable tableName="model">
+      <column name="id" type="bigint" autoIncrement="true">
+        <constraints primaryKey="true" nullable="false"/>
+      </column>
+      <column name="name" type="varchar(1000)">
+        <constraints nullable="true"/>
+      </column>
+
+      <column name="brand_id" type="bigint">
+        <constraints nullable="true"/>
+      </column>
+
+    </createTable>
+
+    <addForeignKeyConstraint baseColumnNames="brand_id"
+      baseTableName="model"
+      constraintName="fk_model_brand_id"
+      referencedColumnNames="id"
+      referencedTableName="brand"/>
+
+  </changeSet>
+
+  <!--
+      Table Car
+  -->
+  <changeSet id="20181016133054-1" author="Benjamin CAURE">
+    <createTable tableName="car">
+      <column name="id" type="bigint" autoIncrement="true">
+        <constraints primaryKey="true" nullable="false"/>
+      </column>
+      <column name="variant" type="varchar(1000)">
+        <constraints nullable="true"/>
+      </column>
+
+      <column name="power" type="float">
+        <constraints nullable="true"/>
+      </column>
+
+      <column name="real_weight" type="float">
+        <constraints nullable="true"/>
+      </column>
+
+      <column name="official_weight" type="float">
+        <constraints nullable="true"/>
+      </column>
+
+      <column name="options" type="varchar(1000)">
+        <constraints nullable="true"/>
+      </column>
+
+      <column name="start_date" type="date">
+        <constraints nullable="true"/>
+      </column>
+
+      <column name="image_url" type="varchar(1000)">
+        <constraints nullable="true"/>
+      </column>
+
+      <column name="image" type="blob">
+        <constraints nullable="true"/>
+      </column>
+
+      <column name="model_id" type="bigint">
+        <constraints nullable="true"/>
+      </column>
+
+    </createTable>
+
+    <addForeignKeyConstraint baseColumnNames="model_id"
+      baseTableName="car"
+      constraintName="fk_car_model_id"
+      referencedColumnNames="id"
+      referencedTableName="model"/>
+
+  </changeSet>
+
+  <!-- Data -->
+
+  <changeSet id="20181016133052-2" author="Benjamin CAURE">
+    <loadData file="db/data/brands.csv" separator=";" tableName="brand">
+    </loadData>
+  </changeSet>
+
+  <changeSet id="20181016133053-3" author="Benjamin CAURE">
+    <loadData file="db/data/models.csv" separator=";" tableName="model">
+    </loadData>
+  </changeSet>
+
+  <changeSet id="20181016133054-3" author="Benjamin CAURE">
+    <loadData file="db/data/cars.csv" separator=";" tableName="car">
+      <column name="start_date" header="start_date" type="DATE"/>
+    </loadData>
+  </changeSet>
+
+
+</databaseChangeLog>

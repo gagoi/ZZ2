@@ -1,0 +1,31 @@
+plugins {
+	id 'org.springframework.boot' version '2.1.6.RELEASE'
+	id 'java'
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+group = 'org.sportscars'
+version = '1.0'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.liquibase:liquibase-core'
+	runtimeOnly 'com.h2database:h2'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    
+    // Java 9+
+    runtimeOnly 'javax.xml.bind:jaxb-api:2.3.0'
+    runtimeOnly 'javax.activation:activation:1.1'
+    runtimeOnly 'org.glassfish.jaxb:jaxb-runtime:2.3.0'
+
+    // TD4 Junit Dependencies.java
+    testImplementation group: 'org.apache.commons', name: 'commons-collections4', version: '4.2'
+}

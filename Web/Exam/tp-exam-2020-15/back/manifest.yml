@@ -1,0 +1,7 @@
+# For deployment on run.pivotal.io
+---
+applications:
+- name: sports-cars
+  random-route: true
+  memory: 1G
+  path: build/libs/sports-cars-1.0.jar

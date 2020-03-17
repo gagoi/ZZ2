@@ -1,0 +1,63 @@
+@import '/theme.css';
+
+.car-details {
+  padding-bottom: 10px;
+}
+
+.car-summary {
+  padding-left: 5px;
+  padding-right: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.car-summary {
+  font-weight: normal;
+  margin-top: 8px;
+  margin-bottom: 5px;
+}
+
+.name {
+  /* Long labels */
+  max-width: 70%; /* do not reduce summary arrow */
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.bars {
+  margin-left: 15px;
+  margin-right: 10px;
+}
+
+.bars label {
+  color: var(--text-medium);
+}
+
+.bars span {
+  color: var(--text-extra-bright);
+}
+
+.bar {
+  width: 0%; /* default value; will be computed later */
+  height: 3px;
+  margin: 5px 0 10px 0;
+}
+
+.bar-weight {
+  background-color: yellow;
+}
+
+.bar-power {
+  background-color: red;
+}
+
+.bar-ratio {
+  background-color: green;
+}
+
+.bar-title {
+  display: flex;
+  justify-content: space-between;
+  font-size: small;
+}

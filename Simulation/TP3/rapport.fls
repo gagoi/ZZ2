@@ -67,8 +67,8 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
 INPUT /usr/share/texlive/texmf-dist/tex/generic/unicode-data/UnicodeData.txt
 INPUT /usr/share/texlive/texmf-dist/tex/generic/unicode-data/UnicodeData.txt
 INPUT /dev/null
-INPUT /usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3pdfmode.def
-INPUT /usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3pdfmode.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 INPUT /usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/oberdiek/zref-abspage.sty
@@ -121,11 +121,11 @@ INPUT /home/gagoi/Documents/zz/ZZ2/Simulation/TP3/rapport.toc
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
 OUTPUT /home/gagoi/Documents/zz/ZZ2/Simulation/TP3/rapport.toc
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 INPUT /home/gagoi/Documents/zz/ZZ2/Simulation/TP3/main.c
-INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr9.tfm
 INPUT /home/gagoi/Documents/zz/ZZ2/Simulation/TP3/main.c
 INPUT /home/gagoi/Documents/zz/ZZ2/Simulation/TP3/main.c

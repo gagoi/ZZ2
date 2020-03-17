@@ -1,0 +1,104 @@
+@import '../../theme.css';
+
+.app-header {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
+  padding: 50px;
+  color: var(--text-bright);
+}
+
+h1 {
+  flex: 0 0 200px;
+  text-align: center;
+  font-variant: small-caps;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.2;
+  color: inherit;
+}
+
+.search {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.search input.form-control {
+  width: 200px;
+  height: 25px;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: var(--text-medium);
+  display: block;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.search input.form-control::placeholder {
+  color: var(--text-medium);
+}
+
+/*** MENU ***/
+
+.nav-items {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.nav-items > * {
+  /* do not move position when showing details */
+  height: 56px;
+}
+
+.nav-items .menu-top10 {
+  /* do not move position when showing details */
+  width: 200px;
+}
+
+.nav-items nav {
+  display: flex;
+  align-items: flex-start;
+  cursor: pointer;
+  flex: 1;
+}
+
+.nav-items nav:hover {
+  background-color: var(--element-hover);
+}
+
+.nav-items span {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  white-space: nowrap;
+}
+
+nav.top10-weight,
+nav.top10-power,
+nav.top10-ratio {
+  justify-content: center;
+}
+
+.nav-items details {
+  margin-left: 15px;
+}
+
+/* Horizontal menu */
+
+summary {
+  display: flex;
+  align-items: center;
+}
+
+.app-header details section {
+  display: flex;
+}

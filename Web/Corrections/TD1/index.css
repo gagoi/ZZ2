@@ -1,0 +1,274 @@
+* {
+    --text-extra-bright: white;
+    --text-bright: #e1e1e1;
+    --text-medium: #a1a1a1;
+    --text-medium-dark: gray;
+    --text-dark: #333333;
+    --element-hover: rgba(80, 80, 80, 0.8);
+    --element-selected: rgba(80, 80, 80, 0.5);
+  }
+  summary {
+    outline: none; /* remove border on select */
+    cursor: pointer;
+  }
+  summary:hover {
+    background-color: var(--element-hover);
+  }
+  details[open] {
+    background-color: var(--element-selected);
+  }
+  .app-container {
+    display: flex;
+    flex-direction: column;
+    background-image: url('hangar.jpg');
+    background-size: cover;
+    font-family: 'Gill Sans', sans-serif;
+    min-height: 100vh;
+    position: relative;
+  }
+  .app-container,
+  .overlay {
+    width: 100%;
+    height: 100%;
+  }
+  .overlay {
+    position: absolute;
+    top: 0px;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  .app-header,
+  .app-content {
+    z-index: 1;
+    align-self: center;
+    align-items: start;
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    height: 90%;
+  }
+  .nav-items {
+    flex: 0 0 300px;
+  }
+  .model-content {
+    margin: 15px;
+    color: var(--text-bright);
+    padding: 15px;
+    background-color: rgba(55, 55, 70, 0.8);
+    display: flex;
+    width: 350px;
+    flex-direction: column;
+  }
+  /*** HEADER ***/
+  .app-header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+    padding: 50px;
+    color: var(--text-bright);
+  }
+  h1 {
+    flex: 0 0 200px;
+    text-align: center;
+    font-variant: small-caps;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.2;
+    color: inherit;
+  }
+  .search {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  .search input.form-control {
+    width: 200px;
+    height: 25px;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: var(--text-medium);
+    display: block;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+  .search input.form-control::placeholder {
+    color: var(--text-medium);
+  }
+  /*** MENU ***/
+  .nav-items {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .nav-items > * {
+    /* do not move position when showing details */
+    height: 56px;
+  }
+  .nav-items .menu-top10 {
+    /* do not move position when showing details */
+    width: 200px;
+  }
+  .nav-items nav {
+    display: flex;
+    align-items: flex-start;
+    cursor: pointer;
+    flex: 1;
+  }
+  .nav-items nav:hover {
+    background-color: var(--element-hover);
+  }
+  .nav-items span {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    white-space: nowrap;
+  }
+  nav.top10-weight,
+  nav.top10-power,
+  nav.top10-ratio {
+    justify-content: center;
+  }
+  .nav-items details {
+    margin-left: 15px;
+  }
+  /* Horizontal menu */
+  .app-header summary {
+    display: flex;
+    align-items: center;
+  }
+  .app-header details section {
+    display: flex;
+  }
+  /*** MODEL ***/
+  h3 {
+    font-weight: normal;
+  }
+  .image-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border-width: 3px;
+    border-color: var(--text-medium);
+    border-style: solid;
+    box-sizing: border-box;
+    width: 100%;
+    height: 240px;
+    background-color: white;
+  }
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  /*** CAR ***/
+  .car-details {
+    padding-bottom: 10px;
+  }
+  .car-summary {
+    padding-left: 5px;
+    padding-right: 10px;
+    display: flex;
+    align-items: center;
+  }
+  .car-summary {
+    font-weight: normal;
+    margin-top: 8px;
+    margin-bottom: 5px;
+  }
+  .car {
+    /* Long labels */
+    max-width: 70%; /* do not reduce summary arrow */
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  .bars {
+    margin-left: 15px;
+    margin-right: 10px;
+  }
+  .bars label {
+    color: var(--text-medium);
+  }
+  .bars span {
+    color: var(--text-extra-bright);
+  }
+  .bar {
+    width: 0%; /* default value; will be computed later */
+    height: 3px;
+    margin: 5px 0 10px 0;
+  }
+  .bar-weight {
+    background-color: yellow;
+  }
+  .bar-power {
+    background-color: red;
+  }
+  .bar-ratio {
+    background-color: green;
+  }
+  .bar-title {
+    display: flex;
+    justify-content: space-between;
+    font-size: small;
+  }
+
+Benjamin Caure  9 h 38
+index.html => carte
+<article class="model-content">
+                <h2>FORD MUSTANG</h2>
+                <div class="cover">
+                    <img src="http://www.regcheck.org.uk/image.aspx/@Zm9yZCBtdXN0YW5n">
+                </div>
+                <details class="car-details">
+                    <summary class="car-summary">
+                        <h3>SHELBY GT500</h3>
+                    </summary>
+                    <div class="bars">
+                        <div class="bar-title">Weight<label></label><span class="weight"></span><span>kg</span></div>
+                        <div class="bar bar-weight"></div>
+                        <div class="bar-title">Power<label></label><span class="weight"></span><span>hp</span></div>
+                        <div class="bar bar-weight"></div>
+                        <div class="bar-title">Ratio<label></label><span class="weight"></span><span>kg/hp</span></div>
+                        <div class="bar bar-weight"></div>
+                    </div>
+                </details class="car-summary">
+            </article>
+9 h 40
+index.css => carte
+  /** CARTES */
+  .model-content {
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+  }
+  .cover {
+    height: 150px;
+    width: 100%;
+  }
+  .cover img {
+    height: 100%;
+  }
+  .content {
+    flex: 1;
+  }
+  .model-content summary {
+    display: flex;
+    align-items: center;
+  }
+  /** BARS */
+.bar {
+  height: 3px;
+    width: 66%;
+    background-color: yellow;
+    margin: 5px 0 10px 0;
+}
+.bar-title {
+  display: flex;
+    justify-content: space-between;
+    font-size: small;
+}

@@ -1,0 +1,20 @@
+{
+  "name": "tp-exam-2020-prerequis",
+  "version": "1.0.0",
+  "description": "Pour cet examen, utiliser une version récente de Chrome ou Firefox, Git et NodeJS.",
+  "main": "test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://gitlab.isima.fr/tp-exam-2020/tp-exam-2020-prerequis.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-react-app": "^3.1.2"
+  }
+}
